@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "DaystartIA · Recepción con IA para clínicas dentales, de estética y fisioterapia",
+  title: "DaystartIA · Recepción con IA para clínicas",
   description:
     "Ayudamos a clínicas dentales, de estética y de fisioterapia a convertir llamadas perdidas en citas confirmadas, 24/7 y sin trabajo extra para el equipo. Pide tu auditoría gratuita.",
   openGraph: {

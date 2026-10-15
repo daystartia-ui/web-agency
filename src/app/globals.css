@@ -262,7 +262,8 @@ body {
   box-shadow: 0 14px 28px -14px rgba(9, 76, 183, 0.6);
 }
 .btn:active {
-  transform: translateY(0);
+  transform: scale(0.97);
+  transition-duration: 0.1s;
 }
 .btn-sun::after {
   content: "";
@@ -290,6 +291,21 @@ body {
   }
 }
 
+/* Hero: al bajar, el contenido se aleja con profundidad */
+@supports (animation-timeline: view()) {
+  .hero-inner {
+    animation: hero-exit linear both;
+    animation-timeline: view();
+    animation-range: exit 0% exit 90%;
+  }
+  @keyframes hero-exit {
+    to {
+      opacity: 0.2;
+      transform: translateY(80px) scale(0.96);
+    }
+  }
+}
+
 /* Aro giratorio de la garantía */
 .guarantee-badge::before {
   content: "";
@@ -312,6 +328,19 @@ body {
   background: #25d366;
   animation: ping 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
   z-index: -1;
+}
+
+/* Un día en tu clínica: capas de escena y velo para leer el texto */
+.story-layer {
+  transform-origin: 50% 45%;
+  will-change: transform, opacity, filter;
+}
+.story-shade {
+  background:
+    linear-gradient(180deg, rgba(14, 33, 70, 0.7) 0%, rgba(14, 33, 70, 0.1) 32%, rgba(14, 33, 70, 0.15) 50%, rgba(14, 33, 70, 0.88) 100%);
+}
+.story-copy {
+  will-change: transform, opacity;
 }
 
 /* Preguntas frecuentes: el contenido aparece suave */

@@ -4,6 +4,7 @@ import DemoForm from "@/components/DemoForm";
 import Logo from "@/components/Logo";
 import ResultsPanel from "@/components/ResultsPanel";
 import RevealObserver from "@/components/RevealObserver";
+import ScrollStory from "@/components/ScrollStory";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { site } from "@/lib/site";
 
@@ -70,24 +71,6 @@ const specialties = [
       "Ofrece las cancelaciones de última hora a la lista de espera",
       "Recuerda la siguiente sesión para que el tratamiento no se corte",
     ],
-  },
-];
-
-const gallery = [
-  {
-    src: "/images/dentista-paciente.jpg",
-    alt: "Odontólogo explicando un tratamiento a una paciente en la consulta",
-    caption: "Mientras atiendes en el sillón…",
-  },
-  {
-    src: "/images/estetica-cabina.jpg",
-    alt: "Profesional de estética aplicando un tratamiento facial en cabina",
-    caption: "…en la cabina o en la camilla…",
-  },
-  {
-    src: "/images/sala-espera.jpg",
-    alt: "Sala de espera de una clínica con sofás y luz cálida",
-    caption: "…tus pacientes siguen recibiendo respuesta.",
   },
 ];
 
@@ -240,11 +223,11 @@ export default function Home() {
           <div aria-hidden className="hero-glow hero-glow-a" />
           <div aria-hidden className="hero-glow hero-glow-b" />
           <div aria-hidden className="hero-grid" />
-          <div className="relative mx-auto grid w-full max-w-6xl gap-12 px-5 pb-28 pt-14 sm:px-8 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:pt-20">
+          <div className="hero-inner relative mx-auto grid w-full max-w-6xl gap-12 px-5 pb-28 pt-14 sm:px-8 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:pt-20">
             <div className="hero-copy">
               <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1.5 text-sm font-medium text-sun ring-1 ring-white/15">
                 <span className="live-dot" aria-hidden />
-                Recepción con IA para clínicas dentales, de estética y de fisioterapia
+                Recepción con IA para clínicas
               </p>
               <h1 className="mt-5 font-display text-[clamp(2.5rem,5.5vw,3.5rem)] font-bold leading-[1.1] tracking-[-0.02em]">
                 Tu clínica nunca pierde una cita.
@@ -354,24 +337,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Galería: la clínica */}
-        <section className="bg-navy text-white">
-          <div className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8">
-            <h2 data-reveal className="max-w-2xl font-display text-[clamp(1.75rem,3vw,2rem)] font-semibold leading-tight">
-              Tu equipo, centrado en los pacientes
-            </h2>
-            <ul className="mt-10 grid gap-6 md:grid-cols-3">
-              {gallery.map((g) => (
-                <li key={g.src} data-reveal className="group">
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-                    <Image src={g.src} alt={g.alt} fill sizes="(min-width: 768px) 360px, 100vw" className="zoom object-cover" />
-                  </div>
-                  <p className="mt-4 text-lg text-white/85">{g.caption}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        {/* Un día en tu clínica: recorrido con scroll */}
+        <ScrollStory />
 
         {/* Cómo funciona */}
         <section id="como-funciona" className="scroll-mt-20 bg-mist">
@@ -632,7 +599,7 @@ export default function Home() {
           <div>
             <Logo variant="negativo" className="h-14 w-auto" />
             <p className="mt-4 max-w-xs leading-relaxed">
-              {site.tagline} Recepción con IA para clínicas dentales, de estética y de fisioterapia.
+              {site.tagline} Recepción con IA para clínicas.
             </p>
           </div>
           <nav aria-label="Producto" className="grid content-start gap-2">
