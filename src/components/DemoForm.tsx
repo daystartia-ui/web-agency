@@ -2,12 +2,28 @@
 
 import { useState } from "react";
 import { BookedMark } from "@/components/Logo";
+import { site } from "@/lib/site";
+
+// FormSubmit reenvía cada solicitud al email de DaystartIA (sin servidor propio)
+const endpoint = `https://formsubmit.co/ajax/${site.email}`;
+
+const labels: Record<string, string> = {
+  name: "Nombre",
+  clinic: "Clínica",
+  email: "Email",
+  phone: "Teléfono",
+  type: "Tipo de clínica",
+  rooms: "Gabinetes",
+  source: "Cómo nos ha conocido",
+  message: "Qué le preocupa",
+};
 
 const inputClass =
   "rounded-xl border border-line bg-paper px-3.5 py-3 text-base font-normal";
 
 export default function DemoForm() {
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const sent = status === "sent";
 
   if (sent) {
     return (
@@ -25,12 +41,32 @@ export default function DemoForm() {
   return (
     <form
       className="grid gap-4 rounded-3xl bg-white p-6 text-ink sm:grid-cols-2 sm:p-8"
-      onSubmit={(e) => {
+      onSubmit={async (e) => {
         e.preventDefault();
-        // TODO: conectar con el backend (API route + email/CRM)
-        setSent(true);
+        const data = new FormData(e.currentTarget);
+        if (data.get("_honey")) return;
+        const body: Record<string, string> = {
+          _subject: `Nueva auditoría: ${data.get("clinic")}`,
+          _template: "table",
+          _replyto: String(data.get("email")),
+        };
+        for (const [key, label] of Object.entries(labels)) body[label] = String(data.get(key) ?? "");
+        setStatus("sending");
+        try {
+          const res = await fetch(endpoint, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", Accept: "application/json" },
+            body: JSON.stringify(body),
+          });
+          const json = await res.json().catch(() => null);
+          setStatus(res.ok && String(json?.success) === "true" ? "sent" : "error");
+        } catch {
+          setStatus("error");
+        }
       }}
     >
+      {/* Campo trampa para bots: las personas no lo ven */}
+      <input type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden className="hidden" />
       <Field label="Tu nombre" name="name" autoComplete="name" />
       <Field label="Nombre de la clínica" name="clinic" autoComplete="organization" />
       <Field label="Email" name="email" type="email" autoComplete="email" />
@@ -55,11 +91,19 @@ export default function DemoForm() {
           DaystartIA me contacte sobre la auditoría.
         </span>
       </label>
+      {status === "error" && (
+        <p role="alert" className="rounded-xl bg-red-50 px-4 py-3 text-sm text-red-800 sm:col-span-2">
+          No se ha podido enviar la solicitud. Inténtalo de nuevo o escríbenos a{" "}
+          <a href={`mailto:${site.email}`} className="underline">{site.email}</a> o al{" "}
+          <a href={site.phoneHref} className="underline">{site.phone}</a>.
+        </p>
+      )}
       <button
         type="submit"
-        className="rounded-full bg-sun px-6 py-3.5 font-semibold text-navy transition-colors hover:bg-[#f2df00] sm:col-span-2"
+        disabled={status === "sending"}
+        className="rounded-full bg-sun px-6 py-3.5 font-semibold text-navy transition-colors hover:bg-[#f2df00] disabled:opacity-60 sm:col-span-2"
       >
-        Pedir auditoría gratuita
+        {status === "sending" ? "Enviando…" : "Pedir auditoría gratuita"}
       </button>
     </form>
   );
