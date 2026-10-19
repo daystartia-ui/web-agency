@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restaurante Yain · Cocina aragonesa en la Judería de Teruel</title>
+<meta name="description" content="Restaurante Yain, en la Plaza de la Judería de Teruel. Especialidad en bacalao, carnes de Aragón y más de 200 vinos por copas. Bib Gourmand de la Guía Michelin. Reservas: 978 62 40 76.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --noche:#14120f; --carbon:#1d1a16; --vino:#7d1f2c; --vino-cl:#a8394a; --oro:#c9a868; --crema:#f6f1e8; --papel:#fbf8f2;
+    --texto:#2a2520; --suave:#7a7065; --linea:#e7dfd1; --linea-osc:rgba(255,255,255,.12); --radio:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Manrope,system-ui,sans-serif;background:var(--papel);color:var(--texto);line-height:1.65;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  h1,h2,h3{font-family:"DM Serif Display",Georgia,serif;font-weight:400;line-height:1.05;letter-spacing:-.005em}
+  h1 em,h2 em{color:var(--oro);font-style:italic}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  .eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--vino)}
+  section{padding:100px 0}
+  .titulo{max-width:660px;margin-bottom:50px}
+  .titulo h2{font-size:clamp(2.3rem,5vw,3.6rem);margin-top:12px}
+  .titulo p{color:var(--suave);font-size:1.06rem;margin-top:14px}
+  .oscuro{background:var(--noche);color:#e4dccf}
+  .oscuro h2,.oscuro h3{color:#fff}
+  .oscuro .eyebrow{color:var(--oro)}
+  .oscuro .titulo p{color:#b3a898}
+
+  .demo{background:#000;color:#bbb;font-size:.8rem;text-align:center;padding:7px 16px}
+  .demo b{color:#fff}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(20,18,15,.9);backdrop-filter:blur(12px);color:#fff;border-bottom:1px solid var(--linea-osc)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+  .marca{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .marca img{height:44px;width:auto;background:#fff;border-radius:10px;padding:3px}
+  .marca span{font-family:"DM Serif Display",serif;font-size:1.5rem}
+  .menu{display:flex;gap:26px;list-style:none;font-size:.9rem}
+  .menu a{text-decoration:none;opacity:.75}
+  .menu a:hover{opacity:1}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 24px;border-radius:999px;font-family:inherit;font-weight:700;font-size:.93rem;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-1px)}
+  .btn svg{width:18px;height:18px}
+  .btn-vino{background:var(--vino);color:#fff}
+  .btn-vino:hover{background:var(--vino-cl)}
+  .btn-borde{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+
+  /* hero */
+  .hero{position:relative;min-height:calc(100vh - 100px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;padding:0}
+  .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,15,.3) 0%,rgba(20,18,15,.5) 40%,rgba(20,18,15,.94) 100%)}
+  .hero .wrap{position:relative;z-index:1;padding-top:120px;padding-bottom:70px;width:100%}
+  .hero h1{font-size:clamp(2.8rem,7vw,5.6rem);max-width:15ch}
+  .hero p{max-width:560px;font-size:1.12rem;color:#ddd3c4;margin:20px 0 30px}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .sellos{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+  .sello{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.25);border-radius:999px;padding:7px 14px;font-size:.84rem}
+  .sello b{color:var(--oro)}
+
+  /* menú del día */
+  .franja{background:var(--vino);color:#fff}
+  .franja .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+  .franja div>div{padding:26px 20px;border-left:1px solid rgba(255,255,255,.18)}
+  .franja div>div:first-child{border-left:0}
+  .franja strong{display:block;font-family:"DM Serif Display",serif;font-size:1.9rem;font-weight:400;line-height:1.1}
+  .franja span{font-size:.88rem;opacity:.85}
+
+  /* carta */
+  .carta{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .plato{background:#fff;border:1px solid var(--linea);border-radius:var(--radio);overflow:hidden}
+  .plato img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#fff}
+  .plato div{padding:22px 24px 26px}
+  .plato h3{font-size:1.7rem;margin-bottom:6px;color:var(--texto)}
+  .plato p{color:var(--suave);font-size:.95rem}
+  .plato .tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:#f6e8ea;color:var(--vino);border-radius:6px;padding:3px 8px;margin-bottom:10px}
+  .dulces{list-style:none;margin-top:12px;display:grid;gap:6px}
+  .dulces li{display:flex;justify-content:space-between;gap:10px;font-size:.9rem;border-bottom:1px dashed var(--linea);padding-bottom:6px}
+  .dulces b{color:var(--vino);white-space:nowrap}
+
+  /* grupos */
+  .menus{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:10px}
+  .menu-g{border:1px solid var(--linea);border-radius:var(--radio);padding:24px;background:#fff}
+  .menu-g h3{font-size:1.4rem;color:var(--texto)}
+  .menu-g .precio{font-family:"DM Serif Display",serif;font-size:2.4rem;color:var(--vino);line-height:1.1;margin:6px 0 10px}
+  .menu-g p{font-size:.88rem;color:var(--suave)}
+  .nota{font-size:.85rem;color:var(--suave);margin-top:18px}
+
+  /* bodega */
+  .bodega .grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .bodega .foto img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radio)}
+  .bodega p{color:#cfc5b6;margin-bottom:16px}
+  .cifras{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+  .cifras div{border-top:2px solid var(--oro);padding-top:12px}
+  .cifras b{display:block;font-family:"DM Serif Display",serif;font-size:2.2rem;font-weight:400;color:#fff;line-height:1}
+  .cifras span{font-size:.84rem;color:#a99e8e}
+
+  /* distinciones */
+  .distin{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px;list-style:none;border-top:1px solid var(--linea-osc)}
+  .distin li{display:flex;gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--linea-osc)}
+  .distin b{font-family:"DM Serif Display",serif;font-weight:400;color:var(--oro);font-size:1.3rem;min-width:56px}
+
+  /* equipo */
+  .equipo{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+  .persona img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:var(--radio);filter:grayscale(.15)}
+  .persona b{display:block;font-family:"DM Serif Display",serif;font-weight:400;font-size:1.3rem;margin-top:12px}
+  .persona span{font-size:.82rem;color:var(--suave)}
+
+  /* salones */
+  .salones{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .salon{position:relative;border-radius:var(--radio);overflow:hidden;min-height:340px;display:flex;align-items:flex-end;color:#fff}
+  .salon img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .salon::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.8),transparent 60%)}
+  .salon div{position:relative;z-index:1;padding:26px}
+  .salon h3{font-size:2rem;color:#fff}
+  .salon p{opacity:.85;font-size:.95rem}
+
+  /* opiniones */
+  .resumen{display:flex;align-items:center;gap:22px;margin-bottom:36px;flex-wrap:wrap}
+  .resumen .nota-g{font-family:"DM Serif Display",serif;font-size:4.6rem;line-height:.9;color:var(--vino)}
+  .estrellas{color:#d4a43a;letter-spacing:2px}
+  .ops{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .op{background:#fff;border:1px solid var(--linea);border-radius:var(--radio);padding:28px}
+  .op p{font-family:"DM Serif Display",serif;font-size:1.35rem;line-height:1.3;margin:12px 0 14px}
+  .op small{color:var(--suave)}
+
+  /* faq */
+  .faq{max-width:820px}
+  details{border-bottom:1px solid var(--linea);padding:18px 0}
+  summary{cursor:pointer;font-weight:700;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-family:"DM Serif Display",serif;font-size:1.6rem;line-height:1;color:var(--vino)}
+  details[open] summary::after{content:"–"}
+  details p{color:var(--suave);margin-top:10px}
+
+  /* contacto */
+  .contacto .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px}
+  .fila{padding:18px 0;border-bottom:1px solid var(--linea-osc)}
+  .fila h3{font-size:1.4rem;margin-bottom:4px}
+  .fila p{color:#cfc5b6}
+  .fila a{color:var(--oro);text-decoration:none;font-weight:700}
+  .horario{list-style:none;color:#cfc5b6}
+  .horario li{display:flex;justify-content:space-between;gap:16px;max-width:380px;padding:2px 0}
+  .horario li.hoy{color:var(--oro);font-weight:700}
+  .mapa{border-radius:var(--radio);overflow:hidden;min-height:420px}
+  .mapa iframe{width:100%;height:100%;min-height:420px;border:0;display:block;filter:grayscale(.3) contrast(.95)}
+
+  footer{background:#0c0b09;color:#8f8579;padding:44px 0 110px;font-size:.88rem}
+  footer .grid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+
+  .barra{display:none}
+
+  @media (max-width:980px){
+    .menu{display:none}
+    .equipo{grid-template-columns:repeat(3,1fr)}
+    .menus{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:900px){
+    .nav .btn{display:none}
+    .carta,.ops{grid-template-columns:1fr}
+    .bodega .grid,.contacto .grid{grid-template-columns:1fr;gap:40px}
+    .distin{grid-template-columns:1fr}
+    .salones{grid-template-columns:1fr}
+    section{padding:72px 0}
+    .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--noche);border-top:1px solid var(--linea-osc)}
+    .barra a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 12px;font-size:.74rem;font-weight:700;text-decoration:none;color:#e4dccf}
+    .barra a:first-child{background:var(--vino);color:#fff}
+    .barra svg{width:20px;height:20px}
+  }
+  @media (max-width:560px){
+    .ctas{flex-direction:column}
+    .franja .wrap{grid-template-columns:1fr}
+    .franja div>div{border-left:0;border-top:1px solid rgba(255,255,255,.18);padding:16px 0}
+    .franja div>div:first-child{border-top:0}
+    .menus{grid-template-columns:1fr}
+    .equipo{grid-template-columns:1fr 1fr}
+    .cifras b{font-size:1.8rem}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Propuesta de diseño</b> preparada por DaystartIA para el Restaurante Yain · no es la web oficial</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="marca" href="#inicio"><img src="/demos/yain/img/logo.png" alt="Logotipo de Restaurante Yain"><span>Yain</span></a>
+    <ul class="menu">
+      <li><a href="#carta">Carta</a></li>
+      <li><a href="#grupos">Grupos</a></li>
+      <li><a href="#bodega">Bodega</a></li>
+      <li><a href="#equipo">Equipo</a></li>
+      <li><a href="#visitanos">Visítanos</a></li>
+    </ul>
+    <a class="btn btn-vino" href="tel:+34978624076">Reservar mesa</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <img src="/demos/yain/img/sala.webp" alt="Comedor del Restaurante Yain con mesas preparadas">
+  <div class="wrap">
+    <div class="sellos">
+      <span class="sello"><b>Bib Gourmand</b> Guía Michelin</span>
+      <span class="sello"><b>Mejor Sumiller</b> de España</span>
+      <span class="sello"><b>★ 4,7</b> 834 opiniones</span>
+    </div>
+    <h1>Cocina aragonesa de autor en la <em>Judería de Teruel</em>.</h1>
+    <p>Bacalao desalado como lo hacían nuestras abuelas, carnes criadas en Aragón y más de 200 vinos por copas, a 50 metros de los Amantes.</p>
+    <div class="ctas">
+      <a class="btn btn-vino" href="tel:+34978624076">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        Reservar · 978 62 40 76
+      </a>
+      <a class="btn btn-borde" href="#carta">Ver la carta</a>
+    </div>
+  </div>
+</section>
+
+<div class="franja">
+  <div class="wrap">
+    <div><strong>20 €</strong><span>Menú de mediodía, de martes a viernes</span></div>
+    <div><strong>30 €</strong><span>Menú de fin de semana y festivos</span></div>
+    <div><strong>30–35 €</strong><span>Precio medio a la carta, sin bebida</span></div>
+  </div>
+</div>
+
+<section id="carta">
+  <div class="wrap">
+    <div class="titulo">
+      <div class="eyebrow">La carta</div>
+      <h2>Lo clásico y lo nuevo, <em>en el mismo plato</em></h2>
+      <p>Desde pequeñas raciones para compartir hasta nuestro menú degustación. Adaptamos la mayoría de platos para celíacos y tenemos pan sin gluten.</p>
+    </div>
+    <div class="carta">
+      <article class="plato"><img src="/demos/yain/img/bacalao.webp" alt="Plato de bacalao del Restaurante Yain" loading="lazy"><div><span class="tag">Nuestra especialidad</span><h3>Bacalaos</h3><p>El pescado de interior por excelencia, siempre desalado en casa. Máxima calidad en un producto que nos encanta.</p></div></article>
+      <article class="plato"><img src="/demos/yain/img/carnes.webp" alt="Plato de carne del Restaurante Yain" loading="lazy"><div><h3>Carnes de Aragón</h3><p>Animales criados en Aragón, de procedencia que controlamos directamente para buscar la máxima calidad.</p></div></article>
+      <article class="plato"><img src="/demos/yain/img/comenzar.webp" alt="Entrante del Restaurante Yain" loading="lazy"><div><h3>Para comenzar</h3><p>Pequeñas raciones y platos para compartir: nuestras elaboraciones clásicas y las últimas novedades.</p></div></article>
+      <article class="plato"><img src="/demos/yain/img/degustacion.webp" alt="Plato del menú degustación" loading="lazy"><div><span class="tag">8 elaboraciones</span><h3>Menú degustación</h3><p>Nuestra opción más completa para disfrutar y conocernos. Con maridaje de vinos si lo deseas.</p></div></article>
+      <article class="plato"><img src="/demos/yain/img/pescado.webp" alt="Plato de pescado del Restaurante Yain" loading="lazy"><div><h3>Pescados</h3><p>Producto de temporada con la mano de nuestra cocina, ligera y llena de sabor.</p></div></article>
+      <article class="plato"><img src="/demos/yain/img/postre.webp" alt="Postre de chocolate del Restaurante Yain" loading="lazy"><div><h3>Postres</h3>
+        <ul class="dulces">
+          <li><span>Semiesfera de chocolate blanco y negro con gelatina de habanero</span><b>5,50 €</b></li>
+          <li><span>Tarta de queso semicurado de Albarracín y frutos rojos</span><b>5,50 €</b></li>
+          <li><span>Mousse de limón con galleta y merengue tostado</span><b>5,50 €</b></li>
+        </ul>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+<section id="grupos" style="background:var(--crema)">
+  <div class="wrap">
+    <div class="titulo">
+      <div class="eyebrow">Celebraciones</div>
+      <h2>Menús para grupos</h2>
+      <p>Cenas de empresa, comuniones, bautizos o reuniones familiares. Para grupos de 10 personas o más, elegidos con antelación. También preparamos menús a medida para grupos de 10 a 20 personas.</p>
+    </div>
+    <div class="menus">
+      <div class="menu-g"><h3>Menú 1</h3><div class="precio">40 €</div><p>Entrantes a centro de mesa, segundo a elegir (secreto, confit de pato o corvina), postre y vino Cariñena.</p></div>
+      <div class="menu-g"><h3>Menú 2</h3><div class="precio">45 €</div><p>Entrantes a compartir, segundo a elegir entre cinco opciones, postre y vino Edra Grullas de Paso.</p></div>
+      <div class="menu-g"><h3>Menú 3</h3><div class="precio">45 €</div><p>Jamón de Teruel al corte, turbante de bacalao, entrecôte o pluma a baja temperatura, postre y vino.</p></div>
+      <div class="menu-g"><h3>Menú 4</h3><div class="precio">60 €</div><p>Todo servido individual: vieiras, bacalao, ternasco de Aragón «a la pastora», postre, blanco y tinto.</p></div>
+    </div>
+    <p class="nota">Precios por persona, IVA incluido.</p>
+  </div>
+</section>
+
+<section class="oscuro bodega" id="bodega">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow">La bodega</div>
+      <h2 style="font-size:clamp(2.3rem,5vw,3.6rem);margin:12px 0 22px">Yain significa <em>vino</em> en hebreo</h2>
+      <p>Cuando empezamos las obras del restaurante, en pleno barrio judío de Teruel, aparecieron los restos de una bodega del siglo XIV: su trujal, ánforas enterradas para fermentar y cerámica de la época. El nombre parecía estar predestinado.</p>
+      <p>Hoy, junto a esos restos y a siete metros bajo tierra, guardamos una selección muy personal de vinos elegida por Raúl Igual, Mejor Sumiller de España.</p>
+      <div class="cifras">
+        <div><b>+200</b><span>vinos por copas</span></div>
+        <div><b>S. XIV</b><span>bodega judía original</span></div>
+        <div><b>15 ºC</b><span>a 7 m bajo tierra</span></div>
+      </div>
+    </div>
+    <div class="foto"><img src="/demos/yain/img/bodega.webp" alt="Interior del Restaurante Yain con detalles de madera" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="oscuro" style="padding-top:0">
+  <div class="wrap">
+    <div class="titulo">
+      <div class="eyebrow">Distinciones</div>
+      <h2>Reconocidos desde hace más de 15 años</h2>
+    </div>
+    <ul class="distin">
+      <li><b>2010</b><span>Bib Gourmand de la Guía Michelin</span></li>
+      <li><b>2010</b><span>Mejor Sumiller de España</span></li>
+      <li><b>2010</b><span>Recomendado por la Guía Repsol</span></li>
+      <li><b>2013</b><span>Candidato a Mejor Sumiller del Mundo y de Europa</span></li>
+      <li><b>2014</b><span>Premio Aragón con Gusto, mejor establecimiento de Teruel</span></li>
+      <li><b>2015</b><span>Premio a la Trayectoria Gastronómica «Con Mucho Gusto»</span></li>
+      <li><b>2017</b><span>Mejor establecimiento de hostelería de Teruel</span></li>
+      <li><b>2021</b><span>Mejor Sumiller, IWC Merchant Awards</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="equipo">
+  <div class="wrap">
+    <div class="titulo">
+      <div class="eyebrow">Las personas</div>
+      <h2>Quién está detrás de <em>cada plato</em></h2>
+    </div>
+    <div class="equipo">
+      <div class="persona"><img src="/demos/yain/img/raul.webp" alt="Raúl Igual" loading="lazy"><b>Raúl Igual</b><span>Sala y sumiller</span></div>
+      <div class="persona"><img src="/demos/yain/img/inaki.webp" alt="Iñaki Cubas" loading="lazy"><b>Iñaki Cubas</b><span>Cocina</span></div>
+      <div class="persona"><img src="/demos/yain/img/alberto.webp" alt="Alberto Miguel" loading="lazy"><b>Alberto Miguel</b><span>Cocina</span></div>
+      <div class="persona"><img src="/demos/yain/img/julia.webp" alt="Julia Campillo" loading="lazy"><b>Julia Campillo</b><span>Sala</span></div>
+      <div class="persona"><img src="/demos/yain/img/marina.webp" alt="Marina Galve" loading="lazy"><b>Marina Galve</b><span>Sala</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="titulo">
+      <div class="eyebrow">Salones</div>
+      <h2>Pequeños a propósito</h2>
+      <p>Dos salones de capacidad reducida para poder ofrecerte un servicio más personal.</p>
+    </div>
+    <div class="salones">
+      <div class="salon"><img src="/demos/yain/img/alabastro.webp" alt="Salón Alabastro" loading="lazy"><div><h3>Alabastro</h3><p>Hasta 20 comensales · a pie de calle, de fácil acceso</p></div></div>
+      <div class="salon"><img src="/demos/yain/img/silex.webp" alt="Salón Silex" loading="lazy"><div><h3>Silex</h3><p>Hasta 10 comensales · salón privado en el interior</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--crema)">
+  <div class="wrap">
+    <div class="resumen">
+      <div class="nota-g">4,7</div>
+      <div><div class="estrellas" style="font-size:1.3rem">★★★★★</div><div style="color:var(--suave)">834 opiniones en Google · lo más comentado: el bacalao, el sumiller y el menú degustación</div></div>
+    </div>
+    <div class="ops">
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Profesionalidad, buen trato, buen vino, buena atención.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Pedimos un secreto y un bacalao, ambos muy buenos.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Un menú diario excelente con una relación calidad-precio excepcional.”</p><small>Opinión en Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="titulo"><div class="eyebrow">Preguntas frecuentes</div><h2>Antes de venir</h2></div>
+    <div class="faq">
+      <details open><summary>¿Es necesario reservar?</summary><p>No es obligatorio, pero sí recomendable: el restaurante no es muy grande y a veces el espacio es limitado. Reserva por teléfono en el 978 62 40 76, de 10:00 a 17:00 y de 20:30 a 23:30.</p></details>
+      <details><summary>¿Tenéis opciones para celíacos?</summary><p>Sí. Evitamos la contaminación cruzada y adaptamos la mayoría de nuestras elaboraciones. También tenemos pan sin gluten.</p></details>
+      <details><summary>¿Hay menú infantil?</summary><p>No tenemos un menú específico, pero siempre podemos preparar carne a la plancha con patatas, filete empanado o pescado a la plancha o rebozado.</p></details>
+      <details><summary>¿Dónde puedo aparcar?</summary><p>El parking más cercano es el de la estación de autobuses, a unos 50 metros. También hay zona de aparcamiento en la Ronda de Ambeles.</p></details>
+      <details><summary>¿Hacéis maridajes?</summary><p>Sí. Con más de 200 vinos por copas podemos maridar tu comida con diferentes opciones.</p></details>
+      <details><summary>¿Se admiten perros?</summary><p>Por normativa sanitaria solo podemos admitir perros guía.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="oscuro contacto" id="visitanos">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow">Visítanos</div>
+      <h2 style="font-size:clamp(2.3rem,5vw,3.6rem);margin:12px 0 10px">En pleno casco histórico</h2>
+      <div class="fila"><h3>Dirección</h3><p>Plaza de la Judería, 9 · 44001 Teruel<br>A 50 m de los Amantes y a 100 m de la Plaza del Torico.</p></div>
+      <div class="fila"><h3>Horario</h3>
+        <ul class="horario" id="horario">
+          <li data-d="2"><span>Martes</span><span>13:30 – 15:15</span></li>
+          <li data-d="3"><span>Miércoles</span><span>13:30 – 15:15 · 21:00 – 22:30</span></li>
+          <li data-d="4"><span>Jueves</span><span>13:30 – 15:15 · 21:00 – 22:30</span></li>
+          <li data-d="5"><span>Viernes</span><span>13:30 – 15:15 · 21:00 – 22:30</span></li>
+          <li data-d="6"><span>Sábado</span><span>13:30 – 15:15 · 21:00 – 22:30</span></li>
+          <li data-d="0"><span>Domingo y lunes</span><span>Cerrado</span></li>
+        </ul>
+      </div>
+      <div class="fila" style="border:0"><h3>Reservas</h3><p><a href="tel:+34978624076">978 62 40 76</a> · de 10:00 a 17:00 y de 20:30 a 23:30</p></div>
+    </div>
+    <div class="mapa"><iframe title="Mapa: Restaurante Yain, Plaza de la Judería 9, Teruel" loading="lazy" src="https://maps.google.com/maps?q=Restaurante%20Yain%2C%20Plaza%20de%20la%20Juder%C3%ADa%209%2C%20Teruel&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div><b style="color:#fff">Restaurante Yain</b> · Plaza de la Judería, 9 · Teruel</div>
+    <div>Reservas: 978 62 40 76</div>
+    <div style="opacity:.6">Propuesta de diseño · DaystartIA</div>
+  </div>
+</footer>
+
+<nav class="barra" aria-label="Acciones rápidas">
+  <a href="tel:+34978624076"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Reservar</a>
+  <a href="#carta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>Carta</a>
+  <a href="https://maps.google.com/?q=Restaurante+Yain+Teruel" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>Cómo llegar</a>
+</nav>
+
+<script>
+  // Resalta el día de hoy en el horario
+  const d = new Date().getDay();
+  const fila = document.querySelector(`#horario li[data-d="${d === 1 ? 0 : d}"]`);
+  if (fila) fila.classList.add('hoy');
+</script>
+</body>
+</html>
