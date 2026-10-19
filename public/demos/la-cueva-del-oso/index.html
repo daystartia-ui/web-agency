@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Cueva del Oso · Barbería en Badajoz</title>
+<meta name="description" content="Barbería y peluquería masculina en Badajoz desde 2005. Cortes a medida, afeitado a navaja con toalla caliente y rituales de barba. Reserva tu cita online.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --negro:#0e0d0c; --carbon:#181614; --piedra:#24211e; --crema:#efe7da; --hueso:#f7f3ec;
+    --cobre:#c58a4a; --cobre-osc:#a46e35; --texto:#e9e2d6; --suave:#a69c8f; --linea:rgba(255,255,255,.1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--negro);color:var(--texto);line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  h1,h2,h3{font-family:"Big Shoulders Display",Impact,sans-serif;text-transform:uppercase;line-height:.95;letter-spacing:.01em}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+  .eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--cobre)}
+  section{padding:100px 0}
+  .titulo{max-width:700px;margin-bottom:50px}
+  .titulo h2{font-size:clamp(2.6rem,6vw,4.4rem);margin-top:12px;font-weight:800}
+  .titulo p{color:var(--suave);font-size:1.06rem;margin-top:16px}
+
+  .demo{background:#000;color:#bbb;font-size:.8rem;text-align:center;padding:7px 16px;border-bottom:1px solid var(--linea)}
+  .demo b{color:#fff}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(14,13,12,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--linea)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
+  .marca{text-decoration:none;font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:1.55rem;text-transform:uppercase;letter-spacing:.02em}
+  .marca span{color:var(--cobre)}
+  .menu{display:flex;gap:30px;list-style:none;font-size:.9rem;text-transform:uppercase;letter-spacing:.08em}
+  .menu a{text-decoration:none;color:var(--suave)}
+  .menu a:hover{color:#fff}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;font-weight:600;font-size:.92rem;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-1px)}
+  .btn svg{width:18px;height:18px}
+  .btn-cobre{background:var(--cobre);color:var(--negro)}
+  .btn-cobre:hover{background:#d89b59}
+  .btn-borde{border:1.5px solid rgba(255,255,255,.45);color:#fff}
+
+  /* hero */
+  .hero{position:relative;min-height:calc(100vh - 100px);display:flex;align-items:flex-end;overflow:hidden;padding:0}
+  .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 30%;filter:grayscale(1) contrast(1.05)}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,13,12,.92) 0%,rgba(14,13,12,.6) 45%,rgba(14,13,12,.15) 100%),linear-gradient(0deg,rgba(14,13,12,.9) 0%,transparent 40%)}
+  .hero .wrap{position:relative;z-index:1;padding-top:120px;padding-bottom:80px;width:100%}
+  .hero h1{font-size:clamp(3.6rem,11vw,8.5rem);font-weight:900;max-width:9ch}
+  .hero h1 span{color:var(--cobre)}
+  .hero p{max-width:470px;font-size:1.12rem;color:#d5ccbf;margin:22px 0 32px}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .rating{display:inline-flex;align-items:center;gap:10px;font-size:.88rem;margin-bottom:22px;color:#d5ccbf}
+  .estrellas{color:var(--cobre);letter-spacing:2px}
+
+  .cinta{background:var(--cobre);color:var(--negro);overflow:hidden;white-space:nowrap;padding:14px 0}
+  .cinta div{display:inline-block;animation:cinta 30s linear infinite;font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:1.4rem;text-transform:uppercase;letter-spacing:.06em}
+  .cinta span{margin:0 26px}
+  @keyframes cinta{to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion:reduce){.cinta div{animation:none}}
+
+  /* servicios */
+  .servicios{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--linea)}
+  .serv{background:var(--negro);position:relative;overflow:hidden;min-height:460px;display:flex;align-items:flex-end}
+  .serv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55;transition:opacity .3s,transform .6s}
+  .serv:hover img{opacity:.75;transform:scale(1.04)}
+  .serv::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,13,12,.95) 15%,transparent 70%)}
+  .serv div{position:relative;z-index:1;padding:30px}
+  .serv .num{font-family:"Big Shoulders Display",sans-serif;color:var(--cobre);font-weight:800;font-size:1.1rem}
+  .serv h3{font-size:2.4rem;font-weight:800;margin:6px 0 10px}
+  .serv p{color:#cfc6b9;font-size:.95rem}
+
+  /* historia */
+  .historia{background:var(--hueso);color:#1c1916}
+  .historia .eyebrow{color:var(--cobre-osc)}
+  .historia .grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .historia h2{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:800;margin:12px 0 22px}
+  .historia p{color:#4a443d;margin-bottom:16px}
+  .linea-t{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+  .linea-t div{border-top:3px solid var(--cobre);padding-top:12px}
+  .linea-t b{font-family:"Big Shoulders Display",sans-serif;font-size:2rem;font-weight:800;display:block;line-height:1}
+  .linea-t span{font-size:.85rem;color:#6b6259}
+  .fotos-h{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .fotos-h img{width:100%;height:100%;object-fit:cover}
+  .fotos-h img:first-child{grid-column:span 2;aspect-ratio:16/10}
+  .fotos-h img:not(:first-child){aspect-ratio:1/1}
+  blockquote{font-family:"Big Shoulders Display",sans-serif;font-size:1.7rem;font-weight:600;text-transform:uppercase;line-height:1.15;border-left:3px solid var(--cobre);padding-left:18px;margin:26px 0 8px;color:#1c1916}
+  cite{font-style:normal;font-size:.85rem;color:#6b6259;padding-left:21px}
+
+  /* trabajos */
+  .trabajos{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .trabajos figure{position:relative;overflow:hidden;aspect-ratio:3/4}
+  .trabajos img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .trabajos figure:hover img{transform:scale(1.05)}
+  .trabajos figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent);font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:1.3rem;text-transform:uppercase}
+  .trabajos figcaption small{display:block;font-family:Inter,sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.14em;color:var(--cobre)}
+
+  /* opiniones */
+  .opiniones{background:var(--carbon)}
+  .resumen{display:flex;align-items:center;gap:22px;margin-bottom:40px;flex-wrap:wrap}
+  .resumen .nota{font-family:"Big Shoulders Display",sans-serif;font-size:5rem;font-weight:900;color:var(--cobre);line-height:.9}
+  .ops{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .op{border:1px solid var(--linea);padding:30px;background:var(--piedra)}
+  .op p{font-family:"Big Shoulders Display",sans-serif;font-size:1.6rem;font-weight:600;text-transform:uppercase;line-height:1.15;margin:14px 0}
+  .op small{color:var(--suave)}
+
+  /* reserva */
+  .reserva .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
+  .reserva h2{font-size:clamp(2.8rem,7vw,5rem);font-weight:900}
+  .reserva h2 span{color:var(--cobre)}
+  .reserva .lead{color:var(--suave);font-size:1.08rem;margin:18px 0 28px;max-width:480px}
+  .horario{list-style:none;border-top:1px solid var(--linea)}
+  .horario li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--linea);font-size:.95rem}
+  .horario li span:first-child{text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;color:var(--suave);padding-top:2px}
+  .horario li.hoy span{color:var(--cobre)}
+  .datos-c{margin-top:28px;display:grid;gap:6px;color:var(--suave)}
+  .datos-c a{color:#fff;text-decoration:none;font-weight:600}
+  .mapa{margin-top:26px;border:1px solid var(--linea)}
+  .mapa iframe{width:100%;height:260px;border:0;display:block;filter:grayscale(1) invert(.92) contrast(.9)}
+
+  footer{border-top:1px solid var(--linea);padding:44px 0 110px;color:var(--suave);font-size:.88rem}
+  footer .grid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+  footer .marca{font-size:1.3rem;color:#fff}
+  .redes{display:flex;gap:16px}
+  .redes a{text-decoration:none}
+  .redes a:hover{color:#fff}
+
+  .barra{display:none}
+
+  @media (max-width:900px){
+    .menu,.nav .btn{display:none}
+    .servicios{grid-template-columns:1fr}
+    .serv{min-height:340px}
+    .historia .grid,.reserva .grid{grid-template-columns:1fr;gap:40px}
+    .trabajos{grid-template-columns:1fr 1fr}
+    .ops{grid-template-columns:1fr}
+    section{padding:72px 0}
+    .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--carbon);border-top:1px solid var(--linea)}
+    .barra a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 12px;font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;color:var(--texto)}
+    .barra a:first-child{background:var(--cobre);color:var(--negro)}
+    .barra svg{width:20px;height:20px}
+  }
+  @media (max-width:520px){
+    .ctas{flex-direction:column}
+    .hero>img{object-position:62% 30%}
+    .linea-t b{font-size:1.6rem}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Propuesta de diseño</b> preparada por DaystartIA para La Cueva del Oso · no es la web oficial</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="marca" href="#inicio">La Cueva <span>del Oso</span></a>
+    <ul class="menu">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#historia">Nosotros</a></li>
+      <li><a href="#trabajos">Trabajos</a></li>
+      <li><a href="#reserva">Horario</a></li>
+    </ul>
+    <a class="btn btn-cobre" href="https://cut.yeasyapp.com/KtQZGH" target="_blank" rel="noopener">Reservar cita</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <img src="/demos/la-cueva-del-oso/img/hero.webp" alt="Barbero de La Cueva del Oso trabajando con tijera">
+  <div class="wrap">
+    <div class="rating"><span class="estrellas">★★★★★</span> 4,6 en Google · 173 opiniones</div>
+    <h1>Diseñamos <span>tu imagen.</span></h1>
+    <p>Barbería tradicional y peluquería masculina en Badajoz desde 2005. Cortes a medida, afeitado a navaja con toalla caliente y rituales de barba.</p>
+    <div class="ctas">
+      <a class="btn btn-cobre" href="https://cut.yeasyapp.com/KtQZGH" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Reservar cita online
+      </a>
+      <a class="btn btn-borde" href="tel:+34689400564">Llamar · 689 40 05 64</a>
+    </div>
+  </div>
+</section>
+
+<div class="cinta" aria-hidden="true"><div>
+  <span>Corte a medida</span>✦<span>Afeitado a navaja</span>✦<span>Toalla caliente</span>✦<span>Ritual de barba</span>✦<span>Color</span>✦<span>Academia LCO</span>✦
+  <span>Corte a medida</span>✦<span>Afeitado a navaja</span>✦<span>Toalla caliente</span>✦<span>Ritual de barba</span>✦<span>Color</span>✦<span>Academia LCO</span>✦
+</div></div>
+
+<section id="servicios" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="titulo">
+      <div class="eyebrow">Servicios</div>
+      <h2>Le damos forma a tu idea</h2>
+      <p>Te asesoramos en cada servicio para potenciar lo mejor de ti: desde un nuevo look creado a medida hasta el ritual de barba más completo.</p>
+    </div>
+  </div>
+  <div class="servicios">
+    <article class="serv">
+      <img src="/demos/la-cueva-del-oso/img/corte2.webp" alt="Barbero haciendo un degradado a un cliente" loading="lazy">
+      <div><span class="num">01</span><h3>Peluquería</h3><p>Corte, lavado y cambio de color. Diseño y creación de un look a tu medida: clásico, contemporáneo o urbano.</p></div>
+    </article>
+    <article class="serv">
+      <img src="/demos/la-cueva-del-oso/img/brocha.webp" alt="Brocha de afeitar con espuma y navaja" loading="lazy">
+      <div><span class="num">02</span><h3>Barbería</h3><p>El ritual de barba de los barberos de siempre: afeitado a navaja con toallas calientes, perfilado y tratamiento.</p></div>
+    </article>
+    <article class="serv">
+      <img src="/demos/la-cueva-del-oso/img/herramientas.webp" alt="Herramientas de barbero sobre la mesa" loading="lazy">
+      <div><span class="num">03</span><h3>Academia LCO</h3><p>Formamos a nuevos profesionales de la peluquería y la barbería con técnica, fundamentos y oficio.</p></div>
+    </article>
+  </div>
+</section>
+
+<section class="historia" id="historia">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow">Nuestra historia</div>
+      <h2>La barbería de antes, con el estilo de hoy</h2>
+      <p>Empezamos en 2005. En 2010 nos especializamos en estilismo masculino como Pertegal Peluqueros y, con el auge del barbershop, nació La Cueva del Oso: una fusión de barbería tradicional y peluquería masculina con sello propio.</p>
+      <p>Cuidamos la barba con protocolos totalmente higiénicos y te enseñamos a mantenerla. Recuperamos los fundamentos del oficio que se habían olvidado.</p>
+      <blockquote>“Nuestro trabajo se basa en interpretar cada una de vuestras peticiones.”</blockquote>
+      <cite>Daniel Pertegal · fundador</cite>
+      <div class="linea-t">
+        <div><b>2005</b><span>Primeras tijeras</span></div>
+        <div><b>2010</b><span>Peluquería masculina</span></div>
+        <div><b>Hoy</b><span>Barbería y academia</span></div>
+      </div>
+    </div>
+    <div class="fotos-h">
+      <img src="/demos/la-cueva-del-oso/img/local.webp" alt="Interior de la barbería con sillones clásicos" loading="lazy">
+      <img src="/demos/la-cueva-del-oso/img/daniel.webp" alt="Daniel Pertegal con unas tijeras" loading="lazy">
+      <img src="/demos/la-cueva-del-oso/img/fachada.webp" alt="El equipo en la puerta de La Cueva del Oso" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="trabajos">
+  <div class="wrap">
+    <div class="titulo">
+      <div class="eyebrow">Trabajos</div>
+      <h2>Clásico, contemporáneo, urbano</h2>
+    </div>
+    <div class="trabajos">
+      <figure><img src="/demos/la-cueva-del-oso/img/modelo1.webp" alt="Corte urbano con degradado" loading="lazy"><figcaption><small>Urbano</small>Corte urbano</figcaption></figure>
+      <figure><img src="/demos/la-cueva-del-oso/img/modelo2.webp" alt="Corte clásico con barba perfilada" loading="lazy"><figcaption><small>Clásico</small>Corte clásico</figcaption></figure>
+      <figure><img src="/demos/la-cueva-del-oso/img/barba.webp" alt="Barba larga cuidada" loading="lazy"><figcaption><small>Barbería</small>Ritual de barba</figcaption></figure>
+      <figure><img src="/demos/la-cueva-del-oso/img/modelo3.webp" alt="Tupé contemporáneo" loading="lazy"><figcaption><small>Contemporáneo</small>Estilo propio</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="opiniones">
+  <div class="wrap">
+    <div class="resumen">
+      <div class="nota">4,6</div>
+      <div><div class="estrellas" style="font-size:1.3rem">★★★★★</div><div style="color:var(--suave)">173 opiniones en Google</div></div>
+    </div>
+    <div class="ops">
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Llevo yendo ya varias veces y no puedo estar más contento.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Excelente trato, gran servicio y muy cercanos.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Buen trato, grandes profesionales.”</p><small>Opinión en Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="reserva" id="reserva">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow">Reserva</div>
+      <h2>Tu silla <span>te espera.</span></h2>
+      <p class="lead">Elige día, hora y servicio en un minuto desde el móvil. Sin llamadas, sin esperas.</p>
+      <div class="ctas">
+        <a class="btn btn-cobre" href="https://cut.yeasyapp.com/KtQZGH" target="_blank" rel="noopener">Reservar cita online</a>
+        <a class="btn btn-borde" href="tel:+34689400564">689 40 05 64</a>
+      </div>
+      <div class="datos-c">
+        <div>C/ Godofredo Ortega y Muñoz, 35, Local 1A · 06011 Badajoz</div>
+        <div><a href="mailto:info@lacuevadelosobarberia.com">info@lacuevadelosobarberia.com</a></div>
+      </div>
+      <div class="mapa"><iframe title="Mapa: Barbería La Cueva del Oso, Badajoz" loading="lazy" src="https://maps.google.com/maps?q=Barber%C3%ADa%20La%20Cueva%20del%20Oso%2C%20C.%20Godofredo%20Ortega%20y%20Mu%C3%B1oz%2035%2C%20Badajoz&z=16&output=embed"></iframe></div>
+    </div>
+    <div>
+      <h3 style="font-size:2rem;font-weight:800;margin-bottom:16px">Horario</h3>
+      <ul class="horario" id="horario">
+        <li data-d="1"><span>Lunes</span><span>16:00 – 20:30</span></li>
+        <li data-d="2"><span>Martes</span><span>10:00 – 13:30 · 15:30 – 20:30</span></li>
+        <li data-d="3"><span>Miércoles</span><span>10:00 – 13:30 · 15:30 – 20:30</span></li>
+        <li data-d="4"><span>Jueves</span><span>10:00 – 14:00 · 15:30 – 20:30</span></li>
+        <li data-d="5"><span>Viernes</span><span>9:30 – 14:00 · 16:00 – 21:00</span></li>
+        <li data-d="6"><span>Sábado</span><span>9:30 – 13:30</span></li>
+        <li data-d="0"><span>Domingo</span><span>Cerrado</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <span class="marca">La Cueva <span style="color:var(--cobre)">del Oso</span></span>
+    <div class="redes">
+      <a href="https://www.instagram.com/la_cueva_del_oso_barberia/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/lacuevadelosobarberiafranquicia" target="_blank" rel="noopener">Facebook</a>
+    </div>
+    <div style="opacity:.6">Propuesta de diseño · DaystartIA</div>
+  </div>
+</footer>
+
+<nav class="barra" aria-label="Acciones rápidas">
+  <a href="https://cut.yeasyapp.com/KtQZGH" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Reservar</a>
+  <a href="tel:+34689400564"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Llamar</a>
+  <a href="https://maps.google.com/?q=Barber%C3%ADa+La+Cueva+del+Oso+Badajoz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>Cómo llegar</a>
+</nav>
+
+<script>
+  // Resalta el día de hoy en el horario
+  const hoy = document.querySelector(`#horario li[data-d="${new Date().getDay()}"]`);
+  if (hoy) hoy.classList.add('hoy');
+</script>
+</body>
+</html>
