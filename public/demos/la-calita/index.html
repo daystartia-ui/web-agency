@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cervecería La Calita · Tapas y pescaíto en Mairena del Aljarafe</title>
+<meta name="description" content="Cervecería La Calita, en Mairena del Aljarafe (Sevilla). Tapas caseras, pescaíto frito, gambas, salmorejo y cerveza muy fría. Abierto de lunes a sábado. Reservas: 955 05 11 10.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --albero:#e9a23b; --albero-osc:#c97f17; --azul:#1f4e8c; --azul-osc:#163a69; --cal:#fffaf1; --crema:#fbf1df;
+    --tinta:#1d1a16; --texto:#2e2a24; --suave:#6e665b; --linea:#ecdcc0; --verde:#2f7d4a; --radio:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Nunito Sans",system-ui,sans-serif;background:var(--cal);color:var(--texto);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  h1,h2,h3{font-family:"Alfa Slab One",Georgia,serif;font-weight:400;line-height:1.05;color:var(--azul-osc)}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+  .eyebrow{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--albero-osc)}
+  section{padding:92px 0}
+  .titulo{max-width:640px;margin-bottom:44px}
+  .titulo h2{font-size:clamp(2.1rem,4.8vw,3.4rem);margin-top:10px}
+  .titulo p{color:var(--suave);font-size:1.06rem;margin-top:12px}
+
+  /* azulejo */
+  .azulejo{background-color:var(--azul);background-image:
+    radial-gradient(circle at 50% 50%,transparent 9px,rgba(255,255,255,.14) 10px,rgba(255,255,255,.14) 12px,transparent 13px),
+    linear-gradient(45deg,rgba(255,255,255,.08) 25%,transparent 25%,transparent 75%,rgba(255,255,255,.08) 75%),
+    linear-gradient(45deg,rgba(255,255,255,.08) 25%,transparent 25%,transparent 75%,rgba(255,255,255,.08) 75%);
+    background-size:44px 44px,44px 44px,44px 44px;background-position:0 0,0 0,22px 22px}
+
+  .demo{background:var(--tinta);color:#ddd;font-size:.8rem;text-align:center;padding:7px 16px}
+  .demo b{color:#fff}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(255,250,241,.94);backdrop-filter:blur(10px);border-bottom:3px solid var(--albero)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+  .marca{text-decoration:none;font-family:"Alfa Slab One",serif;font-size:1.5rem;color:var(--azul-osc);line-height:1}
+  .marca small{display:block;font-family:"Nunito Sans",sans-serif;font-size:.68rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--albero-osc);margin-top:4px}
+  .menu{display:flex;gap:28px;list-style:none;font-weight:700;font-size:.95rem}
+  .menu a{text-decoration:none;color:var(--suave)}
+  .menu a:hover{color:var(--azul)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 24px;border-radius:999px;font-family:inherit;font-weight:800;font-size:.98rem;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-1px)}
+  .btn svg{width:19px;height:19px}
+  .btn-albero{background:var(--albero);color:var(--tinta)}
+  .btn-albero:hover{background:#f2b24f}
+  .btn-blanco{background:#fff;color:var(--azul-osc)}
+
+  /* hero */
+  .hero{position:relative;color:#fff;padding:90px 0 110px;overflow:hidden}
+  .hero .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+  .hero h1{color:#fff;font-size:clamp(2.8rem,7vw,5.4rem);text-shadow:0 4px 0 rgba(0,0,0,.15)}
+  .hero h1 span{color:var(--albero)}
+  .hero p{font-size:1.18rem;max-width:520px;margin:22px 0 32px;color:#e7eefb}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .rating{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:8px 16px;border-radius:999px;font-weight:700;margin-bottom:22px}
+  .estrellas{color:var(--albero);letter-spacing:2px}
+  .placa{background:var(--cal);color:var(--texto);border-radius:24px;padding:30px;box-shadow:0 30px 60px -20px rgba(0,0,0,.45);border:6px solid var(--albero);transform:rotate(-2deg)}
+  .placa h3{font-size:1.6rem;margin-bottom:12px}
+  .placa ul{list-style:none;display:grid;gap:10px}
+  .placa li{display:flex;justify-content:space-between;gap:12px;border-bottom:2px dotted var(--linea);padding-bottom:8px;font-weight:700}
+  .placa li span:last-child{color:var(--albero-osc)}
+  .estado{display:flex;align-items:center;gap:10px;margin-top:16px;font-weight:800}
+  .punto{width:11px;height:11px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px #dcfce7}
+  .punto.cerrado{background:#ef4444;box-shadow:0 0 0 4px #fee2e2}
+
+  /* platos */
+  .platos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .plato{background:#fff;border:2px solid var(--linea);border-radius:var(--radio);padding:26px;transition:transform .2s,border-color .2s}
+  .plato:hover{transform:translateY(-3px);border-color:var(--albero)}
+  .plato .emo{font-size:2.2rem;line-height:1}
+  .plato h3{font-size:1.35rem;margin:12px 0 6px}
+  .plato p{color:var(--suave);font-size:.96rem}
+  .plato .tag{display:inline-block;margin-top:12px;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--crema);color:var(--albero-osc);padding:4px 10px;border-radius:999px}
+  .nota{margin-top:22px;color:var(--suave);font-size:.92rem}
+
+  /* franja */
+  .franja{background:var(--albero);color:var(--tinta)}
+  .franja .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+  .franja div>div{padding:26px 18px;border-left:2px solid rgba(0,0,0,.08)}
+  .franja div>div:first-child{border-left:0}
+  .franja strong{display:block;font-family:"Alfa Slab One",serif;font-weight:400;font-size:1.5rem}
+  .franja span{font-weight:700;font-size:.9rem}
+
+  /* opiniones */
+  .opiniones{background:var(--crema)}
+  .resumen{display:flex;align-items:center;gap:22px;margin-bottom:38px;flex-wrap:wrap}
+  .resumen .nota-g{font-family:"Alfa Slab One",serif;font-size:4.6rem;color:var(--azul);line-height:.9}
+  .ops{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .op{background:#fff;border-radius:var(--radio);padding:28px;border:2px solid var(--linea)}
+  .op p{font-size:1.12rem;font-weight:700;margin:12px 0 14px;color:var(--tinta)}
+  .op small{color:var(--suave)}
+
+  /* visita */
+  .visita .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:44px}
+  .fila{padding:18px 0;border-bottom:2px dotted var(--linea)}
+  .fila:last-of-type{border:0}
+  .fila h3{font-size:1.25rem;margin-bottom:4px}
+  .fila p{color:var(--suave);font-weight:600}
+  .fila a{color:var(--azul);font-weight:800;text-decoration:none}
+  .consejo{background:var(--crema);border-left:5px solid var(--albero);padding:16px 18px;border-radius:10px;margin-top:20px;font-weight:600}
+  .mapa{border-radius:var(--radio);overflow:hidden;border:3px solid var(--albero);min-height:420px}
+  .mapa iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+  footer{color:#dbe5f5;padding:40px 0 110px;font-size:.9rem}
+  footer .grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  footer b{color:#fff}
+
+  .barra{display:none}
+
+  @media (max-width:900px){
+    .menu,.nav .btn{display:none}
+    .hero{padding:56px 0 80px}
+    .hero .grid,.visita .grid{grid-template-columns:1fr;gap:40px}
+    .placa{transform:none}
+    .platos,.ops{grid-template-columns:1fr}
+    .franja .wrap{grid-template-columns:1fr 1fr}
+    .franja div>div:nth-child(3){border-left:0}
+    .franja div>div{border-top:2px solid rgba(0,0,0,.08)}
+    section{padding:70px 0}
+    .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:60;background:#fff;border-top:3px solid var(--albero)}
+    .barra a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 12px;font-size:.76rem;font-weight:800;text-decoration:none;color:var(--azul-osc)}
+    .barra a:first-child{background:var(--azul);color:#fff}
+    .barra svg{width:20px;height:20px}
+  }
+  @media (max-width:520px){ .ctas{flex-direction:column} }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Propuesta de diseño</b> preparada por DaystartIA para Cervecería La Calita · no es la web oficial</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="marca" href="#inicio">La Calita<small>Cervecería · Mairena del Aljarafe</small></a>
+    <ul class="menu">
+      <li><a href="#carta">Lo que hay que pedir</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#visitanos">Horario</a></li>
+    </ul>
+    <a class="btn btn-albero" href="tel:+34955051110">Reservar mesa</a>
+  </div>
+</header>
+
+<main>
+<section class="hero azulejo" id="inicio">
+  <div class="wrap grid">
+    <div>
+      <div class="rating"><span class="estrellas">★★★★★</span> 4,4 en Google · más de 2.200 opiniones</div>
+      <h1>Tapas caseras y <span>pescaíto</span> como Dios manda.</h1>
+      <p>Cervecería de toda la vida en Mairena del Aljarafe: raciones generosas, fritura con aceite limpio, gambas, salmorejo y la cerveza muy fría.</p>
+      <div class="ctas">
+        <a class="btn btn-albero" href="tel:+34955051110">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Reservar · 955 05 11 10
+        </a>
+        <a class="btn btn-blanco" href="#carta">Ver qué pedir</a>
+      </div>
+    </div>
+    <div class="placa">
+      <h3>Hoy en La Calita</h3>
+      <ul>
+        <li><span>Pescaíto frito</span><span>★ Favorito</span></li>
+        <li><span>Gambas</span><span>★ Favorito</span></li>
+        <li><span>Albóndigas de carrillada</span><span>Casero</span></li>
+        <li><span>Salmorejo</span><span>Casero</span></li>
+        <li><span>Tocino de cielo</span><span>Casero</span></li>
+      </ul>
+      <div class="estado" id="estado"><span class="punto"></span><span>Consultando horario…</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="franja">
+  <div class="wrap">
+    <div><strong>7:00 – 24:00</strong><span>De lunes a sábado</span></div>
+    <div><strong>Desayunos</strong><span>Desde primera hora</span></div>
+    <div><strong>Tapas y raciones</strong><span>Mediodía y noche</span></div>
+    <div><strong>Aparcamiento</strong><span>De sobra por la zona</span></div>
+  </div>
+</div>
+
+<section id="carta">
+  <div class="wrap">
+    <div class="titulo">
+      <div class="eyebrow">Lo que hay que pedir</div>
+      <h2>Lo que más nos piden</h2>
+      <p>Cocina casera andaluza, con pescado y marisco fresco y carnes de toda la vida. Pregunta por las sugerencias del día.</p>
+    </div>
+    <div class="platos">
+      <article class="plato"><div class="emo">🐟</div><h3>Pescaíto frito</h3><p>Boquerones y pescado del día, frito al momento y con aceite limpio.</p><span class="tag">El más pedido</span></article>
+      <article class="plato"><div class="emo">🦐</div><h3>Gambas</h3><p>Uno de los platos más comentados por quienes nos visitan.</p><span class="tag">Marisco</span></article>
+      <article class="plato"><div class="emo">🍲</div><h3>Albóndigas de carrillada</h3><p>En salsa con champiñones y jamón. De las que se recuerdan.</p><span class="tag">Casero</span></article>
+      <article class="plato"><div class="emo">🍅</div><h3>Salmorejo y berenjenas</h3><p>Salmorejo casero, solo o acompañando unas berenjenas fritas.</p><span class="tag">Casero</span></article>
+      <article class="plato"><div class="emo">🐙</div><h3>Ensaladilla de pulpo</h3><p>Fresquita, para empezar a compartir.</p><span class="tag">Para compartir</span></article>
+      <article class="plato"><div class="emo">🐟</div><h3>Atún encebollado</h3><p>Un clásico de la cocina andaluza.</p><span class="tag">Tradicional</span></article>
+      <article class="plato"><div class="emo">🥩</div><h3>Lagartitos ibéricos</h3><p>Carne ibérica a la plancha, jugosa y sabrosa.</p><span class="tag">Carnes</span></article>
+      <article class="plato"><div class="emo">🧀</div><h3>Croquetas</h3><p>Caseras, cremosas por dentro y crujientes por fuera.</p><span class="tag">Casero</span></article>
+      <article class="plato"><div class="emo">🍮</div><h3>Tocino de cielo</h3><p>Hecho en casa. El final perfecto.</p><span class="tag">Postre casero</span></article>
+    </div>
+    <p class="nota">La carta completa con precios se añadiría aquí, para que se pueda consultar desde el móvil antes de venir.</p>
+  </div>
+</section>
+
+<section class="opiniones" id="opiniones">
+  <div class="wrap">
+    <div class="resumen">
+      <div class="nota-g">4,4</div>
+      <div><div class="estrellas" style="font-size:1.3rem">★★★★★</div><div style="color:var(--suave);font-weight:700">Más de 2.200 opiniones en Google · lo más comentado: las tapas, las gambas y la carta</div></div>
+    </div>
+    <div class="ops">
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Buena cocina, cerveza muy fría y buen ambiente.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“El pescado frito bien hecho y con aceite limpio. Hay variedad en las tapas.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Servicio rápido y comida exquisita y de calidad. Sin duda lo recomiendo.”</p><small>Opinión en Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visitanos">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow">Visítanos</div>
+      <h2 style="font-size:clamp(2.1rem,4.8vw,3.2rem);margin:10px 0 6px">Te esperamos en Mairena</h2>
+      <div class="fila"><h3>Dirección</h3><p>Av. de las Civilizaciones, 15D · 41927 Mairena del Aljarafe (Sevilla)</p></div>
+      <div class="fila"><h3>Horario</h3><p>Lunes a sábado · 7:00 – 24:00<br>Domingo · cerrado</p></div>
+      <div class="fila"><h3>Reservas</h3><p><a href="tel:+34955051110">955 05 11 10</a></p></div>
+      <div class="consejo">💡 Se llena rápido, sobre todo los fines de semana: mejor llamar y reservar antes de venir.</div>
+    </div>
+    <div class="mapa"><iframe title="Mapa: Cervecería La Calita, Av. de las Civilizaciones 15D, Mairena del Aljarafe" loading="lazy" src="https://maps.google.com/maps?q=Cerveceria%20la%20Calita%2C%20Av.%20de%20las%20Civilizaciones%2015D%2C%20Mairena%20del%20Aljarafe&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer class="azulejo">
+  <div class="wrap grid">
+    <div><b>Cervecería La Calita</b> · Mairena del Aljarafe</div>
+    <div>Reservas: 955 05 11 10</div>
+    <div style="opacity:.7">Propuesta de diseño · DaystartIA</div>
+  </div>
+</footer>
+
+<nav class="barra" aria-label="Acciones rápidas">
+  <a href="tel:+34955051110"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Reservar</a>
+  <a href="#carta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>Qué pedir</a>
+  <a href="https://maps.google.com/?q=Cerveceria+la+Calita+Mairena+del+Aljarafe" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>Cómo llegar</a>
+</nav>
+
+<script>
+  // Abierto de lunes a sábado de 7:00 a 24:00
+  const ahora = new Date(), d = ahora.getDay(), h = ahora.getHours();
+  const abierto = d !== 0 && h >= 7;
+  const e = document.getElementById('estado');
+  e.querySelector('.punto').classList.toggle('cerrado', !abierto);
+  e.lastElementChild.textContent = abierto ? 'Abierto ahora' : 'Cerrado ahora';
+</script>
+</body>
+</html>
