@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clínica Dental Pablo Santaolalla · Dentista en Logroño</title>
+<meta name="description" content="Clínica dental en el centro de Logroño, en General Vara de Rey 46. Estética dental, implantes, ortodoncia, endodoncia y periodoncia. Puntualidad y trato cercano. Cita: 941 25 31 93.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --azul:#1d4b6e; --azul-osc:#133650; --cielo:#e8f1f7; --menta:#d6efe8; --verde:#2e8b74;
+    --papel:#fbfcfd; --texto:#1f2a33; --suave:#64727d; --linea:#e2e9ee; --radio:20px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--papel);color:var(--texto);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  h1,h2,h3{font-family:"Instrument Serif",Georgia,serif;font-weight:400;line-height:1.04;letter-spacing:-.01em;color:var(--azul-osc)}
+  h1 em,h2 em{color:var(--verde)}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+  .eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--verde)}
+  section{padding:96px 0}
+  .titulo{max-width:640px;margin-bottom:46px}
+  .titulo h2{font-size:clamp(2.4rem,5vw,3.6rem);margin-top:10px}
+  .titulo p{color:var(--suave);font-size:1.06rem;margin-top:12px}
+
+  .demo{background:var(--azul-osc);color:#cfe0ec;font-size:.8rem;text-align:center;padding:7px 16px}
+  .demo b{color:#fff}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(251,252,253,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--linea)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+  .marca{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .marca .sello{width:42px;height:42px;border-radius:50%;background:var(--azul);color:#fff;display:grid;place-items:center;font-family:"Instrument Serif",serif;font-size:1.25rem}
+  .marca b{display:block;font-weight:700;font-size:.98rem;color:var(--azul-osc);line-height:1.15}
+  .marca small{font-size:.76rem;color:var(--suave)}
+  .menu{display:flex;gap:28px;list-style:none;font-size:.94rem;font-weight:500}
+  .menu a{text-decoration:none;color:var(--suave)}
+  .menu a:hover{color:var(--azul)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 24px;border-radius:12px;font-family:inherit;font-weight:600;font-size:.96rem;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-1px)}
+  .btn svg{width:18px;height:18px}
+  .btn-azul{background:var(--azul);color:#fff}
+  .btn-azul:hover{background:var(--azul-osc)}
+  .btn-linea{border:1.5px solid var(--linea);background:#fff;color:var(--azul-osc)}
+
+  /* hero */
+  .hero{padding:76px 0 90px;background:linear-gradient(180deg,var(--cielo),var(--papel))}
+  .hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}
+  .hero h1{font-size:clamp(3rem,7vw,5.4rem)}
+  .hero .lead{font-size:1.15rem;color:var(--suave);max-width:520px;margin:22px 0 32px}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .rating{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--linea);padding:7px 14px;border-radius:999px;font-size:.88rem;margin-bottom:22px}
+  .estrellas{color:#f0a823;letter-spacing:2px}
+  .reloj{background:#fff;border:1px solid var(--linea);border-radius:28px;padding:34px;box-shadow:0 40px 80px -45px rgba(19,54,80,.45)}
+  .reloj .esfera{width:150px;height:150px;border-radius:50%;border:8px solid var(--cielo);margin:0 auto 22px;position:relative;background:#fff}
+  .reloj .esfera::before,.reloj .esfera::after{content:"";position:absolute;left:50%;bottom:50%;background:var(--azul);border-radius:4px;transform-origin:bottom center}
+  .reloj .esfera::before{width:6px;height:46px;margin-left:-3px;transform:rotate(0deg)}
+  .reloj .esfera::after{width:4px;height:58px;margin-left:-2px;background:var(--verde);animation:aguja 6s linear infinite}
+  @keyframes aguja{to{transform:rotate(360deg)}}
+  @media (prefers-reduced-motion:reduce){.reloj .esfera::after{animation:none;transform:rotate(60deg)}}
+  .reloj h3{font-size:1.9rem;text-align:center}
+  .reloj p{text-align:center;color:var(--suave);font-size:.95rem;margin-top:6px}
+  .estado{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:18px;font-weight:600;font-size:.95rem}
+  .punto{width:10px;height:10px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px #dcfce7}
+  .punto.cerrado{background:#ef4444;box-shadow:0 0 0 4px #fee2e2}
+
+  /* valores */
+  .valores{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .valor{background:#fff;border:1px solid var(--linea);border-radius:var(--radio);padding:30px}
+  .valor .ico{width:50px;height:50px;border-radius:14px;background:var(--menta);color:var(--verde);display:grid;place-items:center;margin-bottom:16px}
+  .valor .ico svg{width:24px;height:24px}
+  .valor h3{font-size:1.7rem;margin-bottom:6px}
+  .valor p{color:var(--suave);font-size:.96rem}
+
+  /* tratamientos */
+  .trats-bg{background:var(--azul-osc);color:#d3e2ec}
+  .trats-bg h2{color:#fff}
+  .trats-bg .eyebrow{color:#8fd4c2}
+  .trats-bg .titulo p{color:#a9c0cf}
+  .trats{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(255,255,255,.12);border-radius:var(--radio);overflow:hidden}
+  .trat{background:var(--azul-osc);padding:30px 24px}
+  .trat .n{font-family:"Instrument Serif",serif;font-style:italic;color:#8fd4c2;font-size:1.3rem}
+  .trat h3{color:#fff;font-size:1.6rem;margin:8px 0}
+  .trat p{font-size:.92rem;opacity:.85}
+
+  /* opiniones */
+  .resumen{display:flex;align-items:center;gap:22px;margin-bottom:38px;flex-wrap:wrap}
+  .resumen .nota{font-family:"Instrument Serif",serif;font-size:5rem;line-height:.85;color:var(--azul)}
+  .ops{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .op{background:#fff;border:1px solid var(--linea);border-radius:var(--radio);padding:30px}
+  .op p{font-family:"Instrument Serif",serif;font-size:1.5rem;line-height:1.25;color:var(--azul-osc);margin:12px 0 14px}
+  .op small{color:var(--suave)}
+
+  /* contacto */
+  .contacto{background:var(--cielo)}
+  .contacto .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .caja{background:#fff;border-radius:var(--radio);padding:32px;border:1px solid var(--linea)}
+  .caja h3{font-size:2rem;margin-bottom:4px}
+  .caja>p{color:var(--suave);margin-bottom:20px}
+  form{display:grid;gap:14px}
+  label{font-size:.86rem;font-weight:600;display:grid;gap:6px;color:var(--azul-osc)}
+  input,select{font:inherit;font-weight:400;padding:13px 14px;border:1px solid var(--linea);border-radius:12px;background:var(--papel);color:var(--texto)}
+  input:focus,select:focus{outline:2px solid var(--menta);border-color:var(--verde)}
+  .fila{padding:16px 0;border-bottom:1px solid var(--linea)}
+  .fila:last-of-type{border:0}
+  .fila h3{font-size:1.45rem;margin-bottom:2px}
+  .fila p{color:var(--suave)}
+  .fila a{color:var(--azul);font-weight:700;text-decoration:none}
+  .horario{list-style:none;color:var(--suave)}
+  .horario li{display:flex;justify-content:space-between;max-width:320px}
+  .horario li.hoy{color:var(--verde);font-weight:700}
+  .mapa{margin-top:16px;border-radius:16px;overflow:hidden;border:1px solid var(--linea)}
+  .mapa iframe{width:100%;height:230px;border:0;display:block}
+
+  footer{background:var(--azul-osc);color:#a9c0cf;padding:40px 0 110px;font-size:.88rem}
+  footer .grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  footer a{text-decoration:none}
+
+  .barra{display:none}
+
+  @media (max-width:980px){ .trats{grid-template-columns:1fr 1fr} }
+  @media (max-width:900px){
+    .menu,.nav .btn{display:none}
+    .hero{padding:44px 0 70px}
+    .hero .grid,.contacto .grid{grid-template-columns:1fr;gap:36px}
+    .valores,.ops{grid-template-columns:1fr}
+    section{padding:72px 0}
+    .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:60;background:#fff;border-top:1px solid var(--linea);box-shadow:0 -6px 20px rgba(0,0,0,.06)}
+    .barra a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 12px;font-size:.75rem;font-weight:600;text-decoration:none;color:var(--azul-osc)}
+    .barra a:first-child{background:var(--azul);color:#fff}
+    .barra svg{width:20px;height:20px}
+  }
+  @media (max-width:520px){ .ctas{flex-direction:column} .trats{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Propuesta de diseño</b> preparada por DaystartIA para la Clínica Dental Pablo Santaolalla · no es la web oficial</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="marca" href="#inicio"><span class="sello">PS</span><span><b>Clínica Dental Pablo Santaolalla</b><small>Estética dental · Logroño</small></span></a>
+    <ul class="menu">
+      <li><a href="#tratamientos">Tratamientos</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a class="btn btn-azul" href="tel:+34941253193">Pedir cita</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap grid">
+    <div>
+      <div class="rating"><span class="estrellas">★★★★★</span> 4,7 en Google · 49 opiniones</div>
+      <h1>Tu dentista, <em>a su hora</em> y sin dolor.</h1>
+      <p class="lead">Clínica de estética dental en el centro de Logroño. Atención personalizada, tratamientos de calidad y una puntualidad que nuestros pacientes destacan año tras año.</p>
+      <div class="ctas">
+        <a class="btn btn-azul" href="tel:+34941253193">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Llamar · 941 25 31 93
+        </a>
+        <a class="btn btn-linea" href="#contacto">Pedir cita online</a>
+      </div>
+    </div>
+    <div class="reloj">
+      <div class="esfera" aria-hidden="true"></div>
+      <h3>Aquí no se espera</h3>
+      <p>«Nunca espero más de 5 o 10 minutos.» Lo dicen nuestros pacientes.</p>
+      <div class="estado" id="estado"><span class="punto"></span><span>Consultando horario…</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="valores">
+      <div class="valor"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Puntualidad</h3><p>Respetamos tu tiempo: entras a la hora de tu cita.</p></div>
+      <div class="valor"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></div><h3>Trato cercano</h3><p>Te explicamos todo con claridad para que estés tranquilo en cada paso.</p></div>
+      <div class="valor"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Sin dolor</h3><p>Trabajo minucioso y cuidadoso, con los medios técnicos más avanzados.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="trats-bg" id="tratamientos">
+  <div class="wrap">
+    <div class="titulo">
+      <div class="eyebrow">Tratamientos</div>
+      <h2>Especialistas en <em style="color:#8fd4c2">estética dental</em></h2>
+      <p>Tratamientos odontológicos de calidad con un equipo cualificado y atención personalizada.</p>
+    </div>
+    <div class="trats">
+      <div class="trat"><span class="n">01</span><h3>Estética dental</h3><p>Nuestra especialidad: una sonrisa natural y cuidada.</p></div>
+      <div class="trat"><span class="n">02</span><h3>Implantes</h3><p>Recupera los dientes que faltan con implantes fijos y duraderos.</p></div>
+      <div class="trat"><span class="n">03</span><h3>Ortodoncia</h3><p>Corrige la posición de los dientes y la mordida.</p></div>
+      <div class="trat"><span class="n">04</span><h3>Endodoncia</h3><p>Salvamos el diente natural tratando el nervio.</p></div>
+      <div class="trat"><span class="n">05</span><h3>Periodoncia</h3><p>Cuidado y tratamiento de las encías.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="opiniones">
+  <div class="wrap">
+    <div class="resumen">
+      <div class="nota">4,7</div>
+      <div><div class="estrellas" style="font-size:1.3rem">★★★★★</div><div style="color:var(--suave)">49 opiniones en Google · lo más valorado: la confianza y la puntualidad</div></div>
+    </div>
+    <div class="ops">
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Puntualidad: nunca he visto entrar siempre a la hora exacta.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“El trato fue cercano, profesional y muy atento, lo que transmite una gran confianza.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Un servicio de una calidad inigualable. Buen profesional y buena persona.”</p><small>Opinión en Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="contacto" id="contacto">
+  <div class="wrap grid">
+    <div class="caja">
+      <h3>Pide tu cita</h3>
+      <p>Déjanos tus datos y te llamamos para darte hora.</p>
+      <form id="cita">
+        <label>Nombre<input name="nombre" required autocomplete="name"></label>
+        <label>Teléfono<input name="tel" type="tel" required autocomplete="tel"></label>
+        <label>Motivo
+          <select name="motivo">
+            <option>Revisión</option>
+            <option>Estética dental</option>
+            <option>Implantes</option>
+            <option>Ortodoncia</option>
+            <option>Dolor / endodoncia</option>
+            <option>Encías</option>
+          </select>
+        </label>
+        <button class="btn btn-azul" type="submit">Quiero que me llamen</button>
+      </form>
+    </div>
+    <div class="caja">
+      <div class="fila"><h3>Dirección</h3><p>C/ General Vara de Rey, 46 · 1.º A · 26002 Logroño</p></div>
+      <div class="fila"><h3>Horario</h3>
+        <ul class="horario" id="horario">
+          <li data-d="1"><span>Lunes a jueves</span><span>9:00 – 19:30</span></li>
+          <li data-d="5"><span>Viernes</span><span>9:00 – 13:00</span></li>
+          <li data-d="6"><span>Sábado y domingo</span><span>Cerrado</span></li>
+        </ul>
+      </div>
+      <div class="fila"><h3>Teléfono</h3><p><a href="tel:+34941253193">941 25 31 93</a></p></div>
+      <div class="mapa"><iframe title="Mapa: Clínica Dental Pablo Santaolalla, General Vara de Rey 46, Logroño" loading="lazy" src="https://maps.google.com/maps?q=Cl%C3%ADnica%20Dental%20Pablo%20Santaolalla%2C%20C.%20Gral.%20Vara%20de%20Rey%2046%2C%20Logro%C3%B1o&z=16&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div><b style="color:#fff">Clínica Dental Pablo Santaolalla</b> · Logroño</div>
+    <div><a href="tel:+34941253193">941 25 31 93</a></div>
+    <div style="opacity:.6">Propuesta de diseño · DaystartIA</div>
+  </div>
+</footer>
+
+<nav class="barra" aria-label="Acciones rápidas">
+  <a href="tel:+34941253193"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Llamar</a>
+  <a href="#contacto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Pedir cita</a>
+  <a href="https://maps.google.com/?q=Cl%C3%ADnica+Dental+Pablo+Santaolalla+Logro%C3%B1o" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>Cómo llegar</a>
+</nav>
+
+<script>
+  // L–J 9:00–19:30, V 9:00–13:00
+  const ahora = new Date(), d = ahora.getDay(), m = ahora.getHours() * 60 + ahora.getMinutes();
+  const abierto = (d >= 1 && d <= 4 && m >= 540 && m < 1170) || (d === 5 && m >= 540 && m < 780);
+  const e = document.getElementById('estado');
+  e.querySelector('.punto').classList.toggle('cerrado', !abierto);
+  e.lastElementChild.textContent = abierto ? 'Abierto ahora · llámanos' : 'Cerrado ahora · déjanos tus datos';
+  document.querySelector(`#horario li[data-d="${d >= 1 && d <= 4 ? 1 : d === 5 ? 5 : 6}"]`)?.classList.add('hoy');
+  // Demo: la clínica no publica WhatsApp ni email, así que aquí solo se muestra un aviso
+  document.getElementById('cita').addEventListener('submit', e => {
+    e.preventDefault();
+    alert('En la web real, esta solicitud llegaría por email a la clínica y os llamarían para dar hora.');
+  });
+</script>
+</body>
+</html>
