@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signature · Sandra Novoa Estilista · Peluquería en Logroño</title>
+<meta name="description" content="Peluquería y estética en Logroño. Corte femenino y de caballero, color tradicional y orgánico, método curly, tratamientos capilares, maquillaje y packs para bodas y eventos. Cita en el 632 78 77 57.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cobre:#b8734a; --cobre-osc:#94573a; --cobre-cl:#f4e6dc; --carbon:#262321; --crema:#fbf7f3; --arena:#f2ebe4;
+    --texto:#3a3532; --suave:#7d7570; --linea:#eadfd6; --radio:4px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Montserrat,system-ui,sans-serif;font-weight:400;background:var(--crema);color:var(--texto);line-height:1.7;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.05;color:var(--carbon)}
+  em{font-style:italic;color:var(--cobre)}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  .eyebrow{font-size:.72rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--cobre)}
+  section{padding:100px 0}
+  .titulo{max-width:640px;margin-bottom:50px}
+  .titulo h2{font-size:clamp(2.4rem,5vw,3.8rem);margin-top:12px}
+  .titulo p{color:var(--suave);margin-top:14px;font-weight:300}
+
+  .demo{background:var(--carbon);color:#d6cec8;font-size:.78rem;text-align:center;padding:7px 16px}
+  .demo b{color:#fff}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(251,247,243,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--linea)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:80px;gap:20px}
+  .nav img{height:54px;width:auto}
+  .menu{display:flex;gap:30px;list-style:none;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase}
+  .menu a{text-decoration:none;color:var(--suave)}
+  .menu a:hover{color:var(--cobre)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;font-family:inherit;font-weight:500;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer;transition:background .2s,transform .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-1px)}
+  .btn svg{width:17px;height:17px}
+  .btn-cobre{background:var(--cobre);color:#fff}
+  .btn-cobre:hover{background:var(--cobre-osc)}
+  .btn-linea{border:1px solid var(--carbon);color:var(--carbon)}
+
+  /* hero */
+  .hero{position:relative;padding:0;min-height:calc(100vh - 110px);display:grid;grid-template-columns:1fr 1fr}
+  .hero .txt{display:flex;flex-direction:column;justify-content:center;padding:70px 60px 70px max(22px,calc((100vw - 1180px)/2 + 22px))}
+  .hero h1{font-size:clamp(3rem,6.5vw,5.6rem);font-weight:400}
+  .hero p{font-weight:300;color:var(--suave);font-size:1.1rem;max-width:440px;margin:24px 0 34px}
+  .hero .foto{position:relative}
+  .hero .foto img{width:100%;height:100%;object-fit:cover;object-position:60% 30%}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .rating{display:inline-flex;align-items:center;gap:10px;font-size:.85rem;color:var(--suave);margin-bottom:22px}
+  .estrellas{color:var(--cobre);letter-spacing:2px}
+  .jueves{position:absolute;left:-60px;bottom:50px;background:#fff;padding:22px 26px;box-shadow:0 30px 60px -30px rgba(38,35,33,.4);max-width:250px}
+  .jueves b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.6rem;font-weight:500;color:var(--carbon);line-height:1.1}
+  .jueves span{font-size:.82rem;color:var(--suave)}
+
+  /* servicios */
+  .servs{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--linea);border:1px solid var(--linea)}
+  .serv{background:var(--crema);padding:34px 26px;transition:background .2s}
+  .serv:hover{background:#fff}
+  .serv .n{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.3rem;color:var(--cobre)}
+  .serv h3{font-size:1.65rem;margin:6px 0 8px}
+  .serv p{font-size:.9rem;color:var(--suave);font-weight:300}
+
+  /* color */
+  .color{background:var(--arena)}
+  .color .grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .color img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .dos{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+  .dos div{background:var(--crema);padding:22px;border-top:2px solid var(--cobre)}
+  .dos b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.5rem;font-weight:500;color:var(--carbon)}
+  .dos span{font-size:.88rem;color:var(--suave);font-weight:300}
+
+  /* cofres */
+  .cofres{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .cofre{border:1px solid var(--linea);background:#fff;padding:34px 30px;position:relative}
+  .cofre.destacado{background:var(--carbon);color:#e9e2dc;border-color:var(--carbon)}
+  .cofre.destacado h3{color:#fff}
+  .cofre .tag{position:absolute;top:-12px;left:30px;background:var(--cobre);color:#fff;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;padding:5px 12px}
+  .cofre h3{font-size:2rem;margin-bottom:4px}
+  .cofre .sub{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cobre);margin-bottom:18px}
+  .cofre ul{list-style:none;display:grid;gap:8px}
+  .cofre li{display:flex;gap:10px;font-size:.92rem;font-weight:300}
+  .cofre li::before{content:"✦";color:var(--cobre);font-size:.7rem;margin-top:5px}
+  .eventos{font-size:.9rem;color:var(--suave);margin-top:22px;text-align:center}
+
+  /* sandra */
+  .sandra{background:var(--carbon);color:#ddd5ce}
+  .sandra h2{color:#fff}
+  .sandra .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+  .sandra img{width:100%;aspect-ratio:1/1;object-fit:cover}
+  .sandra p{font-weight:300;margin-bottom:16px;opacity:.9}
+  .firma{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:2rem;color:var(--cobre);margin-top:10px}
+
+  /* opiniones */
+  .ops{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .op{border-top:2px solid var(--cobre);padding-top:22px}
+  .op p{font-family:"Cormorant Garamond",serif;font-size:1.45rem;line-height:1.3;color:var(--carbon);margin:10px 0 12px}
+  .op small{color:var(--suave);font-size:.8rem}
+  .resumen{display:flex;align-items:center;gap:22px;margin-bottom:44px;flex-wrap:wrap}
+  .resumen .nota{font-family:"Cormorant Garamond",serif;font-size:5rem;line-height:.9;color:var(--cobre)}
+
+  /* contacto */
+  .contacto{background:var(--arena)}
+  .contacto .grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+  .caja{background:var(--crema);padding:34px}
+  .caja h3{font-size:2rem;margin-bottom:4px}
+  .caja>p{color:var(--suave);font-weight:300;margin-bottom:22px}
+  form{display:grid;gap:14px}
+  label{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;display:grid;gap:7px;color:var(--suave)}
+  input,select{font:inherit;font-size:.95rem;letter-spacing:0;text-transform:none;padding:13px 14px;border:1px solid var(--linea);background:#fff;color:var(--texto)}
+  input:focus,select:focus{outline:2px solid var(--cobre-cl);border-color:var(--cobre)}
+  .fila{padding:16px 0;border-bottom:1px solid var(--linea)}
+  .fila:last-of-type{border:0}
+  .fila h3{font-size:1.4rem;margin-bottom:2px}
+  .fila p{color:var(--suave);font-weight:300}
+  .fila a{color:var(--cobre);font-weight:500;text-decoration:none}
+  .horario{list-style:none;color:var(--suave);font-weight:300}
+  .horario li{display:flex;justify-content:space-between;max-width:340px}
+  .horario li.hoy{color:var(--cobre);font-weight:500}
+  .mapa{margin-top:16px;overflow:hidden;border:1px solid var(--linea)}
+  .mapa iframe{width:100%;height:230px;border:0;display:block;filter:sepia(.2)}
+
+  footer{background:var(--carbon);color:#a49b94;padding:42px 0 110px;font-size:.85rem}
+  footer .grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  footer a{text-decoration:none}
+
+  .barra{display:none}
+
+  @media (max-width:980px){ .servs{grid-template-columns:1fr 1fr} }
+  @media (max-width:900px){
+    .menu,.nav .btn{display:none}
+    .hero{grid-template-columns:1fr;min-height:auto}
+    .hero .foto{order:-1;height:360px}
+    .hero .txt{padding:64px 22px 60px}
+    .jueves{left:16px;bottom:-30px;padding:16px 20px}
+    .color .grid,.sandra .grid,.contacto .grid{grid-template-columns:1fr;gap:40px}
+    .cofres,.ops{grid-template-columns:1fr;gap:28px}
+    section{padding:74px 0}
+    .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--crema);border-top:1px solid var(--linea);box-shadow:0 -6px 20px rgba(0,0,0,.06)}
+    .barra a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 12px;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--texto)}
+    .barra a:first-child{background:var(--cobre);color:#fff}
+    .barra svg{width:20px;height:20px}
+  }
+  @media (max-width:520px){
+    .ctas{flex-direction:column}
+    .servs{grid-template-columns:1fr}
+    .dos{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Propuesta de diseño</b> preparada por DaystartIA para Signature · Sandra Novoa · no es la web oficial</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#inicio"><img src="/demos/signature/img/logo.png" alt="Signature, Sandra Novoa Estilista"></a>
+    <ul class="menu">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#cofres">Eventos</a></li>
+      <li><a href="#sandra">Sandra</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a class="btn btn-cobre" href="https://wa.me/34632787757?text=Hola%20Sandra%2C%20quer%C3%ADa%20pedir%20cita" target="_blank" rel="noopener">Pedir cita</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="txt">
+    <div class="rating"><span class="estrellas">★★★★★</span> 4,7 en Google · 69 opiniones</div>
+    <div class="eyebrow">Peluquería y estética · Logroño</div>
+    <h1 style="margin-top:14px">Cortes y color que <em>reflejan tu esencia</em>.</h1>
+    <p>Peluquería de señora y caballero, color orgánico, método curly y estética, con la atención personalizada de Sandra Novoa.</p>
+    <div class="ctas">
+      <a class="btn btn-cobre" href="https://wa.me/34632787757?text=Hola%20Sandra%2C%20quer%C3%ADa%20pedir%20cita" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+        Cita por WhatsApp
+      </a>
+      <a class="btn btn-linea" href="tel:+34632787757">632 78 77 57</a>
+    </div>
+  </div>
+  <div class="foto">
+    <img src="/demos/signature/img/hero.webp" alt="Melena lisa y brillante tras un tratamiento de hidratación">
+    <div class="jueves"><b>Jueves, corte de caballero</b><span>Precio especial todos los jueves del año</span></div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="titulo">
+      <div class="eyebrow">Servicios</div>
+      <h2>Todo para tu pelo, <em>y para ti</em></h2>
+      <p>Cada servicio empieza escuchándote: adaptamos el corte, el color y el tratamiento a tu estilo y a tu cabello.</p>
+    </div>
+    <div class="servs">
+      <div class="serv"><span class="n">i.</span><h3>Corte femenino</h3><p>Cortes diseñados según tu estilo y la forma de tu rostro.</p></div>
+      <div class="serv"><span class="n">ii.</span><h3>Corte caballero</h3><p>Clásico, moderno, degradado, hair tattoo y arreglo de barba.</p></div>
+      <div class="serv"><span class="n">iii.</span><h3>Color y mechas</h3><p>Tinte tradicional u orgánico, sin amoniaco. Resultados duraderos.</p></div>
+      <div class="serv"><span class="n">iv.</span><h3>Método curly</h3><p>Productos y herramientas especiales para rizos perfectos.</p></div>
+      <div class="serv"><span class="n">v.</span><h3>Tratamientos</h3><p>Regeneración, hidratación, antifrizz y anticaída.</p></div>
+      <div class="serv"><span class="n">vi.</span><h3>Secado, planchas y trenzas</h3><p>Peinados para el día a día o para una ocasión especial.</p></div>
+      <div class="serv"><span class="n">vii.</span><h3>Belleza exterior</h3><p>Maquillaje, depilación facial, manicura, pedicura y tratamientos faciales.</p></div>
+      <div class="serv"><span class="n">viii.</span><h3>Mirada</h3><p>Lifting y extensión de pestañas, laminado de cejas.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="color">
+  <div class="wrap grid">
+    <img src="/demos/signature/img/melena.webp" alt="Melena cobriza con brillo" loading="lazy">
+    <div>
+      <div class="eyebrow">Especialidad</div>
+      <h2 style="font-size:clamp(2.4rem,5vw,3.6rem);margin:12px 0 16px">Color tradicional <em>u orgánico</em></h2>
+      <p style="color:var(--suave);font-weight:300">Tú eliges: alta cosmética con muy poco amoniaco, o color orgánico sin amoniaco, con aceites de aguacate y pracaxi para un brillo espejo.</p>
+      <div class="dos">
+        <div><b>Tradicional</b><span>Cobertura 100 %, reflejos estables y color duradero con solo un 1,5 % de amoniaco.</span></div>
+        <div><b>Orgánico</b><span>Sin amoniaco, textura gel con notas florales y nutrición extra para el cabello.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cofres">
+  <div class="wrap">
+    <div class="titulo">
+      <div class="eyebrow">Bodas, comuniones y eventos</div>
+      <h2>Nuestros <em>cofres</em> para tu gran día</h2>
+      <p>Packs pensados para que el día elegido todo fluya: con pruebas previas, para que lleguemos conociendo tus gustos.</p>
+    </div>
+    <div class="cofres">
+      <div class="cofre"><h3>Beauty Box</h3><div class="sub">Lo esencial</div>
+        <ul><li>Recogido el día del evento</li><li>Prueba de peluquería</li><li>Maquillaje el día del evento</li><li>Prueba de maquillaje</li></ul></div>
+      <div class="cofre destacado"><span class="tag">El más completo</span><h3>Luxury Box</h3><div class="sub">Todo incluido</div>
+        <ul><li>Recogido y maquillaje con pruebas</li><li>Manicura y pedicura</li><li>Depilación y diseño de cejas</li><li>Tratamiento hidratante del pelo</li><li>Tratamiento facial de luminosidad</li></ul></div>
+      <div class="cofre"><h3>Glamorous Box</h3><div class="sub">Con manos y pies</div>
+        <ul><li>Recogido y prueba</li><li>Maquillaje y prueba</li><li>Manicura</li><li>Pedicura</li></ul></div>
+    </div>
+    <p class="eventos">Bodas, comuniones, bautizos y celebraciones. Pregúntanos por tu fecha.</p>
+  </div>
+</section>
+
+<section class="sandra" id="sandra">
+  <div class="wrap grid">
+    <img src="/demos/signature/img/belleza.webp" alt="Retrato de belleza" loading="lazy">
+    <div>
+      <div class="eyebrow">Quién está detrás</div>
+      <h2 style="font-size:clamp(2.4rem,5vw,3.6rem);margin:12px 0 22px">Belleza, cosmética <em>y cuidado personal</em></h2>
+      <p>En Signature, bajo la dirección de Sandra Novoa, se unen la pasión por la belleza, la cosmética y el cuidado personal.</p>
+      <p>Con una trayectoria amplia y pluridisciplinar en el sector, ofrecemos servicios de vanguardia con una atención cercana y personalizada, para señora, caballero y también para los más pequeños.</p>
+      <div class="firma">Sandra Novoa</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="resumen">
+      <div class="nota">4,7</div>
+      <div><div class="estrellas" style="font-size:1.2rem">★★★★★</div><div style="color:var(--suave);font-size:.9rem">69 opiniones en Google</div></div>
+    </div>
+    <div class="ops">
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Profesionalidad, buenos precios, puntualidad y trato excelente.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Trato inmejorable y corte de pelo perfecto, justo lo que quería.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Sitio 100 % recomendable, tanto por la peluquería como por la estética.”</p><small>Opinión en Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="contacto" id="contacto">
+  <div class="wrap grid">
+    <div class="caja">
+      <h3>Pide tu cita</h3>
+      <p>Déjanos tus datos y te respondemos por WhatsApp.</p>
+      <form id="cita">
+        <label>Nombre<input name="nombre" required autocomplete="name"></label>
+        <label>Teléfono<input name="tel" type="tel" required autocomplete="tel"></label>
+        <label>Servicio
+          <select name="servicio">
+            <option>Corte femenino</option>
+            <option>Corte caballero</option>
+            <option>Color / mechas</option>
+            <option>Método curly</option>
+            <option>Tratamiento capilar</option>
+            <option>Estética / pestañas</option>
+            <option>Boda o evento (cofres)</option>
+          </select>
+        </label>
+        <button class="btn btn-cobre" type="submit">Enviar por WhatsApp</button>
+      </form>
+    </div>
+    <div class="caja">
+      <div class="fila"><h3>Dirección</h3><p>C/ Ingeniero la Cierva, 8, bajo · 26003 Logroño</p></div>
+      <div class="fila"><h3>Horario</h3>
+        <ul class="horario" id="horario">
+          <li data-d="1"><span>Lunes a miércoles</span><span>10:00–13:00 · 16:00–19:00</span></li>
+          <li data-d="4"><span>Jueves y viernes</span><span>9:00 – 21:00</span></li>
+          <li data-d="6"><span>Sábado y domingo</span><span>Cerrado</span></li>
+        </ul>
+      </div>
+      <div class="fila"><h3>Contacto</h3><p><a href="tel:+34632787757">632 78 77 57</a> · <a href="mailto:signature.estilista@gmail.com">signature.estilista@gmail.com</a><br><a href="https://www.instagram.com/signature_sn/" target="_blank" rel="noopener">@signature_sn</a></p></div>
+      <div class="mapa"><iframe title="Mapa: Signature, C/ Ingeniero la Cierva 8, Logroño" loading="lazy" src="https://maps.google.com/maps?q=Signature%20peluquer%C3%ADa%2C%20C.%20Ing.%20la%20Cierva%208%2C%20Logro%C3%B1o&z=16&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div><b style="color:#fff">Signature</b> · Sandra Novoa Estilista · Logroño</div>
+    <div><a href="https://www.instagram.com/signature_sn/" target="_blank" rel="noopener">Instagram</a></div>
+    <div style="opacity:.6">Propuesta de diseño · DaystartIA</div>
+  </div>
+</footer>
+
+<nav class="barra" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34632787757?text=Hola%20Sandra%2C%20quer%C3%ADa%20pedir%20cita" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Cita</a>
+  <a href="tel:+34632787757"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Llamar</a>
+  <a href="https://maps.google.com/?q=Signature+peluquer%C3%ADa+Ingeniero+la+Cierva+8+Logro%C3%B1o" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>Cómo llegar</a>
+</nav>
+
+<script>
+  const d = new Date().getDay();
+  const k = d >= 1 && d <= 3 ? 1 : (d === 4 || d === 5) ? 4 : 6;
+  document.querySelector(`#horario li[data-d="${k}"]`)?.classList.add('hoy');
+  document.getElementById('cita').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = new FormData(e.target);
+    const msg = `Hola Sandra, soy ${f.get('nombre')}. Me gustaría pedir cita para: ${f.get('servicio')}. Mi teléfono es ${f.get('tel')}.`;
+    window.open('https://wa.me/34632787757?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  });
+</script>
+</body>
+</html>
