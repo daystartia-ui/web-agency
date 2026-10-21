@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hermosilla Esteticistas · Centro médico-estético en Logroño</title>
+<meta name="description" content="Centro médico-estético en Logroño desde 2004. Tratamientos faciales y corporales, medicina estética, novias, cosmética oncológica y diagnóstico personalizado. Pide cita en el 627 90 07 28.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blanco:#fffdf9; --lino:#f6f0e7; --roble:#c9a27a; --roble-osc:#8d6a48; --oliva:#7d8a5a; --oliva-cl:#e9edde;
+    --tinta:#2a2621; --texto:#3c372f; --suave:#7b7266; --linea:#ebe2d5; --radio:22px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Jost,system-ui,sans-serif;background:var(--blanco);color:var(--texto);line-height:1.65;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.08;letter-spacing:-.015em;color:var(--tinta)}
+  em{font-style:italic;color:var(--roble-osc)}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  .eyebrow{font-size:.76rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--oliva)}
+  section{padding:100px 0}
+  .titulo{max-width:660px;margin-bottom:50px}
+  .titulo h2{font-size:clamp(2.3rem,5vw,3.6rem);margin-top:12px}
+  .titulo p{color:var(--suave);font-size:1.07rem;margin-top:14px;font-weight:300}
+
+  .demo{background:var(--tinta);color:#d8d0c4;font-size:.8rem;text-align:center;padding:7px 16px}
+  .demo b{color:#fff}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(255,253,249,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--linea)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+  .nav img{height:56px;width:auto;mix-blend-mode:multiply}
+  .menu{display:flex;gap:28px;list-style:none;font-size:.93rem}
+  .menu a{text-decoration:none;color:var(--suave)}
+  .menu a:hover{color:var(--tinta)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 26px;border-radius:999px;font-family:inherit;font-weight:500;font-size:.96rem;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-1px)}
+  .btn svg{width:18px;height:18px}
+  .btn-oliva{background:var(--oliva);color:#fff}
+  .btn-oliva:hover{background:#68744a}
+  .btn-linea{border:1px solid var(--roble-osc);color:var(--roble-osc)}
+
+  /* hero */
+  .hero{padding:50px 0 90px}
+  .hero .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(2.8rem,6.4vw,5.2rem);font-weight:300}
+  .hero .lead{font-size:1.15rem;font-weight:300;color:var(--suave);max-width:470px;margin:22px 0 32px}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .rating{display:inline-flex;align-items:center;gap:10px;font-size:.9rem;color:var(--suave);margin-bottom:20px}
+  .estrellas{color:#c49a4f;letter-spacing:2px}
+  .hero-fotos{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:520px}
+  .hero-fotos img{width:100%;height:100%;object-fit:cover;border-radius:var(--radio)}
+  .hero-fotos img:first-child{grid-row:span 2;border-radius:200px 200px var(--radio) var(--radio)}
+  .desde{display:flex;gap:30px;margin-top:38px;flex-wrap:wrap}
+  .desde div b{display:block;font-family:Fraunces,serif;font-size:2rem;font-weight:400;color:var(--tinta);line-height:1}
+  .desde div span{font-size:.85rem;color:var(--suave)}
+
+  /* servicios */
+  .serv-bg{background:var(--lino)}
+  .servs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .serv{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);padding:30px}
+  .serv .num{font-family:Fraunces,serif;font-style:italic;color:var(--roble);font-size:1.4rem}
+  .serv h3{font-size:1.7rem;margin:6px 0 10px}
+  .serv p{color:var(--suave);font-size:.96rem;font-weight:300}
+  .serv ul{list-style:none;margin-top:12px;display:grid;gap:5px}
+  .serv li{font-size:.9rem;color:var(--suave);display:flex;gap:8px}
+  .serv li::before{content:"·";color:var(--oliva);font-weight:700}
+
+  /* especiales */
+  .esp{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+  .esp div{background:var(--oliva-cl);border-radius:18px;padding:22px}
+  .esp b{display:block;font-family:Fraunces,serif;font-size:1.3rem;font-weight:400;color:var(--tinta);margin-bottom:4px}
+  .esp span{font-size:.88rem;color:#5f6745}
+
+  /* diagnóstico */
+  .diag .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+  .diag .foto img{width:100%;aspect-ratio:4/3.2;object-fit:cover;border-radius:var(--radio)}
+  .tecnos{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+  .tecnos span{border:1px solid var(--linea);border-radius:999px;padding:7px 14px;font-size:.86rem;color:var(--suave);background:#fff}
+
+  /* veronica */
+  .vero{background:var(--tinta);color:#e6ddd0}
+  .vero h2{color:#fff}
+  .vero .eyebrow{color:var(--roble)}
+  .vero .grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .vero .foto img{width:100%;border-radius:var(--radio);aspect-ratio:4/3;object-fit:cover}
+  .vero p{font-weight:300;opacity:.88;margin-bottom:16px}
+  .hitos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+  .hitos div{border-top:1px solid rgba(255,255,255,.25);padding-top:12px}
+  .hitos b{display:block;font-family:Fraunces,serif;font-size:2rem;font-weight:300;color:#fff;line-height:1}
+  .hitos span{font-size:.84rem;opacity:.7}
+
+  /* espacio */
+  .galeria{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .galeria img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:18px}
+
+  /* opiniones */
+  .resumen{display:flex;align-items:center;gap:22px;margin-bottom:38px;flex-wrap:wrap}
+  .resumen .nota{font-family:Fraunces,serif;font-size:4.8rem;font-weight:300;color:var(--roble-osc);line-height:.9}
+  .ops{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .op{background:var(--lino);border-radius:var(--radio);padding:30px}
+  .op p{font-family:Fraunces,serif;font-size:1.3rem;font-weight:300;line-height:1.35;margin:12px 0 14px;color:var(--tinta)}
+  .op small{color:var(--suave)}
+
+  /* contacto */
+  .contacto{background:var(--lino)}
+  .contacto .grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+  .caja{background:var(--blanco);border-radius:var(--radio);padding:34px;border:1px solid var(--linea)}
+  .caja h3{font-size:1.9rem;margin-bottom:4px}
+  .caja>p{color:var(--suave);margin-bottom:22px;font-weight:300}
+  form{display:grid;gap:14px}
+  label{font-size:.86rem;font-weight:500;display:grid;gap:6px}
+  input,select{font:inherit;font-weight:400;padding:13px 15px;border:1px solid var(--linea);border-radius:12px;background:#fff;color:var(--texto)}
+  input:focus,select:focus{outline:2px solid var(--oliva-cl);border-color:var(--oliva)}
+  .fila{padding:16px 0;border-bottom:1px solid var(--linea)}
+  .fila:last-of-type{border:0}
+  .fila h3{font-size:1.3rem;margin-bottom:2px}
+  .fila p{color:var(--suave)}
+  .fila a{color:var(--roble-osc);font-weight:500;text-decoration:none}
+  .horario{list-style:none;color:var(--suave)}
+  .horario li{display:flex;justify-content:space-between;max-width:320px}
+  .horario li.hoy{color:var(--oliva);font-weight:600}
+  .mapa{margin-top:16px;border-radius:18px;overflow:hidden;border:1px solid var(--linea)}
+  .mapa iframe{width:100%;height:230px;border:0;display:block}
+
+  footer{background:var(--tinta);color:#a99f92;padding:40px 0 110px;font-size:.88rem}
+  footer .grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  footer a{text-decoration:none}
+
+  .barra{display:none}
+
+  @media (max-width:980px){ .esp{grid-template-columns:1fr 1fr} .galeria{grid-template-columns:1fr 1fr} }
+  @media (max-width:900px){
+    .menu,.nav .btn{display:none}
+    .hero{padding:30px 0 70px}
+    .hero .grid,.diag .grid,.vero .grid,.contacto .grid{grid-template-columns:1fr;gap:40px}
+    .hero-fotos{height:380px}
+    .servs,.ops{grid-template-columns:1fr}
+    section{padding:74px 0}
+    .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--blanco);border-top:1px solid var(--linea);box-shadow:0 -6px 20px rgba(0,0,0,.06)}
+    .barra a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 12px;font-size:.75rem;font-weight:500;text-decoration:none;color:var(--texto)}
+    .barra a:first-child{background:var(--oliva);color:#fff}
+    .barra svg{width:20px;height:20px}
+  }
+  @media (max-width:520px){
+    .ctas{flex-direction:column}
+    .hero-fotos{height:300px}
+    .esp{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Propuesta de diseño</b> preparada por DaystartIA para Hermosilla Esteticistas · no es la web oficial</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#inicio"><img src="/demos/hermosilla/img/logo.png" alt="Hermosilla Esteticistas"></a>
+    <ul class="menu">
+      <li><a href="#tratamientos">Tratamientos</a></li>
+      <li><a href="#diagnostico">Diagnóstico</a></li>
+      <li><a href="#nosotras">Nosotras</a></li>
+      <li><a href="https://hermosillaesteticistastheshop.com/es/" target="_blank" rel="noopener">Tienda</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a class="btn btn-oliva" href="#contacto">Pedir cita</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap grid">
+    <div>
+      <div class="rating"><span class="estrellas">★★★★★</span> 4,9 en Google · 79 opiniones</div>
+      <div class="eyebrow">Centro médico-estético en Logroño</div>
+      <h1 style="margin-top:14px">Tu piel, <em>en las mejores manos</em> desde 2004.</h1>
+      <p class="lead">Estética avanzada, medicina estética y un plan de cuidados hecho para ti, con diagnóstico personalizado y seguimiento en cada paso.</p>
+      <div class="ctas">
+        <a class="btn btn-oliva" href="https://wa.me/34627900728?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20cita" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+          Pedir cita por WhatsApp
+        </a>
+        <a class="btn btn-linea" href="tel:+34627900728">627 90 07 28</a>
+      </div>
+      <div class="desde">
+        <div><b>+20 años</b><span>cuidando pieles</span></div>
+        <div><b>+40 novias</b><span>maquilladas cada año</span></div>
+      </div>
+    </div>
+    <div class="hero-fotos">
+      <img src="/demos/hermosilla/img/local.webp" alt="Interior del centro Hermosilla Esteticistas">
+      <img src="/demos/hermosilla/img/espejo.webp" alt="Tocador con espejo iluminado" loading="lazy">
+      <img src="/demos/hermosilla/img/cabina.webp" alt="Cabina de tratamientos" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="serv-bg" id="tratamientos">
+  <div class="wrap">
+    <div class="titulo">
+      <div class="eyebrow">Tratamientos</div>
+      <h2>Estética integral, <em>de la piel al bienestar</em></h2>
+      <p>Cada piel es distinta. Por eso empezamos siempre con un diagnóstico y te proponemos un programa de cuidados con su mantenimiento.</p>
+    </div>
+    <div class="servs">
+      <article class="serv"><span class="num">01</span><h3>Faciales</h3><p>Especialistas en pieles con rosácea, dermatitis, acné o manchas.</p>
+        <ul><li>Hydrafacial</li><li>Luz pulsada (IPL)</li><li>Radiofrecuencia facial</li><li>Programas para ojos y doble mentón</li></ul></article>
+      <article class="serv"><span class="num">02</span><h3>Corporales</h3><p>Remodelación corporal con tecnología y rituales de bienestar.</p>
+        <ul><li>Diagnóstico corporal Termo Pro</li><li>Anticelulíticos y reafirmantes</li><li>Drenaje y presoterapia</li><li>Masajes, exfoliaciones y envolturas</li></ul></article>
+      <article class="serv"><span class="num">03</span><h3>Medicina estética</h3><p>Médicos con años de experiencia para completar tu tratamiento.</p>
+        <ul><li>Ácido hialurónico</li><li>Labios, ojeras y pómulos</li><li>Estimulación de colágeno</li><li>Relleno de arrugas</li></ul></article>
+      <article class="serv"><span class="num">04</span><h3>Maquillaje</h3><p>Maquillaje para eventos y cursos de automaquillaje.</p></article>
+      <article class="serv"><span class="num">05</span><h3>Manos, pies y pestañas</h3><p>Los cuidados esenciales, con el mismo mimo que el resto.</p></article>
+      <article class="serv"><span class="num">06</span><h3>Nutrición y nutricosmética</h3><p>Porque la piel también se cuida por dentro.</p></article>
+    </div>
+    <div class="esp">
+      <div><b>Novias</b><span>Especialistas desde 2008, con plan de piel previo a la boda.</span></div>
+      <div><b>Cosmética oncológica</b><span>Apoyo y cuidados adaptados durante el tratamiento.</span></div>
+      <div><b>Embarazadas</b><span>Tratamientos seguros para cada etapa.</span></div>
+      <div><b>Niños y hombres</b><span>Cuidados pensados para ellos.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="diag" id="diagnostico">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow">Diagnóstico</div>
+      <h2 style="font-size:clamp(2.3rem,5vw,3.6rem);margin:12px 0 18px">Antes de tratar, <em>entendemos tu piel</em></h2>
+      <p style="color:var(--suave);font-weight:300;font-size:1.06rem">Analizamos tu piel con Mirror Pro y tu cuerpo con Blackview Termo Pro para saber exactamente qué necesitas. Puedes hacerlo en el centro o pedir asesoramiento online.</p>
+      <div class="tecnos"><span>Mirror Pro</span><span>Blackview Termo Pro</span><span>Hydrafacial</span><span>IPL</span><span>LPG Endermologie</span><span>Titans</span></div>
+      <div class="ctas" style="margin-top:28px"><a class="btn btn-oliva" href="#contacto">Pedir mi diagnóstico</a></div>
+    </div>
+    <div class="foto"><img src="/demos/hermosilla/img/gabinetes.webp" alt="Gabinetes de tratamiento del centro" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="vero" id="nosotras">
+  <div class="wrap grid">
+    <div class="foto"><img src="/demos/hermosilla/img/equipo.webp" alt="El equipo de Hermosilla Esteticistas en el centro" loading="lazy"></div>
+    <div>
+      <div class="eyebrow">Nosotras</div>
+      <h2 style="font-size:clamp(2.3rem,5vw,3.6rem);margin:12px 0 22px">Verónica Hermosilla <em style="color:var(--roble)">y su equipo</em></h2>
+      <p>Hermosilla Esteticistas nace en 2004 de la mano de Verónica Hermosilla, técnico en estética, especialista en el cuidado de la piel facial y en maquillaje.</p>
+      <p>En 2016 completa un Máster en formulación cosmética y dermofarmacia por la UNIR, y en 2024 abrimos nuestro nuevo centro en la calle Duques de Nájera.</p>
+      <div class="hitos">
+        <div><b>2004</b><span>Nace Hermosilla</span></div>
+        <div><b>2016</b><span>Máster en dermofarmacia</span></div>
+        <div><b>2024</b><span>Nuevo centro</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="titulo">
+      <div class="eyebrow">El centro</div>
+      <h2>Un espacio pensado <em>para desconectar</em></h2>
+    </div>
+    <div class="galeria">
+      <img src="/demos/hermosilla/img/recepcion.webp" alt="Recepción" loading="lazy">
+      <img src="/demos/hermosilla/img/tocador.webp" alt="Zona de maquillaje" loading="lazy">
+      <img src="/demos/hermosilla/img/cabina2.webp" alt="Cabina con ducha" loading="lazy">
+      <img src="/demos/hermosilla/img/espejo.webp" alt="Espejo iluminado" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="resumen">
+      <div class="nota">4,9</div>
+      <div><div class="estrellas" style="font-size:1.3rem">★★★★★</div><div style="color:var(--suave)">79 opiniones en Google</div></div>
+    </div>
+    <div class="ops">
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Trato exquisito y un 10 en profesionalidad.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Me han tratado a fondo mi problema de acné y el rejuvenecimiento de mi piel. Son un equipo 5 estrellas.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Servicio muy profesional, atención exquisita, recomendable 100 %.”</p><small>Opinión en Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="contacto" id="contacto">
+  <div class="wrap grid">
+    <div class="caja">
+      <h3>Pide tu cita</h3>
+      <p>Déjanos tus datos y te escribimos para encontrar el mejor hueco.</p>
+      <form id="cita">
+        <label>Nombre<input name="nombre" required autocomplete="name"></label>
+        <label>Teléfono<input name="tel" type="tel" required autocomplete="tel"></label>
+        <label>¿Qué te interesa?
+          <select name="motivo">
+            <option>Diagnóstico facial o corporal</option>
+            <option>Tratamiento facial</option>
+            <option>Tratamiento corporal</option>
+            <option>Medicina estética</option>
+            <option>Maquillaje / novias</option>
+            <option>Cosmética oncológica</option>
+            <option>Otro</option>
+          </select>
+        </label>
+        <button class="btn btn-oliva" type="submit">Enviar por WhatsApp</button>
+      </form>
+    </div>
+    <div class="caja">
+      <div class="fila"><h3>Dirección</h3><p>C/ Duques de Nájera, 92 · 26005 Logroño</p></div>
+      <div class="fila"><h3>Horario</h3>
+        <ul class="horario" id="horario">
+          <li data-d="2"><span>Martes a viernes</span><span>10:00 – 19:00</span></li>
+          <li data-d="6"><span>Sábado</span><span>9:00 – 13:00</span></li>
+          <li data-d="0"><span>Domingo y lunes</span><span>Cerrado</span></li>
+        </ul>
+      </div>
+      <div class="fila"><h3>Contacto</h3><p><a href="tel:+34627900728">627 90 07 28</a> · <a href="mailto:hermosillaesteticistas@gmail.com">hermosillaesteticistas@gmail.com</a></p></div>
+      <div class="mapa"><iframe title="Mapa: Hermosilla Esteticistas, C/ Duques de Nájera 92, Logroño" loading="lazy" src="https://maps.google.com/maps?q=Hermosilla%20Esteticistas%2C%20C.%20Duques%20de%20N%C3%A1jera%2092%2C%20Logro%C3%B1o&z=16&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div><b style="color:#fff">Hermosilla Esteticistas</b> · Centro médico-estético · Logroño</div>
+    <div><a href="https://hermosillaesteticistastheshop.com/es/" target="_blank" rel="noopener">Tienda online</a></div>
+    <div style="opacity:.6">Propuesta de diseño · DaystartIA</div>
+  </div>
+</footer>
+
+<nav class="barra" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34627900728?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20cita" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Cita</a>
+  <a href="tel:+34627900728"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Llamar</a>
+  <a href="https://maps.google.com/?q=Hermosilla+Esteticistas+Logro%C3%B1o" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>Cómo llegar</a>
+</nav>
+
+<script>
+  const d = new Date().getDay();
+  document.querySelector(`#horario li[data-d="${d >= 2 && d <= 5 ? 2 : d === 1 ? 0 : d}"]`)?.classList.add('hoy');
+  // Demo: el formulario abre WhatsApp con los datos ya escritos
+  document.getElementById('cita').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = new FormData(e.target);
+    const msg = `Hola, soy ${f.get('nombre')}. Me interesa: ${f.get('motivo')}. Mi teléfono es ${f.get('tel')}.`;
+    window.open('https://wa.me/34627900728?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  });
+</script>
+</body>
+</html>
