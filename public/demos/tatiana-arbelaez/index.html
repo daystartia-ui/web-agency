@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tatiana Arbelaez Beauty Studio · Micropigmentación, cejas y pestañas en Logroño</title>
+<meta name="description" content="Tatiana Arbelaez Beauty Studio, en la Avenida Club Deportivo 48 de Logroño. Micropigmentación de cejas, labios y ojos, lifting de pestañas, laminado de cejas y tratamientos faciales. Tel. 643 16 69 79.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --nude:#f5ece6; --nude2:#ead9cf; --rosa:#c9897a; --rosa-osc:#a86656; --carbon:#1e1a1a; --gris:#2c2626; --texto:#3b3331; --suave:#86766f; --linea:#e3d3c9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Outfit,system-ui,sans-serif;font-weight:400;background:var(--nude);color:var(--texto);line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  h1,h2,h3{font-family:Italiana,Georgia,serif;font-weight:400;line-height:1.05;color:var(--carbon);letter-spacing:.01em}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  .eyebrow{display:inline-block;font-size:.74rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--rosa-osc)}
+  section{padding:100px 0}
+  .titulo{text-align:center;max-width:640px;margin:0 auto 54px}
+  .titulo h2{font-size:clamp(2.6rem,6vw,4.4rem);margin-top:12px}
+  .titulo p{color:var(--suave);margin-top:14px;font-size:1.05rem;font-weight:300}
+
+  .demo{background:var(--carbon);color:#cdbfb8;font-size:.8rem;text-align:center;padding:7px 16px}
+  .demo b{color:#fff;font-weight:600}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(245,236,230,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--linea)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+  .marca{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+  .marca b{font-family:Italiana,serif;font-weight:400;font-size:1.7rem;color:var(--carbon)}
+  .marca small{font-size:.62rem;letter-spacing:.42em;text-transform:uppercase;color:var(--rosa-osc);margin-top:5px}
+  .menu{display:flex;gap:30px;list-style:none;font-size:.88rem;letter-spacing:.06em}
+  .menu a{text-decoration:none;color:var(--suave)}
+  .menu a:hover{color:var(--rosa-osc)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 30px;font-family:inherit;font-weight:500;font-size:.88rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s,color .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:18px;height:18px}
+  .btn-carbon{background:var(--carbon);color:#fff}
+  .btn-carbon:hover{background:var(--rosa-osc)}
+  .btn-linea{border:1px solid var(--carbon);color:var(--carbon)}
+  .btn-linea:hover{background:var(--carbon);color:#fff}
+
+  /* hero */
+  .hero{padding:80px 0 100px;overflow:hidden}
+  .hero .grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:60px;align-items:center}
+  .hero h1{font-size:clamp(3.2rem,7.4vw,6rem);margin-top:18px}
+  .hero h1 i{font-style:normal;color:var(--rosa-osc)}
+  .hero .lead{font-size:1.15rem;color:var(--suave);max-width:500px;margin:24px 0 34px;font-weight:300}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .firma{display:flex;align-items:center;gap:16px;margin-top:38px}
+  .firma .nota{font-family:Italiana,serif;font-size:3rem;line-height:1;color:var(--carbon)}
+  .firma small{color:var(--suave);display:block}
+  .estrellas{color:#c79a3e;letter-spacing:2px}
+  .marco{position:relative;aspect-ratio:4/5;background:linear-gradient(160deg,var(--nude2),#dcc2b5);border-radius:220px 220px 0 0;display:grid;place-items:center}
+  .marco::before{content:"";position:absolute;inset:18px;border:1px solid rgba(30,26,26,.25);border-radius:200px 200px 0 0}
+  .marco svg{width:58%;color:var(--carbon);opacity:.85}
+  .marco .sello{position:absolute;bottom:-26px;left:50%;transform:translateX(-50%);background:var(--carbon);color:#fff;padding:16px 26px;white-space:nowrap;text-align:center}
+  .marco .sello small{display:block;font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:#d9b3a8}
+  .estado{display:flex;align-items:center;justify-content:center;gap:9px;font-size:.95rem}
+  .punto{width:9px;height:9px;border-radius:50%;background:#4ade80}
+  .punto.cerrado{background:#f87171}
+
+  /* especialidad */
+  .especial{background:var(--carbon);color:#d9cbc4}
+  .especial .titulo h2{color:#fff}
+  .especial .titulo .eyebrow{color:#d9b3a8}
+  .especial .titulo p{color:#b3a39c}
+  .zonas{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.12)}
+  .zona{background:var(--carbon);padding:44px 34px;text-align:center}
+  .zona .n{font-family:Italiana,serif;font-size:3.6rem;line-height:1;color:#d9b3a8}
+  .zona h3{color:#fff;font-size:2rem;margin:14px 0 10px}
+  .zona p{color:#b3a39c;font-weight:300}
+
+  /* carta */
+  .carta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 60px;max-width:900px;margin:0 auto}
+  .item{display:flex;align-items:baseline;gap:12px;padding:16px 0;border-bottom:1px solid var(--linea)}
+  .item b{font-weight:500;font-size:1.05rem;color:var(--carbon)}
+  .item span{flex:1;border-bottom:1px dotted var(--suave);transform:translateY(-4px);opacity:.5}
+  .item em{font-style:normal;color:var(--rosa-osc);font-weight:500;white-space:nowrap}
+  .orient{text-align:center;color:var(--suave);font-size:.88rem;margin-top:26px}
+
+  /* opiniones */
+  .opiniones{background:var(--nude2)}
+  .ops{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .op{background:var(--nude);padding:34px 30px;position:relative}
+  .op::before{content:"“";position:absolute;top:6px;right:22px;font-family:Italiana,serif;font-size:5rem;line-height:1;color:var(--rosa);opacity:.4}
+  .op p{font-size:1.08rem;margin:12px 0 16px;font-weight:300;color:var(--carbon)}
+  .op small{color:var(--suave);letter-spacing:.08em}
+
+  /* visita */
+  .visita .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:50px}
+  .visita h2{font-size:clamp(2.4rem,5vw,3.6rem);margin-top:12px}
+  .horario{list-style:none;margin-top:26px}
+  .horario li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--linea)}
+  .horario li span:last-child{color:var(--suave);text-align:right}
+  .horario li.hoy span{color:var(--rosa-osc);font-weight:500}
+  .info{margin-top:24px;display:grid;gap:8px}
+  .info a{color:var(--rosa-osc);font-weight:500;text-decoration:none}
+  .mapa{min-height:440px;border:1px solid var(--linea)}
+  .mapa iframe{width:100%;height:100%;min-height:440px;border:0;display:block;filter:sepia(.15)}
+
+  footer{background:var(--carbon);color:#b3a39c;padding:40px 0 110px;font-size:.88rem;text-align:center}
+  footer b{font-family:Italiana,serif;font-weight:400;font-size:1.5rem;color:#fff;display:block;margin-bottom:6px}
+
+  .barra{display:none}
+
+  @media (max-width:900px){
+    .menu,.nav .btn{display:none}
+    .hero{padding:50px 0 90px}
+    .hero .grid,.visita .grid{grid-template-columns:minmax(0,1fr);gap:56px}
+    .marco{max-width:340px;width:100%;margin:0 auto}
+    .zonas,.ops{grid-template-columns:minmax(0,1fr)}
+    .carta{grid-template-columns:minmax(0,1fr)}
+    section{padding:74px 0}
+    .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--nude);border-top:1px solid var(--linea)}
+    .barra a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 12px;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--carbon)}
+    .barra a:first-child{background:var(--carbon);color:#fff}
+    .barra svg{width:20px;height:20px}
+  }
+  @media (max-width:520px){ .ctas{flex-direction:column} .marco .sello{padding:14px 18px} }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Propuesta de diseño</b> preparada por DaystartIA para Tatiana Arbelaez Beauty Studio · no es la web oficial</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="marca" href="#inicio"><b>Tatiana Arbelaez</b><small>Beauty Studio</small></a>
+    <ul class="menu">
+      <li><a href="#micropigmentacion">Micropigmentación</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#visitanos">Contacto</a></li>
+    </ul>
+    <a class="btn btn-carbon" href="https://wa.me/34643166979?text=Hola%20Tatiana%2C%20quer%C3%ADa%20pedir%20cita" target="_blank" rel="noopener">Reservar</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Micropigmentación · Logroño</span>
+      <h1>Realza tu mirada <i>sin perder tu esencia</i>.</h1>
+      <p class="lead">Soy Tatiana Arbelaez, especialista en micropigmentación natural de cejas, labios y ojos. También lifting de pestañas, laminado de cejas y tratamientos faciales, con técnicas personalizadas para ti.</p>
+      <div class="ctas">
+        <a class="btn btn-carbon" href="https://wa.me/34643166979?text=Hola%20Tatiana%2C%20quer%C3%ADa%20pedir%20cita" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+          Cita por WhatsApp
+        </a>
+        <a class="btn btn-linea" href="#servicios">Ver servicios</a>
+      </div>
+      <div class="firma">
+        <div class="nota">4,9</div>
+        <div><span class="estrellas">★★★★★</span><small>91 opiniones en Google</small></div>
+      </div>
+    </div>
+    <div class="marco">
+      <svg viewBox="0 0 200 120" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+        <path d="M20 36c30-22 90-30 160-6"/>
+        <path d="M30 78c40-34 100-34 140 0"/>
+        <path d="M30 78c40 30 100 30 140 0"/>
+        <circle cx="100" cy="78" r="17"/>
+        <circle cx="100" cy="78" r="6" fill="currentColor"/>
+        <path d="M50 70l-8-12M70 61l-4-14M100 58v-15M130 61l4-14M150 70l8-12"/>
+      </svg>
+      <div class="sello"><small>Beauty Studio</small><div class="estado" id="estado"><span class="punto"></span><span>Consultando…</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="especial" id="micropigmentacion">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">Mi especialidad</span>
+      <h2>Micropigmentación natural</h2>
+      <p>Resultados delicados que respetan tus rasgos. Antes de empezar, estudiamos juntas tu rostro para diseñar lo que mejor te favorece.</p>
+    </div>
+    <div class="zonas">
+      <div class="zona"><div class="n">I</div><h3>Cejas</h3><p>Cejas definidas y naturales, diseñadas a la medida de tu rostro.</p></div>
+      <div class="zona"><div class="n">II</div><h3>Labios</h3><p>Color y definición para unos labios con un aspecto fresco y natural.</p></div>
+      <div class="zona"><div class="n">III</div><h3>Ojos</h3><p>Una mirada más intensa, sin tener que maquillarte cada día.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">Servicios</span>
+      <h2>Mirada, rostro y piel</h2>
+    </div>
+    <div class="carta">
+      <div class="item"><b>Lifting y extensiones de pestañas</b><span></span><em>desde 35 €</em></div>
+      <div class="item"><b>Laminado de cejas</b><span></span><em>consultar</em></div>
+      <div class="item"><b>Diseño y depilación de cejas</b><span></span><em>desde 15 €</em></div>
+      <div class="item"><b>Tratamientos faciales</b><span></span><em>desde 35 €</em></div>
+      <div class="item"><b>Depilación</b><span></span><em>desde 4 €</em></div>
+      <div class="item"><b>Micropigmentación de cejas</b><span></span><em>consultar</em></div>
+      <div class="item"><b>Micropigmentación de labios y ojos</b><span></span><em>consultar</em></div>
+    </div>
+    <p class="orient">Precios orientativos según su ficha de reservas online. Te confirmamos el precio exacto al pedir cita.</p>
+  </div>
+</section>
+
+<section class="opiniones" id="opiniones">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">Opiniones</span>
+      <h2>Lo que dicen mis clientas</h2>
+    </div>
+    <div class="ops">
+      <div class="op"><span class="estrellas">★★★★★</span><p>Súper recomendada, las cejas me quedaron como las imaginé y la atención de 10 ❤️</p><small>OPINIÓN EN GOOGLE</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>Tatiana es encantadora y una súper profesional, me hizo el lifting de pestañas y quedó increíble. Tiene mucha delicadeza a la hora de trabajar.</p><small>OPINIÓN EN GOOGLE</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>El trato fue muy amable y profesional, el ambiente agradable y cuidado.</p><small>OPINIÓN EN GOOGLE</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visitanos">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Visítanos</span>
+      <h2>Av. Club Deportivo, 48</h2>
+      <ul class="horario" id="horario">
+        <li data-d="1"><span>Lunes</span><span>9:00 – 20:00</span></li>
+        <li data-d="2"><span>Martes</span><span>10:00 – 14:00 · 17:30 – 20:00</span></li>
+        <li data-d="3"><span>Miércoles</span><span>10:00 – 14:00 · 17:00 – 19:30</span></li>
+        <li data-d="4"><span>Jueves</span><span>10:00 – 14:00 · 17:30 – 20:00</span></li>
+        <li data-d="5"><span>Viernes</span><span>10:00 – 14:00 · 17:00 – 19:30</span></li>
+        <li data-d="6"><span>Sábado</span><span>10:00 – 14:00</span></li>
+        <li data-d="0"><span>Domingo</span><span>Cerrado</span></li>
+      </ul>
+      <div class="info">
+        <div>📍 Av. Club Deportivo, 48, local · 26007 Logroño</div>
+        <div>📞 <a href="tel:+34643166979">643 16 69 79</a> · también por WhatsApp</div>
+        <div>📷 @tatiana.microart</div>
+      </div>
+    </div>
+    <div class="mapa"><iframe title="Mapa: Tatiana Arbelaez Beauty Studio, Av. Club Deportivo 48, Logroño" loading="lazy" src="https://maps.google.com/maps?q=Tatiana%20Arbelaez%2C%20Av.%20Club%20Deportivo%2048%2C%20Logro%C3%B1o&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>Tatiana Arbelaez · Beauty Studio</b>
+    Av. Club Deportivo, 48 · Logroño · 643 16 69 79<br><span style="opacity:.6">Propuesta de diseño · DaystartIA</span>
+  </div>
+</footer>
+
+<nav class="barra" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34643166979?text=Hola%20Tatiana%2C%20quer%C3%ADa%20pedir%20cita" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Cita</a>
+  <a href="tel:+34643166979"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Llamar</a>
+  <a href="https://maps.google.com/?q=Tatiana+Arbelaez+Av.+Club+Deportivo+48+Logro%C3%B1o" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>Cómo llegar</a>
+</nav>
+
+<script>
+  const ahora = new Date(), d = ahora.getDay(), m = ahora.getHours() * 60 + ahora.getMinutes();
+  const tramos = {1:[[540,1200]],2:[[600,840],[1050,1200]],3:[[600,840],[1020,1170]],4:[[600,840],[1050,1200]],5:[[600,840],[1020,1170]],6:[[600,840]],0:[]};
+  const abierto = tramos[d].some(([a,b]) => m >= a && m < b);
+  const e = document.getElementById('estado');
+  e.querySelector('.punto').classList.toggle('cerrado', !abierto);
+  e.lastElementChild.textContent = abierto ? 'Abierto ahora' : 'Cerrado ahora';
+  document.querySelector(`#horario li[data-d="${d}"]`)?.classList.add('hoy');
+</script>
+</body>
+</html>
