@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ana Pérez Rego · Fisioterapia y osteopatía en Logroño</title>
+<meta name="description" content="Clínica de Fisioterapia y Osteopatía Ana Pérez Rego, en la calle Pintor Rosales 3 de Logroño. Más de 20 años de experiencia en fisioterapia, osteopatía, rehabilitación y fisioterapia deportiva. Tel. 659 78 91 14.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --azul:#1f5fae; --azul-osc:#173f73; --azul-cl:#e8f0fb; --mostaza:#f2b33d; --mostaza-cl:#fdf3de; --fondo:#f8fafc; --tinta:#13213a; --suave:#5c6880; --linea:#e1e7f0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;background:var(--fondo);color:var(--tinta);line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  h1,h2,h3{font-weight:800;line-height:1.08;letter-spacing:-.025em;color:var(--tinta)}
+  h1 span,h2 span{color:var(--azul)}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  .eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--azul);background:var(--azul-cl);padding:6px 12px;border-radius:8px}
+  section{padding:96px 0}
+  .titulo{max-width:640px;margin-bottom:44px}
+  .titulo h2{font-size:clamp(2.1rem,4.6vw,3.2rem);margin-top:14px}
+  .titulo p{color:var(--suave);margin-top:12px;font-size:1.05rem}
+
+  .demo{background:var(--tinta);color:#c6d0e0;font-size:.8rem;text-align:center;padding:7px 16px}
+  .demo b{color:#fff}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(248,250,252,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--linea)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+  .marca{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .marca .logo{width:42px;height:42px;border-radius:12px;background:var(--azul);color:#fff;display:grid;place-items:center;font-weight:800}
+  .marca b{display:block;font-size:1.08rem;line-height:1.1}
+  .marca small{display:block;font-size:.74rem;color:var(--suave)}
+  .menu{display:flex;gap:28px;list-style:none;font-weight:600;font-size:.93rem}
+  .menu a{text-decoration:none;color:var(--suave)}
+  .menu a:hover{color:var(--azul)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:12px;font-family:inherit;font-weight:700;font-size:1rem;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:19px;height:19px}
+  .btn-azul{background:var(--azul);color:#fff}
+  .btn-azul:hover{background:var(--azul-osc)}
+  .btn-blanco{background:#fff;color:var(--azul);border:2px solid var(--linea)}
+
+  /* hero */
+  .hero{padding:70px 0 90px}
+  .hero .grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:54px;align-items:center}
+  .hero h1{font-size:clamp(2.7rem,6.2vw,4.8rem);margin-top:16px}
+  .hero .lead{font-size:1.15rem;color:var(--suave);max-width:520px;margin:20px 0 30px}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .sellos{display:flex;flex-wrap:wrap;gap:26px;margin-top:34px}
+  .sellos div b{display:block;font-size:2rem;color:var(--azul);line-height:1}
+  .sellos div span{color:var(--suave);font-size:.9rem;font-weight:600}
+  .estrellas{color:var(--mostaza);letter-spacing:2px}
+  .panel{background:var(--azul);color:#dbe7f8;border-radius:28px;padding:32px;position:relative;overflow:hidden}
+  .panel::before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;border:40px solid rgba(255,255,255,.07);right:-90px;bottom:-90px}
+  .panel h3{color:#fff;font-size:1.5rem}
+  .panel p{margin-top:8px}
+  .cuerpo{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:20px;position:relative;z-index:1}
+  .cuerpo span{background:rgba(255,255,255,.1);border-radius:12px;padding:10px 12px;font-weight:600;font-size:.92rem}
+  .estado{display:flex;align-items:center;gap:10px;margin-top:20px;font-weight:700;color:#fff;position:relative;z-index:1}
+  .punto{width:10px;height:10px;border-radius:50%;background:#4ade80;flex:none}
+  .punto.cerrado{background:#f87171}
+
+  /* tratamientos */
+  .trats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .trat{background:#fff;border:1px solid var(--linea);border-radius:22px;padding:28px;transition:border-color .2s,transform .2s}
+  .trat:hover{border-color:var(--azul);transform:translateY(-3px)}
+  .trat .ico{width:50px;height:50px;border-radius:14px;background:var(--azul-cl);display:grid;place-items:center;font-size:1.5rem}
+  .trat h3{font-size:1.25rem;margin:16px 0 6px}
+  .trat p{color:var(--suave);font-size:.96rem}
+
+  /* dolencias */
+  .dolencias{background:var(--azul-osc);color:#cbd8ec}
+  .dolencias .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+  .dolencias h2{color:#fff;font-size:clamp(2.1rem,4.6vw,3.2rem);margin-top:14px}
+  .dolencias h2 span{color:var(--mostaza)}
+  .dolencias .eyebrow{background:rgba(255,255,255,.1);color:var(--mostaza)}
+  .dolencias p{margin-top:16px;font-size:1.08rem}
+  .lista{display:flex;flex-wrap:wrap;gap:10px}
+  .lista span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:10px 16px;font-weight:600;color:#fff}
+  .orient{margin-top:18px;font-size:.88rem;color:#9fb1cd}
+
+  /* sobre */
+  .sobre .grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:56px;align-items:center}
+  .retrato{aspect-ratio:1;max-width:360px;width:100%;border-radius:32px;background:linear-gradient(140deg,var(--azul-cl),var(--mostaza-cl));display:grid;place-items:center;font-size:6rem;font-weight:800;color:var(--azul);margin:0 auto;position:relative}
+  .retrato small{position:absolute;bottom:18px;left:18px;right:18px;background:#fff;border-radius:16px;padding:12px 16px;font-size:.9rem;color:var(--tinta);text-align:center;font-weight:700}
+  .sobre p{font-size:1.08rem;margin-top:16px;color:var(--suave)}
+
+  /* opiniones */
+  .opiniones{background:var(--mostaza-cl)}
+  .ops{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .op{background:#fff;border-radius:22px;padding:28px}
+  .op p{font-size:1.08rem;font-weight:600;margin:12px 0 14px}
+  .op small{color:var(--suave)}
+
+  /* visita */
+  .visita .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:44px}
+  .visita h2{font-size:clamp(2.1rem,4.4vw,3rem);margin-top:14px}
+  .horario{list-style:none;margin-top:22px;background:#fff;border:1px solid var(--linea);border-radius:18px;padding:6px 20px}
+  .horario li{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid var(--linea);font-weight:600}
+  .horario li:last-child{border:0}
+  .horario li span:last-child{color:var(--suave);text-align:right}
+  .horario li.hoy span{color:var(--azul);font-weight:800}
+  .info{margin-top:20px;display:grid;gap:8px;font-weight:600}
+  .info a{color:var(--azul);font-weight:800;text-decoration:none}
+  .mapa{border-radius:24px;overflow:hidden;border:1px solid var(--linea);min-height:420px}
+  .mapa iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+  footer{background:var(--tinta);color:#a3b0c5;padding:38px 0 110px;font-size:.9rem}
+  footer .grid{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+
+  .barra{display:none}
+
+  @media (max-width:980px){ .trats{grid-template-columns:1fr 1fr} }
+  @media (max-width:900px){
+    .menu,.nav .btn{display:none}
+    .hero{padding:46px 0 70px}
+    .hero .grid,.dolencias .grid,.sobre .grid,.visita .grid{grid-template-columns:minmax(0,1fr);gap:38px}
+    .ops{grid-template-columns:minmax(0,1fr)}
+    section{padding:72px 0}
+    .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:60;background:#fff;border-top:1px solid var(--linea)}
+    .barra a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 12px;font-size:.76rem;font-weight:700;text-decoration:none;color:var(--azul)}
+    .barra a:first-child{background:var(--azul);color:#fff}
+    .barra svg{width:20px;height:20px}
+  }
+  @media (max-width:520px){ .ctas{flex-direction:column} .trats{grid-template-columns:minmax(0,1fr)} .marca b{font-size:.98rem} }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Propuesta de diseño</b> preparada por DaystartIA para la Clínica de Fisioterapia y Osteopatía Ana Pérez Rego · no es la web oficial</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="marca" href="#inicio"><span class="logo">AP</span><span><b>Ana Pérez Rego</b><small>Fisioterapia y osteopatía</small></span></a>
+    <ul class="menu">
+      <li><a href="#tratamientos">Tratamientos</a></li>
+      <li><a href="#sobre-ana">Sobre Ana</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#visitanos">Horario</a></li>
+    </ul>
+    <a class="btn btn-azul" href="tel:+34659789114">Pedir cita</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Fisioterapia · Osteopatía · Logroño</span>
+      <h1>Te ayudamos a <span>moverte mejor</span>.</h1>
+      <p class="lead">Más de 20 años tratando lesiones y dolores musculares en pleno centro de Logroño. Fisioterapia, osteopatía, rehabilitación y fisioterapia deportiva con un trato cercano.</p>
+      <div class="ctas">
+        <a class="btn btn-azul" href="tel:+34659789114">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Llamar · 659 78 91 14
+        </a>
+        <a class="btn btn-blanco" href="https://wa.me/34659789114?text=Hola%20Ana%2C%20quer%C3%ADa%20pedir%20cita" target="_blank" rel="noopener">Cita por WhatsApp</a>
+      </div>
+      <div class="sellos">
+        <div><b>+20</b><span>años de experiencia</span></div>
+        <div><b>5,0</b><span><span class="estrellas">★★★★★</span> en Google</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>¿Dónde te duele?</h3>
+      <p>Cuéntanos qué te pasa y te decimos cómo podemos ayudarte.</p>
+      <div class="cuerpo">
+        <span>Cuello y espalda</span><span>Hombro</span><span>Muñeca y mano</span><span>Rodilla</span><span>Tobillo</span><span>Lesiones deportivas</span>
+      </div>
+      <div class="estado" id="estado"><span class="punto"></span><span>Consultando…</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="tratamientos" style="padding-top:10px">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">Tratamientos</span>
+      <h2>Lo que hacemos <span>por ti</span></h2>
+      <p>Valoramos tu caso y elegimos el tratamiento que mejor se adapta a ti.</p>
+    </div>
+    <div class="trats">
+      <div class="trat"><div class="ico">🤲</div><h3>Fisioterapia</h3><p>Tratamiento de contracturas, dolores musculares y articulares.</p></div>
+      <div class="trat"><div class="ico">🦴</div><h3>Osteopatía</h3><p>Un enfoque global del cuerpo para tratar el origen del dolor.</p></div>
+      <div class="trat"><div class="ico">🔄</div><h3>Rehabilitación</h3><p>Recuperación tras lesiones, esguinces o intervenciones.</p></div>
+      <div class="trat"><div class="ico">🏃‍♀️</div><h3>Fisioterapia deportiva</h3><p>Para deportistas de todos los niveles: tratar y prevenir lesiones.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dolencias">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Te podemos ayudar con</span>
+      <h2>Sea cual sea <span>tu dolencia</span></h2>
+      <p>Estas son algunas de las molestias que tratamos a diario en la consulta.</p>
+    </div>
+    <div>
+      <div class="lista">
+        <span>Contracturas</span><span>Esguinces</span><span>Calcificaciones</span><span>Dedo en resorte</span><span>Dolor de espalda</span><span>Dolor cervical</span><span>Lesiones deportivas</span><span>Recuperación postlesión</span>
+      </div>
+      <p class="orient">Lista orientativa: consúltanos tu caso.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sobre" id="sobre-ana">
+  <div class="wrap grid">
+    <div class="retrato">AP<small>Ana Pérez Rego · Fisioterapeuta</small></div>
+    <div>
+      <span class="eyebrow">Sobre Ana</span>
+      <h2 style="font-size:clamp(2.1rem,4.6vw,3.2rem);margin-top:14px">Experiencia y <span>cercanía</span></h2>
+      <p>Ana Pérez Rego lleva más de 20 años como fisioterapeuta y osteópata en Logroño. Sus pacientes destacan dos cosas: su experiencia y lo cercana que es.</p>
+      <p>En la consulta de la calle Pintor Rosales, cada sesión es individual: te escucha, valora tu caso y te explica el tratamiento.</p>
+    </div>
+  </div>
+</section>
+
+<section class="opiniones" id="opiniones">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow" style="background:#fff">5,0 en Google</span>
+      <h2>Lo que dicen los pacientes</h2>
+    </div>
+    <div class="ops">
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Gran fisioterapeuta con mucha experiencia, que te deja como nuevo sea cual sea tu dolencia muscular.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Encantadísima con Ana. Excelente profesional y cercana. 🤗”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Muy buena profesional y mejor persona. Muy recomendada.”</p><small>Opinión en Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visitanos">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Visítanos</span>
+      <h2>Calle Pintor Rosales, 3</h2>
+      <ul class="horario" id="horario">
+        <li data-d="1,2,3,4,5"><span>Lunes a viernes</span><span>9:00 – 14:00 · 16:00 – 20:00</span></li>
+        <li data-d="6,0"><span>Sábado y domingo</span><span>Cerrado</span></li>
+      </ul>
+      <div class="info">
+        <div>📍 C. Pintor Rosales, 3, bajo · 26007 Logroño</div>
+        <div>📱 <a href="tel:+34659789114">659 78 91 14</a> · ☎️ <a href="tel:+34941207372">941 20 73 72</a></div>
+      </div>
+    </div>
+    <div class="mapa"><iframe title="Mapa: Clínica de Fisioterapia Ana Pérez Rego, Pintor Rosales 3, Logroño" loading="lazy" src="https://maps.google.com/maps?q=Cl%C3%ADnica%20de%20Fisioterapia%20y%20Osteopat%C3%ADa%20Ana%20P%C3%A9rez%20Rego%2C%20Pintor%20Rosales%203%2C%20Logro%C3%B1o&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div><b style="color:#fff">Clínica de Fisioterapia y Osteopatía Ana Pérez Rego</b> · Pintor Rosales, 3 · Logroño</div>
+    <div>659 78 91 14</div>
+    <div style="opacity:.6">Propuesta de diseño · DaystartIA</div>
+  </div>
+</footer>
+
+<nav class="barra" aria-label="Acciones rápidas">
+  <a href="tel:+34659789114"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Pedir cita</a>
+  <a href="https://wa.me/34659789114?text=Hola%20Ana%2C%20quer%C3%ADa%20pedir%20cita" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>WhatsApp</a>
+  <a href="https://maps.google.com/?q=Cl%C3%ADnica+de+Fisioterapia+Ana+P%C3%A9rez+Rego+Logro%C3%B1o" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>Cómo llegar</a>
+</nav>
+
+<script>
+  const ahora = new Date(), d = ahora.getDay(), m = ahora.getHours() * 60 + ahora.getMinutes();
+  const abierto = d >= 1 && d <= 5 && ((m >= 540 && m < 840) || (m >= 960 && m < 1200));
+  const e = document.getElementById('estado');
+  e.querySelector('.punto').classList.toggle('cerrado', !abierto);
+  e.lastElementChild.textContent = abierto ? 'Consulta abierta ahora' : 'Consulta cerrada · déjanos un WhatsApp';
+  document.querySelectorAll('#horario li').forEach(li => { if (li.dataset.d.split(',').includes(String(d))) li.classList.add('hoy'); });
+</script>
+</body>
+</html>
