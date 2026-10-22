@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Provenza Estética y Masajes · Centro de estética en la calle Clavijo, Logroño</title>
+<meta name="description" content="Provenza Estética y Masajes, centro de estética en la calle Clavijo 7 de Logroño. Masajes, presoterapia, LPG, INDIBA, maderoterapia, Dermapen, láser, limpieza facial y manicura. Tel. 626 88 79 26.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --lavanda:#8c7bb5; --lavanda-osc:#5f4f8c; --lavanda-cl:#efebf7; --oliva:#7d8a5c; --oliva-cl:#eef0e4; --lino:#faf8f4; --tinta:#2f2a3a; --suave:#776f82; --linea:#e4dfec;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Jost,system-ui,sans-serif;background:var(--lino);color:var(--tinta);line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.05;color:var(--tinta)}
+  h1 em,h2 em{font-style:italic;color:var(--lavanda-osc)}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.76rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--oliva)}
+  .eyebrow::before{content:"✿";color:var(--lavanda);letter-spacing:0;font-size:1rem}
+  section{padding:100px 0}
+  .titulo{text-align:center;max-width:640px;margin:0 auto 54px}
+  .titulo h2{font-size:clamp(2.5rem,5.4vw,3.9rem);margin-top:12px}
+  .titulo p{color:var(--suave);margin-top:14px;font-size:1.05rem}
+
+  .demo{background:var(--tinta);color:#d6d0e2;font-size:.8rem;text-align:center;padding:7px 16px}
+  .demo b{color:#fff}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(250,248,244,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--linea)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+  .marca{text-decoration:none;line-height:1;display:flex;flex-direction:column}
+  .marca b{font-family:"Cormorant Garamond",serif;font-size:1.9rem;font-weight:700;letter-spacing:.06em;color:var(--lavanda-osc)}
+  .marca small{font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--oliva);margin-top:3px}
+  .menu{display:flex;gap:30px;list-style:none;font-size:.92rem;font-weight:500}
+  .menu a{text-decoration:none;color:var(--suave)}
+  .menu a:hover{color:var(--lavanda-osc)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:999px;font-family:inherit;font-weight:600;font-size:.98rem;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:19px;height:19px}
+  .btn-lavanda{background:var(--lavanda-osc);color:#fff}
+  .btn-lavanda:hover{background:#4c3e75}
+  .btn-borde{border:1.5px solid var(--lavanda-osc);color:var(--lavanda-osc)}
+
+  /* hero */
+  .hero{padding:80px 0 100px;background:linear-gradient(180deg,var(--lavanda-cl),var(--lino))}
+  .hero .grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:center}
+  .hero h1{font-size:clamp(3rem,6.8vw,5.4rem);margin-top:16px}
+  .hero .lead{font-size:1.15rem;color:var(--suave);max-width:510px;margin:22px 0 32px}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .confianza{display:flex;flex-wrap:wrap;gap:22px;margin-top:34px;color:var(--suave);font-size:.92rem}
+  .confianza b{color:var(--tinta)}
+  .estrellas{color:#d3a83a;letter-spacing:2px}
+  .arco{position:relative;aspect-ratio:4/5;border-radius:999px 999px 26px 26px;background:
+      radial-gradient(circle at 30% 30%,rgba(255,255,255,.5),transparent 40%),
+      repeating-linear-gradient(100deg,#b7a8d8 0 18px,#a593cc 18px 36px);overflow:hidden;box-shadow:0 40px 80px -40px rgba(95,79,140,.6)}
+  .arco::after{content:"";position:absolute;left:0;right:0;bottom:0;height:42%;background:linear-gradient(180deg,transparent,rgba(125,138,92,.55))}
+  .arco .tarjeta{position:absolute;left:18px;right:18px;bottom:18px;z-index:1;background:rgba(250,248,244,.95);border-radius:18px;padding:20px 22px}
+  .arco .tarjeta b{font-family:"Cormorant Garamond",serif;font-size:1.5rem;display:block;line-height:1.1}
+  .estado{display:flex;align-items:center;gap:9px;margin-top:8px;font-weight:600;font-size:.95rem}
+  .punto{width:10px;height:10px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px #dcfce7}
+  .punto.cerrado{background:#ef4444;box-shadow:0 0 0 4px #fee2e2}
+
+  /* tratamientos */
+  .cats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .cat{background:#fff;border:1px solid var(--linea);border-radius:26px;padding:34px 30px}
+  .cat .ico{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-size:1.6rem;background:var(--lavanda-cl)}
+  .cat:nth-child(2) .ico{background:var(--oliva-cl)}
+  .cat h3{font-size:1.9rem;margin:18px 0 12px}
+  .cat ul{list-style:none}
+  .cat li{padding:9px 0;border-bottom:1px dashed var(--linea);display:flex;gap:10px}
+  .cat li:last-child{border:0}
+  .cat li::before{content:"·";color:var(--lavanda);font-weight:700}
+  .cat li span{color:var(--suave);font-size:.9rem;display:block}
+
+  /* aparatología */
+  .tecno{background:var(--tinta);color:#ddd6ea}
+  .tecno .titulo h2{color:#fff}
+  .tecno .titulo h2 em{color:#c9bcf0}
+  .tecno .titulo p{color:#b4abc4}
+  .chips{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .chip{border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:26px 18px;text-align:center}
+  .chip b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.7rem;color:#fff;font-weight:600}
+  .chip span{font-size:.88rem;color:#b4abc4}
+  .nota-or{text-align:center;margin-top:24px;color:#968cab;font-size:.88rem}
+
+  /* regalo */
+  .regalo .caja{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:50px;align-items:center;background:var(--oliva-cl);border-radius:32px;padding:56px}
+  .vale{aspect-ratio:16/10;border-radius:20px;background:linear-gradient(135deg,var(--lavanda-osc),var(--lavanda));color:#fff;padding:28px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 30px 60px -30px rgba(95,79,140,.8);transform:rotate(-3deg)}
+  .vale small{letter-spacing:.3em;text-transform:uppercase;font-size:.7rem;opacity:.85}
+  .vale b{font-family:"Cormorant Garamond",serif;font-size:2.4rem;line-height:1}
+  .vale i{font-style:normal;font-size:.9rem;opacity:.9}
+  .regalo h2{font-size:clamp(2.3rem,4.6vw,3.3rem);margin-top:12px}
+  .regalo p{margin:16px 0 26px;color:var(--suave);font-size:1.06rem}
+
+  /* opiniones */
+  .ops{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .op{background:#fff;border:1px solid var(--linea);border-radius:26px;padding:30px}
+  .op p{font-family:"Cormorant Garamond",serif;font-size:1.35rem;line-height:1.35;margin:12px 0 16px}
+  .op small{color:var(--suave)}
+
+  /* visita */
+  .visita{background:var(--lavanda-cl)}
+  .visita .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:46px}
+  .visita h2{font-size:clamp(2.3rem,4.6vw,3.3rem);margin-top:12px}
+  .horario{list-style:none;margin-top:24px;background:#fff;border-radius:20px;padding:6px 22px}
+  .horario li{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px dashed var(--linea);font-weight:500}
+  .horario li:last-child{border:0}
+  .horario li span:last-child{color:var(--suave)}
+  .horario li.hoy span{color:var(--lavanda-osc);font-weight:600}
+  .info{margin-top:22px;display:grid;gap:8px}
+  .info a{color:var(--lavanda-osc);font-weight:600;text-decoration:none}
+  .mapa{border-radius:26px;overflow:hidden;min-height:420px;border:6px solid #fff}
+  .mapa iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+  footer{background:var(--tinta);color:#b4abc4;padding:40px 0 110px;font-size:.9rem}
+  footer .grid{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+
+  .barra{display:none}
+
+  @media (max-width:980px){ .chips{grid-template-columns:repeat(3,1fr)} }
+  @media (max-width:900px){
+    .menu,.nav .btn{display:none}
+    .hero{padding:50px 0 70px}
+    .hero .grid,.visita .grid,.regalo .caja{grid-template-columns:minmax(0,1fr);gap:40px}
+    .arco{max-width:380px;width:100%;margin:0 auto}
+    .cats,.ops{grid-template-columns:minmax(0,1fr)}
+    .regalo .caja{padding:34px 24px}
+    section{padding:74px 0}
+    .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--lino);border-top:1px solid var(--linea)}
+    .barra a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 12px;font-size:.76rem;font-weight:600;text-decoration:none;color:var(--lavanda-osc)}
+    .barra a:first-child{background:var(--lavanda-osc);color:#fff}
+    .barra svg{width:20px;height:20px}
+  }
+  @media (max-width:520px){ .ctas{flex-direction:column} .chips{grid-template-columns:repeat(2,1fr)} .vale b{font-size:1.9rem} }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Propuesta de diseño</b> preparada por DaystartIA para Provenza Estética y Masajes · no es la web oficial</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="marca" href="#inicio"><b>Provenza</b><small>Estética y masajes</small></a>
+    <ul class="menu">
+      <li><a href="#tratamientos">Tratamientos</a></li>
+      <li><a href="#regalo">Regala Provenza</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#visitanos">Contacto</a></li>
+    </ul>
+    <a class="btn btn-lavanda" href="https://wa.me/34626887926?text=Hola%2C%20quer%C3%ADa%20pedir%20cita%20en%20Provenza" target="_blank" rel="noopener">Pedir cita</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Calle Clavijo, 7 · Logroño</span>
+      <h1>Un respiro <em>para ti</em>, en el centro de Logroño.</h1>
+      <p class="lead">Masajes, tratamientos faciales y corporales, aparatología y manicura en un espacio tranquilo y cuidado. Te recibimos con confianza y sin prisas.</p>
+      <div class="ctas">
+        <a class="btn btn-lavanda" href="https://wa.me/34626887926?text=Hola%2C%20quer%C3%ADa%20pedir%20cita%20en%20Provenza" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+          Pide cita por WhatsApp
+        </a>
+        <a class="btn btn-borde" href="#tratamientos">Ver tratamientos</a>
+      </div>
+      <div class="confianza">
+        <div><span class="estrellas">★★★★★</span> <b>5,0</b> · 73 opiniones en Google</div>
+        <div>💜 Mujer empresaria</div>
+      </div>
+    </div>
+    <div class="arco" aria-hidden="false">
+      <div class="tarjeta">
+        <b>Lunes a viernes, de 9:00 a 19:00</b>
+        <div class="estado" id="estado"><span class="punto"></span><span>Consultando…</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tratamientos">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">Tratamientos</span>
+      <h2>Cuidamos de ti <em>de pies a cabeza</em></h2>
+      <p>Te asesoramos para elegir lo que de verdad necesitas. Escríbenos y te contamos precios y bonos.</p>
+    </div>
+    <div class="cats">
+      <div class="cat"><div class="ico">💆‍♀️</div><h3>Masajes</h3><ul>
+        <li><div>Masaje relajante<span>Para desconectar de verdad.</span></div></li>
+        <li><div>Maderoterapia<span>Modela y ayuda con la celulitis.</span></div></li>
+        <li><div>Presoterapia<span>Piernas ligeras y circulación.</span></div></li>
+      </ul></div>
+      <div class="cat"><div class="ico">🌿</div><h3>Facial y corporal</h3><ul>
+        <li><div>Limpieza facial<span>Piel limpia, luminosa y cuidada.</span></div></li>
+        <li><div>Dermapen<span>Renovación de la piel.</span></div></li>
+        <li><div>Depilación láser<span>Adiós al vello, poco a poco.</span></div></li>
+      </ul></div>
+      <div class="cat"><div class="ico">💅</div><h3>Manos</h3><ul>
+        <li><div>Manicura<span>Preciosa y duradera, con productos de calidad.</span></div></li>
+        <li><div>Uñas<span>Trabajo cuidadoso y acabado impecable.</span></div></li>
+        <li><div>Tarjeta regalo<span>Regala manos bonitas.</span></div></li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="tecno">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow" style="color:#c9bcf0">Aparatología</span>
+      <h2>Tecnología que <em>se nota</em></h2>
+      <p>Trabajamos con equipos y técnicas de referencia en estética corporal y facial.</p>
+    </div>
+    <div class="chips">
+      <div class="chip"><b>LPG</b><span>Corporal</span></div>
+      <div class="chip"><b>INDIBA</b><span>Facial y corporal</span></div>
+      <div class="chip"><b>Láser</b><span>Depilación</span></div>
+      <div class="chip"><b>Madero&shy;terapia</b><span>Modelado</span></div>
+      <div class="chip"><b>Dermapen</b><span>Piel</span></div>
+    </div>
+    <p class="nota-or">Pregúntanos qué tratamiento encaja contigo: te lo explicamos sin compromiso.</p>
+  </div>
+</section>
+
+<section class="regalo" id="regalo">
+  <div class="wrap">
+    <div class="caja">
+      <div class="vale"><small>Tarjeta regalo</small><b>Un momento Provenza</b><i>Masaje, facial o el tratamiento que elijas</i></div>
+      <div>
+        <span class="eyebrow">Regala bienestar</span>
+        <h2>El regalo que <em>siempre acierta</em></h2>
+        <p>Cumpleaños, aniversarios, el Día de la Madre… Varias de nuestras clientas nos conocieron gracias a un vale regalo. Pídelo por WhatsApp y te lo preparamos.</p>
+        <a class="btn btn-lavanda" href="https://wa.me/34626887926?text=Hola%2C%20quer%C3%ADa%20una%20tarjeta%20regalo" target="_blank" rel="noopener">Quiero una tarjeta regalo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="opiniones" style="padding-top:20px">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">Opiniones</span>
+      <h2><em>5,0</em> en Google</h2>
+    </div>
+    <div class="ops">
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Muy simpáticas y profesionales. Manicura preciosa y duradera. Productos de calidad.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Siempre salgo encantada con el resultado, ya que trabajan con mucho cuidado y el acabado es impecable.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“He estado aquí gracias a un vale de regalo (masaje), el servicio estupendo. Para volver.”</p><small>Opinión en Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visitanos">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Visítanos</span>
+      <h2>Calle Clavijo, 7</h2>
+      <ul class="horario" id="horario">
+        <li data-d="1,2,3,4,5"><span>Lunes a viernes</span><span>9:00 – 19:00</span></li>
+        <li data-d="6,0"><span>Sábado y domingo</span><span>Cerrado</span></li>
+      </ul>
+      <div class="info">
+        <div>📍 C. Clavijo, 7, bajo · 26008 Logroño</div>
+        <div>📞 <a href="tel:+34626887926">626 88 79 26</a> · también por WhatsApp</div>
+        <div>📷 @provenzaestetica</div>
+      </div>
+    </div>
+    <div class="mapa"><iframe title="Mapa: Provenza Estética y Masajes, calle Clavijo 7, Logroño" loading="lazy" src="https://maps.google.com/maps?q=Provenza%20Est%C3%A9tica%20y%20Masajes%2C%20Calle%20Clavijo%207%2C%20Logro%C3%B1o&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div><b style="color:#fff">Provenza Estética y Masajes</b> · C. Clavijo, 7 · Logroño</div>
+    <div>626 88 79 26</div>
+    <div style="opacity:.6">Propuesta de diseño · DaystartIA</div>
+  </div>
+</footer>
+
+<nav class="barra" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34626887926?text=Hola%2C%20quer%C3%ADa%20pedir%20cita%20en%20Provenza" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Cita</a>
+  <a href="tel:+34626887926"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Llamar</a>
+  <a href="https://maps.google.com/?q=Provenza+Est%C3%A9tica+y+Masajes+Logro%C3%B1o" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>Cómo llegar</a>
+</nav>
+
+<script>
+  const ahora = new Date(), d = ahora.getDay(), m = ahora.getHours() * 60 + ahora.getMinutes();
+  const abierto = d >= 1 && d <= 5 && m >= 540 && m < 1140;
+  const e = document.getElementById('estado');
+  e.querySelector('.punto').classList.toggle('cerrado', !abierto);
+  e.lastElementChild.textContent = abierto ? 'Abierto ahora' : 'Cerrado ahora · escríbenos y te respondemos';
+  document.querySelectorAll('#horario li').forEach(li => { if (li.dataset.d.split(',').includes(String(d))) li.classList.add('hoy'); });
+</script>
+</body>
+</html>
