@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Casita · Mesón-bar de tapas en la calle Laurel, Logroño, desde 1986</title>
+<meta name="description" content="La Casita, mesón-bar de tapas en la Travesía de Laurel 13 (esquina San Agustín), Logroño, desde 1986. Brocheta de pulpo y langostino, zapatilla de jamón ibérico y opciones sin gluten. Tel. 681 07 80 66.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Karla:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --crema:#f8f1e4; --crema2:#efe3cc; --verde:#1f4a3a; --verde2:#163a2d; --teja:#c0552f; --vino:#7a1f2b; --tinta:#2a241d; --suave:#6f6457; --linea:#e0d2b8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Karla,system-ui,sans-serif;background:var(--crema);color:var(--tinta);line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:800;line-height:1.04;color:var(--verde);letter-spacing:-.01em}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  .eyebrow{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--teja)}
+  section{padding:96px 0}
+  .titulo{max-width:640px;margin-bottom:44px}
+  .titulo h2{font-size:clamp(2.3rem,5vw,3.6rem);margin-top:12px}
+  .titulo p{color:var(--suave);margin-top:14px;font-size:1.06rem}
+
+  .demo{background:var(--tinta);color:#d8ccb6;font-size:.8rem;text-align:center;padding:7px 16px}
+  .demo b{color:#fff}
+
+  /* azulejo */
+  .azulejo{height:14px;background:
+    radial-gradient(circle at 7px 7px,var(--teja) 3px,transparent 4px) 0 0/14px 14px,
+    linear-gradient(var(--verde),var(--verde))}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(248,241,228,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+  .marca{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+  .marca b{font-family:Fraunces,serif;font-weight:800;font-size:1.6rem;color:var(--verde)}
+  .marca small{font-size:.7rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--teja);margin-top:4px}
+  .menu{display:flex;gap:28px;list-style:none;font-weight:700;font-size:.95rem}
+  .menu a{text-decoration:none;color:var(--suave)}
+  .menu a:hover{color:var(--teja)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:999px;font-family:inherit;font-weight:800;font-size:1rem;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:19px;height:19px}
+  .btn-teja{background:var(--teja);color:#fff}
+  .btn-teja:hover{background:#a8461f}
+  .btn-borde{border:2px solid var(--verde);color:var(--verde)}
+  .btn-crema{background:var(--crema);color:var(--verde)}
+
+  /* hero */
+  .hero{background:var(--verde);color:#e9e2d0;padding:84px 0 96px;position:relative;overflow:hidden}
+  .hero::after{content:"1986";position:absolute;right:-20px;bottom:-60px;font-family:Fraunces,serif;font-weight:800;font-size:clamp(9rem,24vw,20rem);color:rgba(255,255,255,.05);line-height:1}
+  .hero .grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:50px;align-items:center}
+  .hero .eyebrow{color:#f0a37f}
+  .hero h1{color:#fff;font-size:clamp(2.9rem,7vw,5.6rem);margin-top:14px}
+  .hero h1 em{font-style:italic;color:#f0a37f}
+  .hero .lead{font-size:1.15rem;max-width:520px;margin:22px 0 32px;color:#cfd9cf}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .hero .btn-borde{border-color:rgba(255,255,255,.4);color:#fff}
+  .placa{background:var(--crema);color:var(--tinta);border-radius:20px;padding:30px;border:6px double var(--teja)}
+  .placa h3{font-size:1.5rem;text-align:center}
+  .placa .estrellas{text-align:center;color:#e0a526;font-size:1.3rem;letter-spacing:2px;margin:8px 0 2px}
+  .placa .n{text-align:center;color:var(--suave);font-weight:700}
+  .placa hr{border:0;border-top:1px dashed var(--linea);margin:18px 0}
+  .estado{display:flex;justify-content:center;align-items:center;gap:10px;font-weight:800}
+  .punto{width:10px;height:10px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px #dcfce7}
+  .punto.cerrado{background:#ef4444;box-shadow:0 0 0 4px #fee2e2}
+  .esquina{text-align:center;color:var(--suave);font-size:.92rem;margin-top:10px}
+
+  /* especialidades */
+  .esp{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .plato{background:#fff;border:1px solid var(--linea);border-radius:22px;padding:34px;display:flex;gap:22px;align-items:flex-start}
+  .plato .ico{flex:none;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-size:2rem;background:var(--crema2)}
+  .plato h3{font-size:1.6rem}
+  .plato p{color:var(--suave);margin-top:8px}
+  .tag{display:inline-block;margin-top:12px;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--vino);background:#f6e2e0;padding:4px 10px;border-radius:999px}
+
+  /* barra de tapas */
+  .tapas{background:var(--crema2)}
+  .lista{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .lista div{background:var(--crema);border:1px solid var(--linea);border-radius:16px;padding:20px;font-weight:800;font-size:1.05rem;color:var(--verde);text-align:center}
+  .lista div span{display:block;font-size:1.8rem;margin-bottom:6px}
+  .nota{margin-top:22px;color:var(--suave);font-size:.95rem}
+
+  /* historia */
+  .historia .grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:center}
+  .sello{aspect-ratio:1;max-width:360px;width:100%;margin:0 auto;border-radius:50%;background:var(--teja);color:#fff;display:grid;place-items:center;text-align:center;border:10px solid var(--crema2);box-shadow:0 0 0 2px var(--teja)}
+  .sello b{display:block;font-family:Fraunces,serif;font-size:clamp(4rem,10vw,6rem);line-height:1}
+  .sello span{font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:.85rem}
+  .historia p{font-size:1.1rem;margin-top:16px}
+
+  /* opiniones */
+  .opiniones{background:var(--verde2);color:#d6e0d6}
+  .opiniones h2{color:#fff}
+  .opiniones .eyebrow{color:#f0a37f}
+  .ops{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .op{background:rgba(255,255,255,.06);border-radius:20px;padding:28px}
+  .op .estrellas{color:#e0a526;letter-spacing:2px}
+  .op p{font-family:Fraunces,serif;font-weight:600;font-size:1.15rem;color:#fff;margin:12px 0 14px;line-height:1.4}
+  .op small{opacity:.7}
+
+  /* visita */
+  .visita .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:44px}
+  .visita h2{font-size:clamp(2.2rem,4.6vw,3.2rem);margin-top:12px}
+  .horario{list-style:none;margin-top:24px;background:#fff;border:1px solid var(--linea);border-radius:18px;padding:6px 20px}
+  .horario li{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px dashed var(--linea);font-weight:700}
+  .horario li:last-child{border:0}
+  .horario li span:last-child{color:var(--suave);text-align:right}
+  .horario li.hoy span{color:var(--teja)}
+  .info{margin-top:22px;display:grid;gap:8px;font-weight:600}
+  .info a{color:var(--teja);text-decoration:none;font-weight:800}
+  .mapa{border-radius:22px;overflow:hidden;border:1px solid var(--linea);min-height:420px}
+  .mapa iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+  footer{background:var(--tinta);color:#bfb39f;padding:38px 0 110px;font-size:.9rem}
+  footer .grid{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+
+  .barra{display:none}
+
+  @media (max-width:980px){ .lista{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:900px){
+    .menu,.nav .btn{display:none}
+    .hero{padding:56px 0 70px}
+    .hero .grid,.historia .grid,.visita .grid{grid-template-columns:minmax(0,1fr);gap:38px}
+    .esp,.ops{grid-template-columns:minmax(0,1fr)}
+    section{padding:72px 0}
+    .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--crema);border-top:1px solid var(--linea)}
+    .barra a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 12px;font-size:.76rem;font-weight:800;text-decoration:none;color:var(--verde)}
+    .barra a:first-child{background:var(--teja);color:#fff}
+    .barra svg{width:20px;height:20px}
+  }
+  @media (max-width:520px){ .ctas{flex-direction:column} .plato{flex-direction:column;padding:26px} }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Propuesta de diseño</b> preparada por DaystartIA para La Casita · no es la web oficial</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="marca" href="#inicio"><b>La Casita</b><small>Mesón-bar · desde 1986</small></a>
+    <ul class="menu">
+      <li><a href="#especialidades">Especialidades</a></li>
+      <li><a href="#historia">Historia</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#visitanos">Horario</a></li>
+    </ul>
+    <a class="btn btn-teja" href="tel:+34681078066">Reservar mesa</a>
+  </div>
+</header>
+<div class="azulejo"></div>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Calle Laurel · Logroño</span>
+      <h1>Tapas caseras en <em>la esquina de siempre</em>.</h1>
+      <p class="lead">Desde 1986 en la Travesía de Laurel, esquina con San Agustín. Ven a por nuestra brocheta de pulpo y langostino, la zapatilla de jamón ibérico y un buen vino de Rioja.</p>
+      <div class="ctas">
+        <a class="btn btn-teja" href="tel:+34681078066">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Llamar · 681 07 80 66
+        </a>
+        <a class="btn btn-borde" href="#especialidades">Ver especialidades</a>
+      </div>
+    </div>
+    <div class="placa">
+      <h3>Bar La Casita</h3>
+      <div class="estrellas">★★★★☆</div>
+      <div class="n">4,3 en Google · 466 opiniones</div>
+      <hr>
+      <div class="estado" id="estado"><span class="punto"></span><span>Consultando…</span></div>
+      <div class="esquina">Tr.ª de Laurel, 13 · esquina San Agustín</div>
+    </div>
+  </div>
+</section>
+
+<section id="especialidades">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">Especialidades de la casa</span>
+      <h2>Lo que no te puedes perder</h2>
+      <p>Las dos tapas que más nos piden en la barra.</p>
+    </div>
+    <div class="esp">
+      <div class="plato"><div class="ico">🍢</div><div><h3>Brocheta de pulpo y langostino</h3><p>A la plancha, nuestra tapa estrella. Es lo más nombrado en las opiniones de Google.</p><span class="tag">La favorita</span></div></div>
+      <div class="plato"><div class="ico">🥖</div><div><h3>Zapatilla de jamón ibérico</h3><p>Un clásico de la casa: pan, tomate y jamón ibérico, sin más secretos.</p><span class="tag">Clásico de la casa</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="tapas">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">En la barra</span>
+      <h2>Tapas y raciones</h2>
+    </div>
+    <div class="lista">
+      <div><span>🐙</span>Pulpo</div>
+      <div><span>🦐</span>Langostinos</div>
+      <div><span>🥘</span>Croquetas</div>
+      <div><span>🌶️</span>Pimientos</div>
+      <div><span>🥓</span>Torreznos</div>
+      <div><span>🍢</span>Brochetas</div>
+      <div><span>🍋</span>Sorbete de postre</div>
+      <div><span>🍷</span>Vinos de Rioja</div>
+    </div>
+    <p class="nota">🌾 Tenemos varias opciones sin gluten: pregúntanos en la barra. Carta orientativa.</p>
+  </div>
+</section>
+
+<section class="historia" id="historia">
+  <div class="wrap grid">
+    <div class="sello"><div><b>1986</b><span>en la calle Laurel</span></div></div>
+    <div>
+      <span class="eyebrow">Nuestra historia</span>
+      <h2 style="font-size:clamp(2.3rem,5vw,3.4rem);margin-top:12px">Casi 40 años de tapeo en la Laurel</h2>
+      <p>La Casita abrió en 1986 en la esquina de la Travesía de Laurel con San Agustín, en plena zona de pinchos de Logroño. Desde entonces seguimos con la misma idea: tapas caseras, buen producto y un ambiente familiar.</p>
+      <p>Y en Navidad, ven a ver la decoración: nuestros clientes dicen que es todo un espectáculo.</p>
+    </div>
+  </div>
+</section>
+
+<section class="opiniones" id="opiniones">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">Opiniones</span>
+      <h2>Lo que dicen en Google</h2>
+    </div>
+    <div class="ops">
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Buen vinito, ricos pinchos, trato amable, servicio rápido y precios razonables.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Tiene varias opciones sin gluten y de las mejores que hemos probado. El pulpo está buenísimo.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Carta variada pero sin excederse, lo que demuestra que dominan el producto que sirven en la mesa.”</p><small>Opinión en Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visitanos">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Visítanos</span>
+      <h2>Travesía de Laurel, 13</h2>
+      <ul class="horario" id="horario">
+        <li data-d="1,2,3,4,5"><span>Lunes a viernes</span><span>12:00 – 16:00 · 19:30 – 00:00</span></li>
+        <li data-d="6,0"><span>Sábado y domingo</span><span>12:00 – 17:00 · 19:30 – 00:00</span></li>
+      </ul>
+      <div class="info">
+        <div>📍 Tr.ª de Laurel, 13 (esquina San Agustín) · 26001 Logroño</div>
+        <div>📞 Reservas: <a href="tel:+34681078066">681 07 80 66</a></div>
+      </div>
+    </div>
+    <div class="mapa"><iframe title="Mapa: Bar La Casita, Travesía de Laurel 13, Logroño" loading="lazy" src="https://maps.google.com/maps?q=Bar%20la%20Casita%2C%20Travesia%20de%20Laurel%2013%2C%20Logro%C3%B1o&z=17&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div><b style="color:#fff">La Casita · Mesón-bar</b> · Tr.ª de Laurel, 13 · Logroño · desde 1986</div>
+    <div>681 07 80 66</div>
+    <div style="opacity:.6">Propuesta de diseño · DaystartIA</div>
+  </div>
+</footer>
+
+<nav class="barra" aria-label="Acciones rápidas">
+  <a href="tel:+34681078066"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Reservar</a>
+  <a href="https://wa.me/34681078066?text=Hola%2C%20quer%C3%ADa%20reservar%20en%20La%20Casita" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>WhatsApp</a>
+  <a href="https://maps.google.com/?q=Bar+la+Casita+Travesia+de+Laurel+13+Logro%C3%B1o" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>Cómo llegar</a>
+</nav>
+
+<script>
+  const ahora = new Date(), d = ahora.getDay(), m = ahora.getHours() * 60 + ahora.getMinutes();
+  const finde = d === 0 || d === 6;
+  const abierto = (m >= 720 && m < (finde ? 1020 : 960)) || m >= 1170;
+  const e = document.getElementById('estado');
+  e.querySelector('.punto').classList.toggle('cerrado', !abierto);
+  e.lastElementChild.textContent = abierto ? 'Abierto ahora' : 'Cerrado ahora · abrimos a las ' + (m < 720 ? '12:00' : '19:30');
+  document.querySelectorAll('#horario li').forEach(li => { if (li.dataset.d.split(',').includes(String(d))) li.classList.add('hoy'); });
+</script>
+</body>
+</html>
