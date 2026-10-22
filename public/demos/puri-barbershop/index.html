@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Puri BarberShop · Barbería en Logroño, abierta todos los días</title>
+<meta name="description" content="Puri BarberShop, barbería de estilo cubano en la calle Doctores Castroviejo 17 de Logroño. Cortes, degradados, buzz cut y barba. Abierta todos los días. Tel. 670 73 23 80.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --negro:#101418; --negro2:#181e25; --azul:#1d3f8f; --rojo:#d7262e; --crema:#f4efe6; --texto:#e7e2d8; --suave:#9aa3ad; --linea:rgba(255,255,255,.1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--negro);color:var(--texto);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  h1,h2,h3{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;line-height:.95;color:#fff;letter-spacing:.01em}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--rojo)}
+  .eyebrow::before{content:"";width:28px;height:3px;background:var(--rojo)}
+  section{padding:96px 0}
+  .titulo{max-width:640px;margin-bottom:46px}
+  .titulo h2{font-size:clamp(2.6rem,6vw,4.4rem);margin-top:14px}
+  .titulo p{color:var(--suave);font-size:1.05rem;margin-top:14px}
+
+  .demo{background:var(--crema);color:#3b3b3b;font-size:.8rem;text-align:center;padding:7px 16px}
+
+  /* poste de barbero */
+  .poste{height:8px;background:repeating-linear-gradient(-45deg,var(--rojo) 0 14px,#fff 14px 28px,var(--azul) 28px 42px,#fff 42px 56px)}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(16,20,24,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--linea)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+  .marca{text-decoration:none;font-family:Anton,sans-serif;font-size:1.65rem;text-transform:uppercase;color:#fff;letter-spacing:.02em}
+  .marca span{color:var(--rojo)}
+  .menu{display:flex;gap:30px;list-style:none;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em}
+  .menu a{text-decoration:none;color:var(--suave)}
+  .menu a:hover{color:#fff}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 26px;border-radius:4px;font-family:inherit;font-weight:800;font-size:.95rem;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:19px;height:19px}
+  .btn-rojo{background:var(--rojo);color:#fff}
+  .btn-rojo:hover{background:#b81d24}
+  .btn-borde{border:2px solid rgba(255,255,255,.3);color:#fff}
+  .btn-borde:hover{border-color:#fff}
+
+  /* hero */
+  .hero{padding:80px 0 100px;background:radial-gradient(800px 500px at 85% 0%,rgba(29,63,143,.45),transparent 65%),radial-gradient(600px 400px at 0% 100%,rgba(215,38,46,.18),transparent 60%)}
+  .hero .grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:50px;align-items:center}
+  .hero h1{font-size:clamp(3.4rem,9vw,7.2rem)}
+  .hero h1 em{font-style:normal;color:var(--rojo)}
+  .hero .lead{font-size:1.15rem;color:var(--suave);max-width:520px;margin:24px 0 32px}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .nota-g{display:inline-flex;align-items:center;gap:10px;font-weight:700;margin-bottom:22px;font-size:.92rem}
+  .estrellas{color:#f5b829;letter-spacing:2px}
+  .tarjeta{background:var(--negro2);border:1px solid var(--linea);border-radius:10px;padding:30px;position:relative;overflow:hidden}
+  .tarjeta::before{content:"";position:absolute;inset:0 auto 0 0;width:6px;background:repeating-linear-gradient(180deg,var(--rojo) 0 14px,#fff 14px 28px,var(--azul) 28px 42px,#fff 42px 56px)}
+  .tarjeta h3{font-size:1.8rem;margin-bottom:16px}
+  .estado{display:flex;align-items:center;gap:10px;font-weight:800;margin-bottom:18px}
+  .punto{width:11px;height:11px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 5px rgba(34,197,94,.2)}
+  .punto.cerrado{background:#ef4444;box-shadow:0 0 0 5px rgba(239,68,68,.2)}
+  .tarjeta ul{list-style:none}
+  .tarjeta li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed var(--linea);font-weight:600}
+  .tarjeta li:last-child{border:0}
+  .tarjeta li span:last-child{color:var(--suave)}
+  .tarjeta li.hoy span{color:#fff}
+  .tarjeta li.hoy span:first-child::after{content:" · hoy";color:var(--rojo);font-weight:800}
+
+  /* servicios */
+  .servs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--linea);border:1px solid var(--linea)}
+  .serv{background:var(--negro);padding:34px 30px;transition:background .2s}
+  .serv:hover{background:var(--negro2)}
+  .serv .n{font-family:Anton,sans-serif;font-size:1rem;color:var(--rojo)}
+  .serv h3{font-size:1.9rem;margin:8px 0 10px}
+  .serv p{color:var(--suave)}
+
+  /* estilo cubano */
+  .cubano{background:var(--crema);color:#2a2a2a}
+  .cubano h2{color:var(--negro)}
+  .cubano .grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .cubano p{font-size:1.1rem;margin-top:18px}
+  .cifras{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .cifra{background:#fff;border-radius:10px;padding:26px;border-bottom:5px solid var(--azul)}
+  .cifra:nth-child(even){border-color:var(--rojo)}
+  .cifra b{font-family:Anton,sans-serif;font-size:2.8rem;color:var(--negro);display:block;line-height:1}
+  .cifra span{color:#666;font-weight:600}
+
+  /* opiniones */
+  .ops{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .op{background:var(--negro2);border:1px solid var(--linea);border-radius:10px;padding:28px}
+  .op p{font-size:1.08rem;color:#fff;margin:12px 0 14px;font-weight:500}
+  .op small{color:var(--suave)}
+
+  /* visita */
+  .visita .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:stretch}
+  .visita h2{font-size:clamp(2.4rem,5vw,3.6rem);margin-top:14px}
+  .info{display:grid;gap:14px;margin:26px 0 30px}
+  .info div{display:flex;gap:12px;align-items:flex-start}
+  .info b{display:block;color:#fff}
+  .info a{color:var(--rojo);font-weight:800;text-decoration:none}
+  .mapa{border-radius:10px;overflow:hidden;border:1px solid var(--linea);min-height:400px}
+  .mapa iframe{width:100%;height:100%;min-height:400px;border:0;display:block;filter:grayscale(.3)}
+
+  footer{border-top:1px solid var(--linea);padding:36px 0 110px;color:var(--suave);font-size:.88rem}
+  footer .grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+  .barra{display:none}
+
+  @media (max-width:900px){
+    .menu,.nav .btn{display:none}
+    .hero{padding:50px 0 70px}
+    .hero .grid,.cubano .grid,.visita .grid{grid-template-columns:minmax(0,1fr);gap:38px}
+    .hero h1{font-size:15vw}
+    .servs,.ops{grid-template-columns:1fr}
+    section{padding:72px 0}
+    .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--negro2);border-top:1px solid var(--linea)}
+    .barra a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 12px;font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;text-decoration:none;color:#fff}
+    .barra a:first-child{background:var(--rojo)}
+    .barra svg{width:20px;height:20px}
+  }
+  @media (max-width:520px){ .ctas{flex-direction:column} .cifra b{font-size:2.2rem} }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Propuesta de diseño</b> preparada por DaystartIA para Puri BarberShop · no es la web oficial</div>
+<div class="poste"></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="marca" href="#inicio">Puri <span>Barber</span>Shop</a>
+    <ul class="menu">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#estilo">Estilo</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#visitanos">Dónde estamos</a></li>
+    </ul>
+    <a class="btn btn-rojo" href="https://wa.me/34670732380?text=Hola%20Puri%2C%20quer%C3%ADa%20pedir%20cita" target="_blank" rel="noopener">Pedir cita</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap grid">
+    <div>
+      <div class="nota-g"><span class="estrellas">★★★★★</span> 5,0 en Google · 21 opiniones</div>
+      <h1>Cortes con <em>estilo</em> cubano.</h1>
+      <p class="lead">Degradados limpios, buzz cut perfecto y barba bien perfilada en la calle Doctores Castroviejo, en Logroño. Abrimos todos los días, también los domingos.</p>
+      <div class="ctas">
+        <a class="btn btn-rojo" href="https://wa.me/34670732380?text=Hola%20Puri%2C%20quer%C3%ADa%20pedir%20cita" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+          Cita por WhatsApp
+        </a>
+        <a class="btn btn-borde" href="tel:+34670732380">670 73 23 80</a>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <h3>Horario</h3>
+      <div class="estado" id="estado"><span class="punto"></span><span>Consultando…</span></div>
+      <ul id="horario">
+        <li data-d="1"><span>Lunes</span><span>10:00 – 21:00</span></li>
+        <li data-d="2"><span>Martes</span><span>10:00 – 21:00</span></li>
+        <li data-d="3"><span>Miércoles</span><span>10:00 – 21:00</span></li>
+        <li data-d="4"><span>Jueves</span><span>10:00 – 21:00</span></li>
+        <li data-d="5"><span>Viernes</span><span>10:00 – 21:00</span></li>
+        <li data-d="6"><span>Sábado</span><span>10:00 – 21:00</span></li>
+        <li data-d="0"><span>Domingo</span><span>12:00 – 18:00</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="servicios" style="padding-top:20px">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">Servicios</span>
+      <h2>Lo que hacemos</h2>
+      <p>Cada corte, con calma y con técnica. Pregúntanos por WhatsApp y te decimos precio y hueco.</p>
+    </div>
+    <div class="servs">
+      <div class="serv"><div class="n">01</div><h3>Corte de pelo</h3><p>Clásico o moderno, adaptado a tu tipo de pelo.</p></div>
+      <div class="serv"><div class="n">02</div><h3>Degradado</h3><p>Fade bajo, medio o alto, con transiciones limpias.</p></div>
+      <div class="serv"><div class="n">03</div><h3>Buzz cut</h3><p>Parece sencillo, pero tiene su técnica: limpio, uniforme y bien definido.</p></div>
+      <div class="serv"><div class="n">04</div><h3>Barba</h3><p>Arreglo, perfilado y barba italiana.</p></div>
+      <div class="serv"><div class="n">05</div><h3>Corte + barba</h3><p>El servicio completo para salir nuevo.</p></div>
+      <div class="serv"><div class="n">06</div><h3>¿Tienes una idea?</h3><p>Tráenos una foto del corte que te gusta y lo vemos juntos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cubano" id="estilo">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Nuestro estilo</span>
+      <h2 style="font-size:clamp(2.6rem,6vw,4.2rem);margin-top:14px">Barberos cubanos en el centro de Logroño</h2>
+      <p>Traemos la escuela cubana de barbería: mucha técnica, buen ojo para cada tipo de pelo y un trato cercano, de los de toda la vida. Aquí vienes a cortarte el pelo y sales como en casa.</p>
+    </div>
+    <div class="cifras">
+      <div class="cifra"><b>5,0</b><span>en Google</span></div>
+      <div class="cifra"><b>7</b><span>días a la semana</span></div>
+      <div class="cifra"><b>21h</b><span>cerramos tarde, de lunes a sábado</span></div>
+      <div class="cifra"><b>💈</b><span>buen precio, mejor trato</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="opiniones">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">Opiniones</span>
+      <h2>Lo que dicen los clientes</h2>
+    </div>
+    <div class="ops">
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Siempre voy con un buzz cut, que parece un corte sencillo pero tiene su técnica… y Puri lo clava cada vez.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Muy buen trato y muy buenos barberos cubanos. Excelentes y profesionales.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Totalmente recomendado, muy buen servicio a precio inmejorable.”</p><small>Opinión en Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visitanos" style="padding-top:0">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Dónde estamos</span>
+      <h2>Doctores Castroviejo, 17</h2>
+      <div class="info">
+        <div>📍<span><b>Dirección</b>C. Doctores Castroviejo, 17 (pasaje), bajo 9 · 26003 Logroño</span></div>
+        <div>📞<span><b>Teléfono y WhatsApp</b><a href="tel:+34670732380">670 73 23 80</a></span></div>
+        <div>🕙<span><b>Horario</b>L–S 10:00–21:00 · Domingo 12:00–18:00</span></div>
+      </div>
+      <a class="btn btn-rojo" href="https://wa.me/34670732380?text=Hola%20Puri%2C%20quer%C3%ADa%20pedir%20cita" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+    </div>
+    <div class="mapa"><iframe title="Mapa: Puri BarberShop, Doctores Castroviejo 17, Logroño" loading="lazy" src="https://maps.google.com/maps?q=Puri%20BarberShop%2C%20Calle%20Doctores%20Castroviejo%2017%2C%20Logro%C3%B1o&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div><b style="color:#fff">Puri BarberShop</b> · C. Doctores Castroviejo, 17 · Logroño</div>
+    <div>670 73 23 80</div>
+    <div style="opacity:.6">Propuesta de diseño · DaystartIA</div>
+  </div>
+</footer>
+
+<nav class="barra" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34670732380?text=Hola%20Puri%2C%20quer%C3%ADa%20pedir%20cita" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Cita</a>
+  <a href="tel:+34670732380"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Llamar</a>
+  <a href="https://maps.google.com/?q=Puri+BarberShop+Logro%C3%B1o" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>Cómo llegar</a>
+</nav>
+
+<script>
+  const ahora = new Date(), d = ahora.getDay(), m = ahora.getHours() * 60 + ahora.getMinutes();
+  const abierto = d === 0 ? (m >= 720 && m < 1080) : (m >= 600 && m < 1260);
+  const e = document.getElementById('estado');
+  e.querySelector('.punto').classList.toggle('cerrado', !abierto);
+  e.lastElementChild.textContent = abierto ? 'Abierto ahora' : 'Cerrado ahora · escríbenos por WhatsApp';
+  document.querySelector(`#horario li[data-d="${d}"]`)?.classList.add('hoy');
+</script>
+</body>
+</html>
