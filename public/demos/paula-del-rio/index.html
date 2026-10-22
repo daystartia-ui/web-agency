@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Centro de estética Paula del Río · Uñas y estética en Logroño</title>
+<meta name="description" content="Centro de estética Paula del Río, en Parque San Adrián 4 de Logroño. Manicura rusa, uñas de gel, alargamientos, pedicura, láser, lifting de pestañas, cejas y tratamientos faciales. Cita: 640 09 01 90.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --rosa:#e7a9a4; --rosa-osc:#c47b75; --nude:#f6e7e1; --nude-2:#fbf3ef; --salvia:#9fb3a0; --cacao:#3d2c29;
+    --blanco:#fffdfb; --texto:#3a2e2c; --suave:#85736f; --linea:#efdfd8; --radio:26px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"DM Sans",system-ui,sans-serif;background:var(--blanco);color:var(--texto);line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  h1,h2,h3{font-family:"DM Serif Display",Georgia,serif;font-weight:400;line-height:1.04;color:var(--cacao)}
+  h1 em,h2 em{color:var(--rosa-osc)}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+  .eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--rosa-osc)}
+  section{padding:96px 0}
+  .titulo{max-width:640px;margin-bottom:46px}
+  .titulo h2{font-size:clamp(2.3rem,5vw,3.6rem);margin-top:10px}
+  .titulo p{color:var(--suave);font-size:1.06rem;margin-top:12px}
+
+  .demo{background:var(--cacao);color:#e6d6d1;font-size:.8rem;text-align:center;padding:7px 16px}
+  .demo b{color:#fff}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(255,253,251,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--linea)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+  .marca{text-decoration:none;font-family:"DM Serif Display",serif;font-size:1.55rem;color:var(--cacao);line-height:1}
+  .marca small{display:block;font-family:"DM Sans",sans-serif;font-size:.66rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--rosa-osc);margin-bottom:4px}
+  .menu{display:flex;gap:28px;list-style:none;font-weight:600;font-size:.94rem}
+  .menu a{text-decoration:none;color:var(--suave)}
+  .menu a:hover{color:var(--rosa-osc)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 26px;border-radius:999px;font-family:inherit;font-weight:700;font-size:.97rem;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-1px)}
+  .btn svg{width:18px;height:18px}
+  .btn-rosa{background:var(--cacao);color:#fff}
+  .btn-rosa:hover{background:#2a1e1c}
+  .btn-blanco{background:#fff;color:var(--cacao);border:1.5px solid var(--linea)}
+
+  /* hero */
+  .hero{padding:70px 0 90px;background:linear-gradient(180deg,var(--nude-2),var(--blanco))}
+  .hero .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+  .hero h1{font-size:clamp(2.8rem,6.4vw,5rem)}
+  .hero .lead{font-size:1.14rem;color:var(--suave);max-width:500px;margin:22px 0 32px}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .rating{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--linea);padding:7px 16px;border-radius:999px;font-weight:600;margin-bottom:22px;font-size:.92rem}
+  .estrellas{color:#e0a43c;letter-spacing:2px}
+  .unas{position:relative;height:440px}
+  .una{position:absolute;bottom:0;width:72px;border-radius:40px 40px 18px 18px;box-shadow:inset 0 12px 0 rgba(255,255,255,.35),0 24px 40px -24px rgba(61,44,41,.5)}
+  .una:nth-child(1){left:6%;height:220px;background:linear-gradient(180deg,#f3c9c4,#e7a9a4)}
+  .una:nth-child(2){left:26%;height:300px;background:linear-gradient(180deg,#c47b75,#9d5a55)}
+  .una:nth-child(3){left:46%;height:340px;background:linear-gradient(180deg,#f6e7e1,#e9d2c8)}
+  .una:nth-child(4){left:66%;height:290px;background:linear-gradient(180deg,#b9cbb9,#9fb3a0)}
+  .una:nth-child(5){left:84%;height:190px;background:linear-gradient(180deg,#e7a9a4,#c47b75)}
+  .una::after{content:"";position:absolute;left:14px;right:14px;top:16px;height:40px;border-radius:30px;background:rgba(255,255,255,.35)}
+
+  /* servicios */
+  .servs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .serv{background:var(--nude-2);border-radius:var(--radio);padding:32px;border:1px solid var(--linea)}
+  .serv.dest{background:var(--cacao);color:#ecdcd7;border-color:var(--cacao)}
+  .serv.dest h3{color:#fff}
+  .serv .ico{width:52px;height:52px;border-radius:16px;background:#fff;display:grid;place-items:center;font-size:1.5rem;margin-bottom:18px}
+  .serv h3{font-size:1.9rem;margin-bottom:10px}
+  .serv ul{list-style:none;display:grid;gap:8px}
+  .serv li{display:flex;gap:10px}
+  .serv li::before{content:"♡";color:var(--rosa-osc)}
+  .serv.dest li::before{color:var(--rosa)}
+
+  /* tendencias */
+  .tend{background:var(--nude)}
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chips span{background:#fff;border-radius:999px;padding:12px 20px;font-weight:600;color:var(--cacao);border:1px solid var(--linea)}
+  .chips span b{color:var(--rosa-osc)}
+
+  /* equipo */
+  .equipo .grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .duo div{aspect-ratio:3/4;border-radius:var(--radio);background:linear-gradient(180deg,var(--nude),var(--rosa));display:flex;align-items:flex-end;padding:22px;color:#fff}
+  .duo div:nth-child(2){background:linear-gradient(180deg,#dfe7df,var(--salvia));margin-top:40px}
+  .duo b{font-family:"DM Serif Display",serif;font-weight:400;font-size:2rem;line-height:1}
+  .equipo p{color:var(--suave);margin-top:14px}
+  .valores{display:grid;gap:12px;margin-top:24px}
+  .valores div{display:flex;gap:12px;align-items:flex-start}
+  .valores div::before{content:"✦";color:var(--rosa-osc)}
+
+  /* opiniones */
+  .opiniones{background:var(--cacao);color:#e6d6d1}
+  .opiniones h2{color:#fff}
+  .resumen{display:flex;align-items:center;gap:22px;margin-bottom:38px;flex-wrap:wrap}
+  .resumen .nota{font-family:"DM Serif Display",serif;font-size:5rem;color:var(--rosa);line-height:.9}
+  .ops{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .op{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radio);padding:28px}
+  .op p{font-family:"DM Serif Display",serif;font-style:italic;font-size:1.3rem;color:#fff;line-height:1.35;margin:12px 0 14px}
+  .op small{opacity:.7}
+
+  /* contacto */
+  .contacto .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .caja{background:var(--nude-2);border-radius:var(--radio);padding:32px;border:1px solid var(--linea)}
+  .caja h3{font-size:2rem;margin-bottom:4px}
+  .caja>p{color:var(--suave);margin-bottom:20px}
+  form{display:grid;gap:14px}
+  label{font-size:.88rem;font-weight:700;display:grid;gap:6px}
+  input,select{font:inherit;font-weight:500;padding:13px 15px;border:1px solid var(--linea);border-radius:14px;background:#fff;color:var(--texto)}
+  input:focus,select:focus{outline:2px solid var(--nude);border-color:var(--rosa-osc)}
+  .horario{list-style:none}
+  .horario li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed var(--linea);color:var(--suave)}
+  .horario li b{color:var(--texto);font-weight:600}
+  .horario li.hoy,.horario li.hoy b{color:var(--rosa-osc);font-weight:700}
+  .info{display:grid;gap:6px;margin-top:18px}
+  .info a{color:var(--rosa-osc);font-weight:700;text-decoration:none}
+  .mapa{margin-top:16px;border-radius:18px;overflow:hidden;border:1px solid var(--linea)}
+  .mapa iframe{width:100%;height:220px;border:0;display:block}
+
+  footer{background:var(--cacao);color:#c9b5ae;padding:40px 0 110px;font-size:.9rem}
+  footer .grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  footer a{text-decoration:none}
+
+  .barra{display:none}
+
+  @media (max-width:900px){
+    .menu,.nav .btn{display:none}
+    .hero{padding:40px 0 70px}
+    .hero .grid,.equipo .grid,.contacto .grid{grid-template-columns:1fr;gap:40px}
+    .unas{height:280px}
+    .una{width:54px}
+    .una:nth-child(1){height:140px}.una:nth-child(2){height:200px}.una:nth-child(3){height:240px}.una:nth-child(4){height:190px}.una:nth-child(5){height:120px;left:82%}
+    .servs,.ops{grid-template-columns:1fr}
+    section{padding:72px 0}
+    .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:60;background:#fff;border-top:1px solid var(--linea);box-shadow:0 -6px 20px rgba(0,0,0,.06)}
+    .barra a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 12px;font-size:.76rem;font-weight:700;text-decoration:none;color:var(--cacao)}
+    .barra a:first-child{background:var(--cacao);color:#fff}
+    .barra svg{width:20px;height:20px}
+  }
+  @media (max-width:520px){ .ctas{flex-direction:column} }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Propuesta de diseño</b> preparada por DaystartIA para el Centro de estética Paula del Río · no es la web oficial</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="marca" href="#inicio"><small>Centro de estética</small>Paula del Río</a>
+    <ul class="menu">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#equipo">Nosotras</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#cita">Cita</a></li>
+    </ul>
+    <a class="btn btn-rosa" href="https://wa.me/34640090190?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20cita" target="_blank" rel="noopener">Pedir cita</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap grid">
+    <div>
+      <div class="rating"><span class="estrellas">★★★★★</span> 4,9 en Google · 107 opiniones</div>
+      <h1>Tus uñas y tu piel, <em>en las mejores manos</em>.</h1>
+      <p class="lead">Centro de estética en Parque San Adrián, Logroño. Manicura, uñas de gel, pestañas, cejas, láser y tratamientos faciales, con materiales de calidad y un trato que enamora.</p>
+      <div class="ctas">
+        <a class="btn btn-rosa" href="https://wa.me/34640090190?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20cita" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+          Cita por WhatsApp
+        </a>
+        <a class="btn btn-blanco" href="#servicios">Ver servicios</a>
+      </div>
+    </div>
+    <div class="unas" aria-hidden="true"><div class="una"></div><div class="una"></div><div class="una"></div><div class="una"></div><div class="una"></div></div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="titulo">
+      <div class="eyebrow">Servicios</div>
+      <h2>Todo lo que necesitas <em>para sentirte bien</em></h2>
+      <p>Esmaltes profesionales, materiales de calidad y atención personalizada en cada servicio.</p>
+    </div>
+    <div class="servs">
+      <article class="serv dest"><div class="ico">💅</div><h3>Uñas</h3><ul>
+        <li>Manicura rusa</li><li>Uñas de gel</li><li>Alargamiento con gel de construcción y moldes</li><li>Diseños y nail art</li><li>Pedicura</li></ul></article>
+      <article class="serv"><div class="ico">👁️</div><h3>Mirada</h3><ul>
+        <li>Lifting de pestañas</li><li>Diseño y cuidado de cejas</li><li>Maquillaje</li></ul></article>
+      <article class="serv"><div class="ico">✨</div><h3>Piel</h3><ul>
+        <li>Tratamientos faciales</li><li>Tratamientos corporales</li><li>Depilación láser</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="tend">
+  <div class="wrap">
+    <div class="titulo" style="margin-bottom:28px">
+      <div class="eyebrow">Tendencias que hacemos</div>
+      <h2>Lo último en <em>uñas</em></h2>
+    </div>
+    <div class="chips">
+      <span><b>✿</b> Efecto blooming</span><span><b>✿</b> Manicura rusa</span><span><b>✿</b> Alargamientos con moldes</span><span><b>✿</b> Diseños personalizados</span>
+    </div>
+    <p style="color:var(--suave);margin-top:22px">Aquí iría la galería de vuestros trabajos, conectada con Instagram.</p>
+  </div>
+</section>
+
+<section class="equipo" id="equipo">
+  <div class="wrap grid">
+    <div class="duo" aria-hidden="true"><div><b>Paula</b></div><div><b>Sofía</b></div></div>
+    <div>
+      <div class="eyebrow">Nosotras</div>
+      <h2 style="font-size:clamp(2.3rem,5vw,3.6rem);margin-top:10px">Un espacio cuidado, <em>con buena energía</em></h2>
+      <p>Somos Paula y Sofía. Nos encanta lo que hacemos y se nota en cada trabajo: nos preocupamos de que estés a gusto y de que salgas feliz con el resultado.</p>
+      <div class="valores">
+        <div>Atención personalizada y sincera</div>
+        <div>Materiales de calidad y esmaltes profesionales</div>
+        <div>Un espacio tranquilo para desconectar</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="opiniones" id="opiniones">
+  <div class="wrap">
+    <div class="resumen">
+      <div class="nota">4,9</div>
+      <div><div class="estrellas" style="font-size:1.3rem">★★★★★</div><div>107 opiniones en Google · lo más comentado: la manicura, el láser y los faciales</div></div>
+    </div>
+    <div class="ops">
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Paula y Sofía son un encanto y grandes profesionales. Recomendable cien por cien.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Es la primera vez que me hago las uñas y sin duda volveré a repetir.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Se preocupan muchísimo de que estés a gusto y de que te gusten los resultados.”</p><small>Opinión en Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="contacto" id="cita">
+  <div class="wrap grid">
+    <div class="caja">
+      <h3>Pide tu cita</h3>
+      <p>Cuéntanos qué te apetece y te respondemos por WhatsApp.</p>
+      <form id="cita-form">
+        <label>Nombre<input name="nombre" required autocomplete="name"></label>
+        <label>Teléfono<input name="tel" type="tel" required autocomplete="tel"></label>
+        <label>Servicio
+          <select name="servicio"><option>Manicura</option><option>Uñas de gel / alargamiento</option><option>Pedicura</option><option>Lifting de pestañas</option><option>Cejas</option><option>Láser</option><option>Tratamiento facial</option></select>
+        </label>
+        <button class="btn btn-rosa" type="submit">Enviar por WhatsApp</button>
+      </form>
+    </div>
+    <div>
+      <h3 style="font-size:2rem;margin-bottom:8px">Horario</h3>
+      <ul class="horario" id="horario">
+        <li data-d="1"><b>Lunes a viernes</b><span>9:00 – 19:30</span></li>
+        <li data-d="6"><b>Sábado</b><span>9:30 – 13:30</span></li>
+        <li data-d="0"><b>Domingo</b><span>Cerrado</span></li>
+      </ul>
+      <div class="info">
+        <div>📍 Parque San Adrián, 4, bajo · 26007 Logroño</div>
+        <div>📞 <a href="tel:+34640090190">640 09 01 90</a> · 📸 <a href="https://www.instagram.com/esteticistapauladelrio/" target="_blank" rel="noopener">@esteticistapauladelrio</a></div>
+      </div>
+      <div class="mapa"><iframe title="Mapa: Centro de estética Paula del Río, Parque San Adrián 4, Logroño" loading="lazy" src="https://maps.google.com/maps?q=Centro%20de%20est%C3%A9tica%20Paula%20Del%20R%C3%ADo%2C%20Parque%20San%20Adri%C3%A1n%204%2C%20Logro%C3%B1o&z=16&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div><b style="color:#fff">Centro de estética Paula del Río</b> · Logroño</div>
+    <div><a href="https://www.instagram.com/esteticistapauladelrio/" target="_blank" rel="noopener">Instagram</a></div>
+    <div style="opacity:.6">Propuesta de diseño · DaystartIA</div>
+  </div>
+</footer>
+
+<nav class="barra" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34640090190?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20cita" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Cita</a>
+  <a href="tel:+34640090190"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Llamar</a>
+  <a href="https://maps.google.com/?q=Centro+de+est%C3%A9tica+Paula+Del+R%C3%ADo+Logro%C3%B1o" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>Cómo llegar</a>
+</nav>
+
+<script>
+  const d = new Date().getDay();
+  document.querySelector(`#horario li[data-d="${d >= 1 && d <= 5 ? 1 : d}"]`)?.classList.add('hoy');
+  document.getElementById('cita-form').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = new FormData(e.target);
+    const msg = `Hola, soy ${f.get('nombre')}. Me gustaría pedir cita para: ${f.get('servicio')}. Mi teléfono es ${f.get('tel')}.`;
+    window.open('https://wa.me/34640090190?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  });
+</script>
+</body>
+</html>
