@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Portuguesa · Cocina portuguesa en Logroño</title>
+<meta name="description" content="La Portuguesa, restaurante de cocina portuguesa en la Calle la Industria 5 de Logroño. Francesinha de Oporto, bacalao a Brás, a Lagareiro, cozido y tarta de naranja casera. Abierto todos los días. Tel. 641 73 11 05.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,500&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --azul:#1b4fa0; --azul-osc:#123a78; --azulejo:#e8f0fb; --amarillo:#f4b928; --rojo:#c2312c;
+    --blanco:#fff; --crema:#fdfaf3; --texto:#1d2433; --suave:#5f6779; --linea:#dde5f2; --radio:20px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Nunito,system-ui,sans-serif;background:var(--crema);color:var(--texto);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:800;line-height:1.04;color:var(--azul-osc);letter-spacing:-.015em}
+  h1 em,h2 em{font-style:italic;font-weight:500;color:var(--rojo)}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+  .eyebrow{font-size:.8rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rojo)}
+  section{padding:92px 0}
+  .titulo{max-width:640px;margin-bottom:44px}
+  .titulo h2{font-size:clamp(2.2rem,4.8vw,3.4rem);margin-top:10px}
+  .titulo p{color:var(--suave);font-size:1.06rem;margin-top:12px}
+
+  /* azulejo */
+  .azulejo{background-color:#fff;background-image:
+    radial-gradient(circle at 50% 50%,var(--azul) 0 5px,transparent 6px),
+    radial-gradient(circle at 0 0,transparent 15px,var(--azul) 16px 18px,transparent 19px),
+    radial-gradient(circle at 100% 0,transparent 15px,var(--azul) 16px 18px,transparent 19px),
+    radial-gradient(circle at 0 100%,transparent 15px,var(--azul) 16px 18px,transparent 19px),
+    radial-gradient(circle at 100% 100%,transparent 15px,var(--azul) 16px 18px,transparent 19px);
+    background-size:48px 48px}
+
+  .demo{background:var(--azul-osc);color:#cfdcf2;font-size:.8rem;text-align:center;padding:7px 16px}
+  .demo b{color:#fff}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(253,250,243,.94);backdrop-filter:blur(10px);border-bottom:4px solid var(--azul)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+  .marca{text-decoration:none;font-family:Fraunces,serif;font-weight:800;font-size:1.6rem;color:var(--azul-osc);display:flex;align-items:center;gap:10px}
+  .marca i{width:34px;height:34px;border-radius:8px;background:var(--azul);display:grid;place-items:center;color:var(--amarillo);font-style:normal;font-size:1.1rem}
+  .menu{display:flex;gap:28px;list-style:none;font-weight:700;font-size:.95rem}
+  .menu a{text-decoration:none;color:var(--suave)}
+  .menu a:hover{color:var(--azul)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 24px;border-radius:999px;font-family:inherit;font-weight:800;font-size:.98rem;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-1px)}
+  .btn svg{width:19px;height:19px}
+  .btn-azul{background:var(--azul);color:#fff}
+  .btn-azul:hover{background:var(--azul-osc)}
+  .btn-amarillo{background:var(--amarillo);color:var(--azul-osc)}
+  .btn-blanco{background:#fff;color:var(--azul-osc);border:2px solid var(--linea)}
+
+  /* hero */
+  .hero{padding:70px 0 90px}
+  .hero .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+  .hero h1{font-size:clamp(2.8rem,6.6vw,5.2rem)}
+  .hero .lead{font-size:1.15rem;color:var(--suave);max-width:520px;margin:22px 0 32px}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .rating{display:inline-flex;align-items:center;gap:10px;background:#fff;border:2px solid var(--linea);padding:7px 16px;border-radius:999px;font-weight:700;margin-bottom:22px;font-size:.92rem}
+  .estrellas{color:var(--amarillo);letter-spacing:2px}
+  .placa{border-radius:28px;padding:16px;box-shadow:0 40px 80px -40px rgba(18,58,120,.5)}
+  .placa div{background:#fff;border-radius:18px;padding:34px;text-align:center}
+  .placa .sub{font-size:.8rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--rojo)}
+  .placa h3{font-size:2.6rem;margin:8px 0}
+  .placa p{color:var(--suave)}
+  .placa .abierto{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-weight:800;color:#15803d}
+  .placa .abierto::before{content:"";width:10px;height:10px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px #dcfce7}
+
+  /* francesinha */
+  .estrella{background:var(--azul);color:#dbe6f8}
+  .estrella .grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .estrella h2{color:#fff;font-size:clamp(2.4rem,5vw,3.8rem);margin:10px 0 16px}
+  .estrella h2 em{color:var(--amarillo)}
+  .estrella .eyebrow{color:var(--amarillo)}
+  .estrella p{opacity:.92}
+  .capas{display:grid;gap:10px}
+  .capa{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:16px 18px;display:flex;gap:14px;align-items:center;font-weight:700}
+  .capa span{font-size:1.5rem}
+
+  /* carta */
+  .carta{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .grupo{background:#fff;border:2px solid var(--linea);border-radius:var(--radio);padding:30px}
+  .grupo h3{font-size:1.6rem;margin-bottom:4px}
+  .grupo .pt{font-family:Fraunces,serif;font-style:italic;color:var(--rojo);margin-bottom:14px}
+  .grupo ul{list-style:none;display:grid;gap:12px}
+  .grupo li b{display:block;color:var(--texto)}
+  .grupo li span{font-size:.9rem;color:var(--suave)}
+  .nota{color:var(--suave);font-size:.92rem;margin-top:22px}
+
+  /* franja */
+  .franja .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-top:36px;padding-bottom:36px}
+  .franja div>div{background:#fff;border-radius:16px;padding:22px;text-align:center;box-shadow:0 10px 30px -18px rgba(18,58,120,.5)}
+  .franja strong{display:block;font-family:Fraunces,serif;font-size:1.4rem;color:var(--azul-osc)}
+  .franja span{color:var(--suave);font-weight:600}
+
+  /* opiniones */
+  .ops{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .op{background:#fff;border:2px solid var(--linea);border-radius:var(--radio);padding:28px}
+  .op p{font-family:Fraunces,serif;font-weight:600;font-size:1.25rem;line-height:1.35;margin:12px 0 14px;color:var(--azul-osc)}
+  .op small{color:var(--suave)}
+  .resumen{display:flex;align-items:center;gap:22px;margin-bottom:38px;flex-wrap:wrap}
+  .resumen .nota-g{font-family:Fraunces,serif;font-size:4.6rem;font-weight:800;color:var(--azul);line-height:.9}
+
+  /* visita */
+  .visita .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:44px}
+  .fila{padding:16px 0;border-bottom:2px dotted var(--linea)}
+  .fila:last-of-type{border:0}
+  .fila h3{font-size:1.25rem;margin-bottom:2px}
+  .fila p{color:var(--suave);font-weight:600}
+  .fila a{color:var(--azul);font-weight:800;text-decoration:none}
+  .mapa{border-radius:var(--radio);overflow:hidden;border:4px solid var(--azul);min-height:400px}
+  .mapa iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+
+  footer{background:var(--azul-osc);color:#b9c8e4;padding:40px 0 110px;font-size:.9rem}
+  footer .grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+  .barra{display:none}
+
+  @media (max-width:900px){
+    .menu,.nav .btn{display:none}
+    .hero{padding:40px 0 70px}
+    .hero .grid,.estrella .grid,.visita .grid{grid-template-columns:1fr;gap:36px}
+    .carta,.ops,.franja .wrap{grid-template-columns:1fr}
+    section{padding:72px 0}
+    .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:60;background:#fff;border-top:4px solid var(--azul)}
+    .barra a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 12px;font-size:.76rem;font-weight:800;text-decoration:none;color:var(--azul-osc)}
+    .barra a:first-child{background:var(--azul);color:#fff}
+    .barra svg{width:20px;height:20px}
+  }
+  @media (max-width:520px){ .ctas{flex-direction:column} }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Propuesta de diseño</b> preparada por DaystartIA para La Portuguesa · no es la web oficial</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="marca" href="#inicio"><i>✿</i>La Portuguesa</a>
+    <ul class="menu">
+      <li><a href="#francesinha">Francesinha</a></li>
+      <li><a href="#carta">Carta</a></li>
+      <li><a href="#visitanos">Horario</a></li>
+    </ul>
+    <a class="btn btn-azul" href="tel:+34641731105">Reservar</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap grid">
+    <div>
+      <div class="rating"><span class="estrellas">★★★★★</span> 4,6 en Google · 574 opiniones</div>
+      <h1>Un pedacito de <em>Portugal</em> en Logroño.</h1>
+      <p class="lead">Cocina portuguesa casera en la Calle la Industria: francesinha de Oporto, bacalao de mil maneras, cozido y postres de la abuela. Raciones generosas y trato familiar.</p>
+      <div class="ctas">
+        <a class="btn btn-azul" href="https://wa.me/34641731105?text=Ol%C3%A1%2C%20quer%C3%ADa%20reservar%20mesa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+          Reservar por WhatsApp
+        </a>
+        <a class="btn btn-blanco" href="#carta">Ver la carta</a>
+      </div>
+    </div>
+    <div class="placa azulejo">
+      <div>
+        <div class="sub">Abierto todos los días</div>
+        <h3>9:00 – 23:00</h3>
+        <p>Desayunos, comidas y cenas.<br>Menú y carta con más de 25 platos.</p>
+        <div class="abierto" id="estado">Hoy abrimos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="estrella" id="francesinha">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow">Nuestra estrella</div>
+      <h2>Francesinha <em>à moda do Porto</em></h2>
+      <p>El plato más famoso de Oporto, tal y como se come allí: un sándwich contundente, gratinado con queso y bañado en nuestra salsa casera. Ven con hambre.</p>
+      <div class="ctas" style="margin-top:26px"><a class="btn btn-amarillo" href="tel:+34641731105">Reservar mesa</a></div>
+    </div>
+    <div class="capas" aria-label="Cómo es una francesinha">
+      <div class="capa"><span>🧀</span>Queso fundido gratinado</div>
+      <div class="capa"><span>🥩</span>Relleno de carnes</div>
+      <div class="capa"><span>🍞</span>Pan tostado</div>
+      <div class="capa"><span>🌶️</span>Salsa casera ligeramente picante</div>
+    </div>
+  </div>
+</section>
+
+<section id="carta">
+  <div class="wrap">
+    <div class="titulo">
+      <div class="eyebrow">La carta</div>
+      <h2>Lo mejor de la <em>cocina lusa</em></h2>
+      <p>Más de 25 platos tradicionales portugueses, cocinados como en casa.</p>
+    </div>
+    <div class="carta">
+      <div class="grupo"><h3>Bacalao</h3><div class="pt">bacalhau</div><ul>
+        <li><b>Bacalhau à Brás</b><span>Desmigado con cebolla, patatas paja y huevo</span></li>
+        <li><b>Bacalhau à Portuguesa</b><span>Lomo encebollado con patatas</span></li>
+        <li><b>Bacalhau à Lagareiro</b><span>Al horno con aceite y ajo</span></li>
+      </ul></div>
+      <div class="grupo"><h3>Mar y tierra</h3><div class="pt">peixe e carne</div><ul>
+        <li><b>Pulpo à portuguesa</b><span>Al estilo tradicional</span></li>
+        <li><b>Sardinas</b><span>Un clásico portugués</span></li>
+        <li><b>Arroz con marisco</b><span>Para compartir</span></li>
+        <li><b>Cozido à portuguesa</b><span>Según temporada, en fin de semana</span></li>
+      </ul></div>
+      <div class="grupo"><h3>Para empezar y acabar</h3><div class="pt">entradas e sobremesas</div><ul>
+        <li><b>Revuelto de boletus</b><span>Entrante de la casa</span></li>
+        <li><b>Ensaladas</b><span>Frescas y variadas</span></li>
+        <li><b>Tarta de naranja casera</b><span>El postre que no te puedes perder</span></li>
+      </ul></div>
+    </div>
+    <p class="nota">También te lo llevamos a casa con Uber Eats. La web real incluiría la carta completa con precios y el menú del día.</p>
+  </div>
+</section>
+
+<div class="franja azulejo">
+  <div class="wrap">
+    <div><strong>Todos los días</strong><span>de 9:00 a 23:00</span></div>
+    <div><strong>Menú y carta</strong><span>+25 platos portugueses</span></div>
+    <div><strong>A domicilio</strong><span>con Uber Eats</span></div>
+  </div>
+</div>
+
+<section id="opiniones">
+  <div class="wrap">
+    <div class="resumen">
+      <div class="nota-g">4,6</div>
+      <div><div class="estrellas" style="font-size:1.3rem">★★★★★</div><div style="color:var(--suave);font-weight:600">574 opiniones en Google</div></div>
+    </div>
+    <div class="ops">
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Comida deliciosa, raciones generosas y trato excelente.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Pedimos ensaladas y revuelto, arroz con marisco, bacalao Portugal y sardinas.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Comida tradicional portuguesa bien elaborada, atención estupenda y gran calidad-precio.”</p><small>Opinión en Tripadvisor</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visitanos" style="padding-top:0">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow">Visítanos</div>
+      <h2 style="font-size:clamp(2.2rem,4.8vw,3.2rem);margin:10px 0 8px">Calle la Industria, 5</h2>
+      <div class="fila"><h3>Dirección</h3><p>C/ la Industria, 5 · 26003 Logroño</p></div>
+      <div class="fila"><h3>Horario</h3><p>Todos los días · 9:00 – 23:00</p></div>
+      <div class="fila"><h3>Reservas</h3><p><a href="tel:+34641731105">641 73 11 05</a> · también por WhatsApp</p></div>
+    </div>
+    <div class="mapa"><iframe title="Mapa: La Portuguesa, Calle la Industria 5, Logroño" loading="lazy" src="https://maps.google.com/maps?q=La%20Portugueza%2C%20C.%20la%20Industria%205%2C%20Logro%C3%B1o&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div><b style="color:#fff">La Portuguesa</b> · cocina portuguesa · Logroño</div>
+    <div>641 73 11 05</div>
+    <div style="opacity:.6">Propuesta de diseño · DaystartIA</div>
+  </div>
+</footer>
+
+<nav class="barra" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34641731105?text=Ol%C3%A1%2C%20quer%C3%ADa%20reservar%20mesa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Reservar</a>
+  <a href="#carta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>Carta</a>
+  <a href="https://maps.google.com/?q=La+Portugueza+Logro%C3%B1o" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>Cómo llegar</a>
+</nav>
+
+<script>
+  const h = new Date().getHours();
+  document.getElementById('estado').textContent = (h >= 9 && h < 23) ? 'Abierto ahora' : 'Abrimos a las 9:00';
+</script>
+</body>
+</html>
