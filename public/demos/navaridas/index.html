@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clínica Dental Navaridas · Dentista en Logroño</title>
+<meta name="description" content="Clínica Dental Navaridas, en la Calle Chile 56 de Logroño. Odontología general, implantes, ortodoncia y estética dental con trato cercano. Pide cita en el 941 28 83 93.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --negro:#0c0c0d; --carbon:#18181a; --naranja:#ff6a13; --naranja-osc:#e05500; --naranja-cl:#fff1e8;
+    --blanco:#fff; --papel:#fafafa; --texto:#1c1c1e; --gris:#6c6c72; --linea:#e7e7ea; --radio:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Urbanist,system-ui,sans-serif;background:var(--papel);color:var(--texto);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:1.04rem}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  h1,h2,h3{line-height:1.05;letter-spacing:-.03em;font-weight:800}
+  h1 span,h2 span{color:var(--naranja)}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  .eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--naranja)}
+  section{padding:92px 0}
+  .titulo{max-width:620px;margin-bottom:44px}
+  .titulo h2{font-size:clamp(2.1rem,4.6vw,3.2rem);margin-top:10px}
+  .titulo p{color:var(--gris);margin-top:12px}
+
+  .demo{background:#000;color:#bbb;font-size:.8rem;text-align:center;padding:7px 16px}
+  .demo b{color:#fff}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(12,12,13,.94);backdrop-filter:blur(10px);color:#fff}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
+  .marca{text-decoration:none;font-weight:800;font-size:1.25rem;letter-spacing:-.02em;line-height:1}
+  .marca small{display:block;font-weight:600;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--naranja);margin-bottom:3px}
+  .menu{display:flex;gap:28px;list-style:none;font-weight:600;font-size:.95rem}
+  .menu a{text-decoration:none;color:#b8b8bd}
+  .menu a:hover{color:#fff}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 26px;border-radius:12px;font-family:inherit;font-weight:700;font-size:1rem;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-1px)}
+  .btn svg{width:19px;height:19px}
+  .btn-naranja{background:var(--naranja);color:#fff}
+  .btn-naranja:hover{background:var(--naranja-osc)}
+  .btn-linea{border:1.5px solid rgba(255,255,255,.35);color:#fff}
+
+  /* hero */
+  .hero{background:var(--negro);color:#d8d8dc;padding:70px 0 90px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-60px;top:40px;width:420px;height:420px;background:
+    linear-gradient(var(--naranja),var(--naranja)) 0 0/88px 88px no-repeat,
+    linear-gradient(#fff,#fff) 104px 0/88px 88px no-repeat,
+    linear-gradient(#fff,#fff) 0 104px/88px 88px no-repeat,
+    linear-gradient(var(--naranja),var(--naranja)) 208px 104px/88px 88px no-repeat,
+    linear-gradient(#fff,#fff) 104px 208px/88px 88px no-repeat;opacity:.08}
+  .hero .grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+  .hero h1{color:#fff;font-size:clamp(2.8rem,6.6vw,5rem)}
+  .hero .lead{font-size:1.15rem;max-width:500px;margin:22px 0 32px;color:#b8b8bd}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .marca-img{border-radius:22px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(255,106,19,.45);border:1px solid rgba(255,255,255,.08)}
+  .marca-img img{width:100%}
+  .rating{display:inline-flex;align-items:center;gap:10px;font-size:.92rem;margin-bottom:22px;color:#c9c9cd}
+  .estrellas{color:var(--naranja);letter-spacing:2px}
+
+  /* ventajas */
+  .ventajas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .vent{background:#fff;border:1px solid var(--linea);border-radius:var(--radio);padding:28px}
+  .vent .n{width:46px;height:46px;border-radius:12px;background:var(--naranja-cl);color:var(--naranja);display:grid;place-items:center;font-weight:800;font-size:1.2rem;margin-bottom:14px}
+  .vent h3{font-size:1.3rem;margin-bottom:6px}
+  .vent p{color:var(--gris);font-size:.97rem}
+
+  /* tratamientos */
+  .trats-bg{background:var(--negro);color:#c9c9cd}
+  .trats-bg h2{color:#fff}
+  .trats-bg .titulo p{color:#9a9aa0}
+  .trats{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#2a2a2d;border-radius:var(--radio);overflow:hidden}
+  .trat{background:var(--carbon);padding:30px 26px;transition:background .2s}
+  .trat:hover{background:#222225}
+  .trat .num{color:var(--naranja);font-weight:800;font-size:.95rem}
+  .trat h3{color:#fff;font-size:1.35rem;margin:8px 0 6px}
+  .trat p{font-size:.95rem}
+
+  /* opinión */
+  .cita{max-width:780px;margin:0 auto;text-align:center}
+  .cita p{font-size:clamp(1.5rem,3.4vw,2.2rem);font-weight:700;letter-spacing:-.02em;line-height:1.25;margin:16px 0}
+  .cita small{color:var(--gris)}
+
+  /* contacto */
+  .contacto .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .caja{background:#fff;border:1px solid var(--linea);border-radius:var(--radio);padding:32px}
+  .caja h3{font-size:1.6rem;margin-bottom:4px}
+  .caja>p{color:var(--gris);margin-bottom:20px}
+  form{display:grid;gap:14px}
+  label{font-size:.9rem;font-weight:700;display:grid;gap:6px}
+  input,select{font:inherit;font-weight:500;padding:13px 14px;border:1px solid var(--linea);border-radius:12px;background:var(--papel);color:var(--texto)}
+  input:focus,select:focus{outline:2px solid #ffd1b5;border-color:var(--naranja)}
+  .fila{padding:16px 0;border-bottom:1px solid var(--linea)}
+  .fila:last-of-type{border:0}
+  .fila h3{font-size:1.1rem;margin-bottom:2px}
+  .fila p{color:var(--gris)}
+  .fila a{color:var(--naranja);font-weight:700;text-decoration:none}
+  .mapa{margin-top:16px;border-radius:14px;overflow:hidden;border:1px solid var(--linea)}
+  .mapa iframe{width:100%;height:230px;border:0;display:block}
+
+  footer{background:#000;color:#8a8a90;padding:40px 0 110px;font-size:.9rem}
+  footer .grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  footer a{text-decoration:none}
+
+  .barra{display:none}
+
+  @media (max-width:900px){
+    .menu,.nav .btn{display:none}
+    .hero{padding:44px 0 70px}
+    .hero .grid,.contacto .grid{grid-template-columns:1fr;gap:36px}
+    .ventajas,.trats{grid-template-columns:1fr}
+    section{padding:72px 0}
+    .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:60;background:#fff;border-top:1px solid var(--linea);box-shadow:0 -6px 20px rgba(0,0,0,.06)}
+    .barra a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 12px;font-size:.76rem;font-weight:700;text-decoration:none;color:var(--texto)}
+    .barra a:first-child{background:var(--naranja);color:#fff}
+    .barra svg{width:20px;height:20px}
+  }
+  @media (max-width:520px){ .ctas{flex-direction:column} }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Propuesta de diseño</b> preparada por DaystartIA para la Clínica Dental Navaridas · tratamientos orientativos, a confirmar con la clínica</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="marca" href="#inicio"><small>Clínica dental</small>Navaridas</a>
+    <ul class="menu">
+      <li><a href="#tratamientos">Tratamientos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a class="btn btn-naranja" href="tel:+34941288393">Pedir cita</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap grid">
+    <div>
+      <div class="rating"><span class="estrellas">★★★★★</span> 5,0 en Google</div>
+      <h1>Tu sonrisa, <span>en buenas manos</span>.</h1>
+      <p class="lead">Clínica dental en la Calle Chile de Logroño. Pacientes que llevan años con nosotros por el trato y por un trabajo bien hecho.</p>
+      <div class="ctas">
+        <a class="btn btn-naranja" href="tel:+34941288393">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Llamar · 941 28 83 93
+        </a>
+        <a class="btn btn-linea" href="#contacto">Pedir cita online</a>
+      </div>
+    </div>
+    <div class="marca-img"><img src="/demos/navaridas/img/marca.webp" alt="Imagen de marca de Clínica Dental Navaridas"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="ventajas">
+      <div class="vent"><div class="n">1</div><h3>Trato cercano</h3><p>Te explicamos cada paso y resolvemos tus dudas sin prisas.</p></div>
+      <div class="vent"><div class="n">2</div><h3>Pacientes de confianza</h3><p>Muchos de nuestros pacientes llevan años confiando en nosotros.</p></div>
+      <div class="vent"><div class="n">3</div><h3>Bien comunicados</h3><p>En la Calle Chile, en pleno barrio de Logroño.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="trats-bg" id="tratamientos">
+  <div class="wrap">
+    <div class="titulo">
+      <div class="eyebrow">Tratamientos</div>
+      <h2>Todo para cuidar <span>de tu boca</span></h2>
+      <p>Odontología para toda la familia, con un diagnóstico claro y presupuesto antes de empezar.</p>
+    </div>
+    <div class="trats">
+      <div class="trat"><span class="num">01</span><h3>Revisión y limpieza</h3><p>Revisiones periódicas y limpieza profesional.</p></div>
+      <div class="trat"><span class="num">02</span><h3>Empastes</h3><p>Tratamiento de caries para conservar tus dientes.</p></div>
+      <div class="trat"><span class="num">03</span><h3>Endodoncia</h3><p>Salvamos el diente tratando el nervio.</p></div>
+      <div class="trat"><span class="num">04</span><h3>Implantes y prótesis</h3><p>Recupera los dientes que faltan.</p></div>
+      <div class="trat"><span class="num">05</span><h3>Ortodoncia</h3><p>Dientes alineados a cualquier edad.</p></div>
+      <div class="trat"><span class="num">06</span><h3>Estética dental</h3><p>Blanqueamiento y carillas.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap cita">
+    <span class="estrellas" style="font-size:1.3rem">★★★★★</span>
+    <p>“El trato es muy bueno, realiza un trabajo excelente. La recomiendo.”</p>
+    <small>Opinión de un paciente en Google</small>
+  </div>
+</section>
+
+<section class="contacto" id="contacto" style="padding-top:0">
+  <div class="wrap grid">
+    <div class="caja">
+      <h3>Pide tu cita</h3>
+      <p>Déjanos tus datos y te llamamos para darte hora.</p>
+      <form id="cita">
+        <label>Nombre<input name="nombre" required autocomplete="name"></label>
+        <label>Teléfono<input name="tel" type="tel" required autocomplete="tel"></label>
+        <label>Motivo
+          <select name="motivo">
+            <option>Revisión</option>
+            <option>Dolor / urgencia</option>
+            <option>Implantes</option>
+            <option>Ortodoncia</option>
+            <option>Estética dental</option>
+          </select>
+        </label>
+        <button class="btn btn-naranja" type="submit">Quiero que me llamen</button>
+      </form>
+    </div>
+    <div class="caja">
+      <div class="fila"><h3>Dirección</h3><p>Calle Chile, 56, bajo · 26007 Logroño</p></div>
+      <div class="fila"><h3>Teléfono</h3><p><a href="tel:+34941288393">941 28 83 93</a></p></div>
+      <div class="fila"><h3>Email</h3><p><a href="mailto:info@clinicanavaridas.com">info@clinicanavaridas.com</a></p></div>
+      <div class="mapa"><iframe title="Mapa: Clínica Dental Navaridas, Calle Chile 56, Logroño" loading="lazy" src="https://maps.google.com/maps?q=Cl%C3%ADnica%20Dental%20Navaridas%2C%20Calle%20Chile%2056%2C%20Logro%C3%B1o&z=16&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div><b style="color:#fff">Clínica Dental Navaridas</b> · Calle Chile, 56 · Logroño</div>
+    <div><a href="tel:+34941288393">941 28 83 93</a></div>
+    <div style="opacity:.6">Propuesta de diseño · DaystartIA</div>
+  </div>
+</footer>
+
+<nav class="barra" aria-label="Acciones rápidas">
+  <a href="tel:+34941288393"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Llamar</a>
+  <a href="#contacto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Pedir cita</a>
+  <a href="https://maps.google.com/?q=Cl%C3%ADnica+Dental+Navaridas+Logro%C3%B1o" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>Cómo llegar</a>
+</nav>
+
+<script>
+  // Demo: el formulario prepara un email a la clínica con los datos
+  document.getElementById('cita').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = new FormData(e.target);
+    const cuerpo = `Nombre: ${f.get('nombre')}\nTeléfono: ${f.get('tel')}\nMotivo: ${f.get('motivo')}`;
+    location.href = 'mailto:info@clinicanavaridas.com?subject=' + encodeURIComponent('Solicitud de cita') + '&body=' + encodeURIComponent(cuerpo);
+  });
+</script>
+</body>
+</html>
