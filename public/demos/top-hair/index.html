@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top Hair · Peluquería unisex y estética en Vara de Rey, Logroño</title>
+<meta name="description" content="Peluquería Top Hair Unisex Estética, en la calle General Vara de Rey 56 de Logroño. Corte, color, keratina, tratamientos del cuero cabelludo, barba, cejas, manicura, pedicura y limpieza facial. Tel. 660 89 30 82.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --petroleo:#0f4c4f; --petroleo2:#0a3638; --coral:#f07a5a; --coral-cl:#fde6df; --arena:#f6f1ea; --blanco:#fff; --tinta:#14201f; --suave:#5f6d6b; --linea:#e3ddd3;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--arena);color:var(--tinta);line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  h1,h2,h3{font-family:Syne,system-ui,sans-serif;font-weight:800;line-height:1;letter-spacing:-.02em;color:var(--tinta)}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  .eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--coral)}
+  section{padding:96px 0}
+  .titulo{max-width:640px;margin-bottom:46px}
+  .titulo h2{font-size:clamp(2.4rem,5.4vw,4rem);margin-top:12px}
+  .titulo p{color:var(--suave);margin-top:14px;font-size:1.05rem}
+
+  .demo{background:var(--tinta);color:#c7d1cf;font-size:.8rem;text-align:center;padding:7px 16px}
+  .demo b{color:#fff}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(246,241,234,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--linea)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+  .marca{text-decoration:none;font-family:Syne,sans-serif;font-weight:800;font-size:1.7rem;letter-spacing:-.03em;color:var(--petroleo)}
+  .marca span{color:var(--coral)}
+  .menu{display:flex;gap:28px;list-style:none;font-weight:600;font-size:.93rem}
+  .menu a{text-decoration:none;color:var(--suave)}
+  .menu a:hover{color:var(--petroleo)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:12px;font-family:inherit;font-weight:700;font-size:1rem;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:19px;height:19px}
+  .btn-coral{background:var(--coral);color:#fff}
+  .btn-coral:hover{background:#e0623f}
+  .btn-petroleo{background:var(--petroleo);color:#fff}
+  .btn-borde{border:2px solid var(--petroleo);color:var(--petroleo)}
+
+  /* hero */
+  .hero{padding:70px 0 96px}
+  .hero .grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:50px;align-items:center}
+  .hero h1{font-size:clamp(3rem,7.6vw,6rem)}
+  .hero h1 span{color:var(--petroleo)}
+  .hero h1 em{font-style:normal;color:var(--coral)}
+  .hero .lead{font-size:1.15rem;color:var(--suave);max-width:520px;margin:22px 0 32px}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .datos{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+  .datos span{background:var(--blanco);border:1px solid var(--linea);border-radius:999px;padding:7px 14px;font-weight:600;font-size:.88rem}
+  .estrellas{color:#e7a520;letter-spacing:1px}
+  .bloque{background:var(--petroleo);color:#d6e6e4;border-radius:28px;padding:34px;position:relative;overflow:hidden}
+  .bloque::after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:var(--coral);opacity:.25;right:-70px;top:-70px}
+  .bloque h3{color:#fff;font-size:1.7rem;position:relative;z-index:1}
+  .bloque ul{list-style:none;margin-top:16px;position:relative;z-index:1}
+  .bloque li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.14);display:flex;gap:10px}
+  .bloque li:last-child{border:0}
+  .bloque li::before{content:"✓";color:var(--coral);font-weight:800}
+  .estado{display:flex;align-items:center;gap:10px;margin-top:16px;font-weight:700;color:#fff;position:relative;z-index:1}
+  .punto{width:10px;height:10px;border-radius:50%;background:#4ade80}
+  .punto.cerrado{background:#f87171}
+
+  /* servicios */
+  .servs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .serv{background:var(--blanco);border:1px solid var(--linea);border-radius:22px;padding:30px}
+  .serv .ico{font-size:2rem}
+  .serv h3{font-size:1.45rem;margin:14px 0 10px}
+  .serv ul{list-style:none;color:var(--suave)}
+  .serv li{padding:5px 0}
+  .serv li::before{content:"— ";color:var(--coral)}
+
+  /* tarifas */
+  .tarifas{background:var(--petroleo2);color:#cfe0de}
+  .tarifas .titulo h2{color:#fff}
+  .tarifas .titulo p{color:#a9c2bf}
+  .tabla{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 50px}
+  .fila{display:flex;align-items:baseline;gap:12px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .fila b{color:#fff;font-weight:600}
+  .fila span{flex:1;border-bottom:1px dotted rgba(255,255,255,.3);transform:translateY(-4px)}
+  .fila em{font-style:normal;font-family:Syne,sans-serif;font-weight:700;color:var(--coral);white-space:nowrap}
+  .aviso{margin-top:28px;background:rgba(240,122,90,.12);border:1px dashed var(--coral);border-radius:16px;padding:18px 22px;color:#f7d3c8;font-size:.95rem}
+
+  /* equipo/confianza */
+  .confianza .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+  .confianza p{font-size:1.1rem;margin-top:16px}
+  .cifras{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .cifra{background:var(--blanco);border:1px solid var(--linea);border-radius:20px;padding:26px}
+  .cifra b{font-family:Syne,sans-serif;font-size:2.6rem;color:var(--petroleo);display:block;line-height:1}
+  .cifra span{color:var(--suave);font-weight:500}
+
+  /* opiniones */
+  .ops{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .op{background:var(--coral-cl);border-radius:22px;padding:28px}
+  .op p{font-size:1.08rem;font-weight:500;margin:12px 0 14px}
+  .op small{color:var(--suave)}
+
+  /* visita */
+  .visita .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:44px}
+  .visita h2{font-size:clamp(2.2rem,4.6vw,3.2rem);margin-top:12px}
+  .horario{list-style:none;margin-top:24px;background:var(--blanco);border:1px solid var(--linea);border-radius:18px;padding:6px 20px}
+  .horario li{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid var(--linea);font-weight:600}
+  .horario li:last-child{border:0}
+  .horario li span:last-child{color:var(--suave);text-align:right}
+  .horario li.hoy span{color:var(--coral)}
+  .info{margin-top:22px;display:grid;gap:8px;font-weight:500}
+  .info a{color:var(--petroleo);font-weight:700;text-decoration:none}
+  .mapa{border-radius:22px;overflow:hidden;border:1px solid var(--linea);min-height:420px}
+  .mapa iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+  footer{background:var(--tinta);color:#a9b7b5;padding:38px 0 110px;font-size:.9rem}
+  footer .grid{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+
+  .barra{display:none}
+
+  @media (max-width:900px){
+    .menu,.nav .btn{display:none}
+    .hero{padding:46px 0 70px}
+    .hero .grid,.confianza .grid,.visita .grid{grid-template-columns:minmax(0,1fr);gap:38px}
+    .hero h1{font-size:14vw}
+    .servs,.ops{grid-template-columns:minmax(0,1fr)}
+    .tabla{grid-template-columns:minmax(0,1fr)}
+    section{padding:72px 0}
+    .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--blanco);border-top:1px solid var(--linea)}
+    .barra a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 12px;font-size:.76rem;font-weight:700;text-decoration:none;color:var(--petroleo)}
+    .barra a:first-child{background:var(--coral);color:#fff}
+    .barra svg{width:20px;height:20px}
+  }
+  @media (max-width:520px){ .ctas{flex-direction:column} }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Propuesta de diseño</b> preparada por DaystartIA para Peluquería Top Hair Unisex Estética · no es la web oficial</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="marca" href="#inicio">Top<span>Hair</span></a>
+    <ul class="menu">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#tarifas">Tarifas</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#visitanos">Horario</a></li>
+    </ul>
+    <a class="btn btn-coral" href="https://wa.me/34660893082?text=Hola%2C%20quer%C3%ADa%20pedir%20cita%20en%20Top%20Hair" target="_blank" rel="noopener">Pedir cita</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Peluquería unisex y estética · Logroño</span>
+      <h1 style="margin-top:14px"><span>Tu pelo,</span> en buenas <em>manos</em>.</h1>
+      <p class="lead">Corte, color y tratamientos capilares para ella y para él, además de estética: cejas, manicura, pedicura y limpieza facial. En Vara de Rey, con trato cercano y siempre con cita.</p>
+      <div class="ctas">
+        <a class="btn btn-coral" href="https://wa.me/34660893082?text=Hola%2C%20quer%C3%ADa%20pedir%20cita%20en%20Top%20Hair" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+          Cita por WhatsApp
+        </a>
+        <a class="btn btn-borde" href="#tarifas">Ver tarifas</a>
+      </div>
+      <div class="datos"><span><span class="estrellas">★</span> 4,4 en Google</span><span>✂️ Unisex</span><span>📍 Vara de Rey, 56</span></div>
+    </div>
+    <div class="bloque">
+      <h3>Por qué Top Hair</h3>
+      <ul>
+        <li>Peluquería y estética en un mismo sitio</li>
+        <li>Atención siempre con cita, sin esperas</li>
+        <li>Diagnóstico del cuero cabelludo</li>
+        <li>Trato cercano y clientas de años</li>
+      </ul>
+      <div class="estado" id="estado"><span class="punto"></span><span>Consultando…</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios" style="padding-top:10px">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">Servicios</span>
+      <h2>Todo lo que necesitas</h2>
+      <p>Pelo, piel y manos, con profesionales que te escuchan.</p>
+    </div>
+    <div class="servs">
+      <div class="serv"><div class="ico">✂️</div><h3>Peluquería</h3><ul><li>Corte de mujer y de hombre</li><li>Tinte y color</li><li>Peinados</li><li>Cambio de look</li></ul></div>
+      <div class="serv"><div class="ico">💧</div><h3>Tratamientos capilares</h3><ul><li>Keratina</li><li>Caspa y exceso de grasa</li><li>Caída del cabello</li><li>Salud y brillo de la melena</li></ul></div>
+      <div class="serv"><div class="ico">🌸</div><h3>Estética</h3><ul><li>Limpieza facial</li><li>Diseño de cejas</li><li>Manicura y pedicura</li><li>Depilación con cera · Barba</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="tarifas" id="tarifas">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">Tarifas</span>
+      <h2>Precios claros, sin sorpresas</h2>
+      <p>Para que sepas lo que vas a pagar antes de sentarte en la silla.</p>
+    </div>
+    <div class="tabla">
+      <div class="fila"><b>Corte de caballero</b><span></span><em>__ €</em></div>
+      <div class="fila"><b>Corte de señora</b><span></span><em>desde __ €</em></div>
+      <div class="fila"><b>Tinte raíz</b><span></span><em>desde __ €</em></div>
+      <div class="fila"><b>Mechas</b><span></span><em>desde __ €</em></div>
+      <div class="fila"><b>Keratina</b><span></span><em>desde __ €</em></div>
+      <div class="fila"><b>Lavar y peinar</b><span></span><em>desde __ €</em></div>
+      <div class="fila"><b>Limpieza facial</b><span></span><em>__ €</em></div>
+      <div class="fila"><b>Manicura</b><span></span><em>__ €</em></div>
+    </div>
+    <div class="aviso">✏️ <b>Nota para Top Hair:</b> aquí irían vuestros precios reales. En melenas largas o trabajos de color se puede indicar «desde» y confirmar el precio final en el salón antes de empezar.</div>
+  </div>
+</section>
+
+<section class="confianza">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Clientas de años</span>
+      <h2 style="font-size:clamp(2.3rem,5vw,3.4rem);margin-top:12px">Gente que vuelve una y otra vez</h2>
+      <p>Hay clientas que llevan viniendo desde hace años y que repiten por el trato personal. Esa es nuestra mejor carta de presentación.</p>
+    </div>
+    <div class="cifras">
+      <div class="cifra"><b>54</b><span>opiniones en Google</span></div>
+      <div class="cifra"><b>6</b><span>días a la semana</span></div>
+      <div class="cifra"><b>2 en 1</b><span>peluquería y estética</span></div>
+      <div class="cifra"><b>♀ ♂</b><span>unisex</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="opiniones" style="padding-top:0">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">Opiniones</span>
+      <h2>Lo que dicen en Google</h2>
+    </div>
+    <div class="ops">
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Llevo desde el año 2020 acudiendo. Normalmente me atiende Sheyla, que es un encanto y excelente profesional.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Muy buena atención, yo siempre que voy me atienden muy bien ☺️”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Estoy encantada con el trato personal.”</p><small>Opinión en Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visitanos" style="padding-top:0">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Visítanos</span>
+      <h2>Vara de Rey, 56</h2>
+      <ul class="horario" id="horario">
+        <li data-d="1,2,3,4,5"><span>Lunes a viernes</span><span>10:00 – 14:00 · 16:00 – 20:00</span></li>
+        <li data-d="6"><span>Sábado</span><span>10:00 – 14:00</span></li>
+        <li data-d="0"><span>Domingo</span><span>Cerrado</span></li>
+      </ul>
+      <div class="info">
+        <div>📍 C. General Vara de Rey, 56 · 26002 Logroño</div>
+        <div>📞 <a href="tel:+34660893082">660 89 30 82</a> · también por WhatsApp</div>
+      </div>
+    </div>
+    <div class="mapa"><iframe title="Mapa: Peluquería Top Hair, Vara de Rey 56, Logroño" loading="lazy" src="https://maps.google.com/maps?q=Peluquer%C3%ADa%20Top%20Hair%20Unisex%20Est%C3%A9tica%2C%20Vara%20de%20Rey%2056%2C%20Logro%C3%B1o&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div><b style="color:#fff">Peluquería Top Hair Unisex Estética</b> · Vara de Rey, 56 · Logroño</div>
+    <div>660 89 30 82</div>
+    <div style="opacity:.6">Propuesta de diseño · DaystartIA</div>
+  </div>
+</footer>
+
+<nav class="barra" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34660893082?text=Hola%2C%20quer%C3%ADa%20pedir%20cita%20en%20Top%20Hair" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Cita</a>
+  <a href="#tarifas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Tarifas</a>
+  <a href="https://maps.google.com/?q=Peluquer%C3%ADa+Top+Hair+Vara+de+Rey+56+Logro%C3%B1o" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>Cómo llegar</a>
+</nav>
+
+<script>
+  const ahora = new Date(), d = ahora.getDay(), m = ahora.getHours() * 60 + ahora.getMinutes();
+  const abierto = (d >= 1 && d <= 5 && ((m >= 600 && m < 840) || (m >= 960 && m < 1200))) || (d === 6 && m >= 600 && m < 840);
+  const e = document.getElementById('estado');
+  e.querySelector('.punto').classList.toggle('cerrado', !abierto);
+  e.lastElementChild.textContent = abierto ? 'Abierto ahora' : 'Cerrado ahora · escríbenos por WhatsApp';
+  document.querySelectorAll('#horario li').forEach(li => { if (li.dataset.d.split(',').includes(String(d))) li.classList.add('hoy'); });
+</script>
+</body>
+</html>
