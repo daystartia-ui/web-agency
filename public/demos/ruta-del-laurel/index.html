@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bar La Ruta del Laurel · Revueltos y zapatillas en la Travesía de Laurel, Logroño</title>
+<meta name="description" content="Bar La Ruta del Laurel, en la Travesía de Laurel 7 de Logroño. Especialidad en revueltos (patata picante, cecina) y zapatilla de cecina, queso y tomate. Tel. 621 18 60 37.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --amarillo:#ffc72c; --amarillo2:#fff3c4; --negro:#16130f; --gris:#2a261f; --rojo:#e2402c; --blanco:#fffdf6; --suave:#6b6355; --linea:#e9dfc4;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Archivo,system-ui,sans-serif;background:var(--blanco);color:var(--negro);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  h1,h2,h3{font-family:"Archivo Black",Impact,sans-serif;font-weight:400;line-height:1;letter-spacing:-.01em;text-transform:uppercase}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  .eyebrow{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;background:var(--negro);color:var(--amarillo);padding:6px 12px}
+  section{padding:96px 0}
+  .titulo{max-width:660px;margin-bottom:44px}
+  .titulo h2{font-size:clamp(2.4rem,5.6vw,4.2rem);margin-top:14px}
+  .titulo p{color:var(--suave);margin-top:14px;font-size:1.06rem}
+
+  .demo{background:var(--negro);color:#cfc6b2;font-size:.8rem;text-align:center;padding:7px 16px}
+  .demo b{color:#fff}
+
+  /* línea de carretera */
+  .carretera{height:10px;background:var(--negro);position:relative}
+  .carretera::after{content:"";position:absolute;left:0;right:0;top:4px;height:2px;background:repeating-linear-gradient(90deg,var(--amarillo) 0 26px,transparent 26px 46px)}
+
+  header{position:sticky;top:0;z-index:50;background:var(--amarillo);border-bottom:3px solid var(--negro)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
+  .marca{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:1.25rem;line-height:1}
+  .marca .senal{width:38px;height:38px;flex:none;background:var(--negro);color:var(--amarillo);display:grid;place-items:center;transform:rotate(45deg);border-radius:6px}
+  .marca .senal span{transform:rotate(-45deg);font-size:1.1rem}
+  .menu{display:flex;gap:26px;list-style:none;font-weight:800;font-size:.9rem;text-transform:uppercase}
+  .menu a{text-decoration:none}
+  .menu a:hover{text-decoration:underline;text-decoration-thickness:3px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;font-family:inherit;font-weight:800;font-size:.95rem;text-transform:uppercase;text-decoration:none;border:3px solid var(--negro);cursor:pointer;transition:transform .12s,box-shadow .12s;white-space:nowrap}
+  .btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--negro)}
+  .btn svg{width:19px;height:19px}
+  .btn-negro{background:var(--negro);color:var(--amarillo)}
+  .btn-amarillo{background:var(--amarillo);color:var(--negro)}
+  .btn-blanco{background:var(--blanco);color:var(--negro)}
+
+  /* hero */
+  .hero{background:var(--amarillo);padding:70px 0 90px;border-bottom:3px solid var(--negro)}
+  .hero .grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:50px;align-items:center}
+  .hero h1{font-size:clamp(3rem,8.4vw,6.6rem)}
+  .hero h1 span{display:inline-block;background:var(--negro);color:var(--amarillo);padding:0 .12em}
+  .hero .lead{font-size:1.18rem;max-width:520px;margin:24px 0 30px;font-weight:500}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .parada{background:var(--blanco);border:3px solid var(--negro);box-shadow:10px 10px 0 var(--negro);padding:28px}
+  .parada .km{font-family:"Archivo Black",sans-serif;font-size:.9rem;letter-spacing:.1em;color:var(--rojo)}
+  .parada h3{font-size:1.9rem;margin:6px 0 14px}
+  .parada .nota{display:flex;align-items:center;gap:10px;font-weight:800}
+  .estrellas{color:#e8a900;letter-spacing:2px}
+  .estado{display:flex;align-items:center;gap:10px;margin-top:14px;padding-top:14px;border-top:2px dashed var(--linea);font-weight:800}
+  .punto{width:11px;height:11px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px #dcfce7}
+  .punto.cerrado{background:#ef4444;box-shadow:0 0 0 4px #fee2e2}
+
+  /* pinchos */
+  .pinchos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .pincho{background:#fff;border:3px solid var(--negro);padding:30px;position:relative;transition:transform .15s,box-shadow .15s}
+  .pincho:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--negro)}
+  .pincho .ico{font-size:2.6rem}
+  .pincho h3{font-size:1.45rem;margin:14px 0 8px}
+  .pincho p{color:var(--suave)}
+  .chip{position:absolute;top:-14px;right:16px;background:var(--rojo);color:#fff;font-weight:800;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;padding:5px 10px;border:2px solid var(--negro)}
+
+  /* picante */
+  .picante{background:var(--negro);color:#e9e2cf}
+  .picante .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:50px;align-items:center}
+  .picante h2{color:var(--amarillo);font-size:clamp(2.4rem,5.6vw,4rem)}
+  .picante p{font-size:1.12rem;margin-top:18px}
+  .bote{justify-self:center;width:min(280px,100%);aspect-ratio:3/4;border:3px solid var(--amarillo);border-radius:30px 30px 18px 18px;display:grid;place-items:center;text-align:center;padding:20px;position:relative}
+  .bote::before{content:"";position:absolute;top:-26px;left:50%;transform:translateX(-50%);width:44%;height:26px;background:var(--rojo);border:3px solid var(--amarillo);border-bottom:0;border-radius:10px 10px 0 0}
+  .bote b{display:block;font-family:"Archivo Black",sans-serif;font-size:4rem;line-height:1}
+  .bote span{font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--amarillo)}
+
+  /* opiniones */
+  .ops{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .op{background:var(--amarillo2);border:3px solid var(--negro);padding:28px}
+  .op p{font-size:1.1rem;font-weight:700;margin:12px 0 14px}
+  .op small{color:var(--suave);font-weight:700}
+
+  /* visita */
+  .visita{background:var(--amarillo2);border-top:3px solid var(--negro)}
+  .visita .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:44px}
+  .visita h2{font-size:clamp(2.2rem,4.8vw,3.4rem);margin-top:14px}
+  .horario{list-style:none;margin-top:24px;background:#fff;border:3px solid var(--negro)}
+  .horario li{display:flex;justify-content:space-between;gap:12px;padding:13px 18px;border-bottom:2px solid var(--linea);font-weight:700}
+  .horario li:last-child{border:0}
+  .horario li span:last-child{text-align:right;color:var(--suave)}
+  .horario li.hoy{background:var(--amarillo)}
+  .horario li.hoy span{color:var(--negro)}
+  .horario li.cerr span:last-child{color:var(--rojo)}
+  .info{margin-top:22px;display:grid;gap:8px;font-weight:700}
+  .info a{color:var(--negro)}
+  .mapa{border:3px solid var(--negro);min-height:420px;background:#fff}
+  .mapa iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+  footer{background:var(--negro);color:#bdb4a0;padding:38px 0 110px;font-size:.9rem}
+  footer .grid{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+
+  .barra{display:none}
+
+  @media (max-width:900px){
+    .menu,.nav .btn{display:none}
+    .hero{padding:46px 0 70px}
+    .hero .grid,.picante .grid,.visita .grid{grid-template-columns:minmax(0,1fr);gap:40px}
+    .hero h1{font-size:13vw}
+    .pinchos,.ops{grid-template-columns:minmax(0,1fr)}
+    .parada{box-shadow:6px 6px 0 var(--negro)}
+    section{padding:72px 0}
+    .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--blanco);border-top:3px solid var(--negro)}
+    .barra a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 12px;font-size:.74rem;font-weight:800;text-transform:uppercase;text-decoration:none;color:var(--negro)}
+    .barra a:first-child{background:var(--amarillo)}
+    .barra svg{width:20px;height:20px}
+  }
+  @media (max-width:520px){ .ctas{flex-direction:column} .marca{font-size:1.05rem} }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Propuesta de diseño</b> preparada por DaystartIA para el Bar La Ruta del Laurel · no es la web oficial</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="marca" href="#inicio"><span class="senal"><span>🍳</span></span>La Ruta del Laurel</a>
+    <ul class="menu">
+      <li><a href="#pinchos">Pinchos</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#visitanos">Horario</a></li>
+    </ul>
+    <a class="btn btn-negro" href="tel:+34621186037">Llamar</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Travesía de Laurel, 7 · Logroño</span>
+      <h1 style="margin-top:16px">Tu parada de <span>revueltos</span> en la Laurel.</h1>
+      <p class="lead">Revuelto de patata picante, revuelto de cecina y zapatilla de cecina, queso y tomate. Un vino, un pincho y a seguir la ruta… o a quedarte, que se está muy bien.</p>
+      <div class="ctas">
+        <a class="btn btn-negro" href="#pinchos">Ver pinchos</a>
+        <a class="btn btn-blanco" href="tel:+34621186037">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          621 18 60 37
+        </a>
+      </div>
+    </div>
+    <div class="parada">
+      <div class="km">PARADA OBLIGATORIA</div>
+      <h3>Bar La Ruta del Laurel</h3>
+      <div class="nota"><span class="estrellas">★★★★★</span> 4,8 · 40 opiniones</div>
+      <div class="estado" id="estado"><span class="punto"></span><span>Consultando…</span></div>
+    </div>
+  </div>
+</section>
+<div class="carretera"></div>
+
+<section id="pinchos">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">Nuestra especialidad</span>
+      <h2>Revueltos y zapatillas</h2>
+      <p>Revueltos bien ligados, nada aceitosos, y pan en su punto. Lo que más nombran nuestros clientes en Google: las zapatillas, la cecina y los revueltos.</p>
+    </div>
+    <div class="pinchos">
+      <div class="pincho"><span class="chip">🌶️ Picante</span><div class="ico">🥔</div><h3>Revuelto de patata picante</h3><p>Nuestro pincho más famoso. Patata bien trabajada y un toque que pica (y si quieres más, te traemos la salsa).</p></div>
+      <div class="pincho"><div class="ico">🍳</div><h3>Revuelto de cecina</h3><p>Huevo bien ligado con cecina. Sabroso y sin complicaciones.</p></div>
+      <div class="pincho"><span class="chip">Favorita</span><div class="ico">🥪</div><h3>Zapatilla de cecina</h3><p>Con queso y tomate. La que más se pide de la casa.</p></div>
+      <div class="pincho"><div class="ico">🥚</div><h3>Revuelto variado</h3><p>También en bocata, para los que vienen con hambre.</p></div>
+      <div class="pincho"><div class="ico">🌭</div><h3>Bocatín de tortilla y chorizo</h3><p>Pequeño, rico y perfecto con un vino.</p></div>
+      <div class="pincho"><div class="ico">🍷</div><h3>Vinos de Rioja</h3><p>Lo que pide un buen pincho en la Laurel.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="picante">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow" style="background:var(--amarillo);color:var(--negro)">¿Te va el picante?</span>
+      <h2 style="margin-top:14px">Pide el botecito.</h2>
+      <p>Si nuestro revuelto picante se te queda corto, pídenos la salsa y te la traemos para que le pongas a tu gusto. Sin problema.</p>
+    </div>
+    <div class="bote"><div><b>🌶️</b><span>Salsa de la casa</span></div></div>
+  </div>
+</section>
+
+<section id="opiniones">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">4,8 en Google</span>
+      <h2>Lo que dicen de nosotros</h2>
+    </div>
+    <div class="ops">
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Tenéis que probar el revuelto picante y el de cecina. Calidad y precio genial, merece mucho la pena salir de lo típico.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Un lugar muy muy bonito. La atención de Ángela, la camarera, maravillosa.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Parada muy acertada en la Ruta del Laurel. El revuelto estaba bien ligado, con buena textura y sabor, nada aceitoso.”</p><small>Opinión en Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visitanos">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Ven a vernos</span>
+      <h2>Travesía de Laurel, 7</h2>
+      <ul class="horario" id="horario">
+        <li class="cerr" data-d="1,2,3"><span>Lunes a miércoles</span><span>Cerrado</span></li>
+        <li data-d="4,5"><span>Jueves y viernes</span><span>19:30 – 00:00</span></li>
+        <li data-d="6"><span>Sábado</span><span>12:30 – 16:00 · 19:30 – 00:00</span></li>
+        <li data-d="0"><span>Domingo</span><span>12:30 – 15:30 · 19:30 – 23:30</span></li>
+      </ul>
+      <div class="info">
+        <div>📍 Tr.ª de Laurel, 7 · 26001 Logroño</div>
+        <div>📞 <a href="tel:+34621186037">621 18 60 37</a> · 📷 @larutadellaurel</div>
+      </div>
+    </div>
+    <div class="mapa"><iframe title="Mapa: Bar La Ruta del Laurel, Travesía de Laurel 7, Logroño" loading="lazy" src="https://maps.google.com/maps?q=Ruta%20del%20Laurel%2C%20Travesia%20de%20Laurel%207%2C%20Logro%C3%B1o&z=17&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div><b style="color:var(--amarillo)">Bar La Ruta del Laurel</b> · Tr.ª de Laurel, 7 · Logroño</div>
+    <div>621 18 60 37</div>
+    <div style="opacity:.6">Propuesta de diseño · DaystartIA</div>
+  </div>
+</footer>
+
+<nav class="barra" aria-label="Acciones rápidas">
+  <a href="tel:+34621186037"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Llamar</a>
+  <a href="#pinchos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Pinchos</a>
+  <a href="https://maps.google.com/?q=Ruta+del+Laurel+Travesia+de+Laurel+7+Logro%C3%B1o" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>Cómo llegar</a>
+</nav>
+
+<script>
+  const ahora = new Date(), d = ahora.getDay(), m = ahora.getHours() * 60 + ahora.getMinutes();
+  let abierto = false, proxima = '';
+  if (d === 4 || d === 5) abierto = m >= 1170;
+  else if (d === 6) abierto = (m >= 750 && m < 960) || m >= 1170;
+  else if (d === 0) abierto = (m >= 750 && m < 930) || (m >= 1170 && m < 1410);
+  if (!abierto) proxima = (d >= 1 && d <= 3) ? 'abrimos el jueves a las 19:30' : (m < 1170 && !((d === 6 || d === 0) && m < 750) ? 'abrimos a las 19:30' : (m < 750 ? 'abrimos a las 12:30' : 'nos vemos pronto'));
+  const e = document.getElementById('estado');
+  e.querySelector('.punto').classList.toggle('cerrado', !abierto);
+  e.lastElementChild.textContent = abierto ? 'Abierto ahora' : 'Cerrado · ' + proxima;
+  document.querySelectorAll('#horario li').forEach(li => { if (li.dataset.d.split(',').includes(String(d))) li.classList.add('hoy'); });
+</script>
+</body>
+</html>
