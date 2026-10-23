@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Charles Barbershop · Barbería en Gonzalo de Berceo, Logroño</title>
+<meta name="description" content="Charles Barbershop, barbería en la Avenida Gonzalo de Berceo 28 de Logroño. Cortes de caballero, barba y cortes infantiles con paciencia. Reserva en el 605 33 58 76.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --esmeralda:#0f3b30; --esmeralda2:#0a2b23; --laton:#c8a35a; --laton-cl:#f3e7cc; --crema:#f7f3ea; --rojo:#b8322a; --tinta:#16201c; --suave:#66736d; --linea:#e3ddcf;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Rubik,system-ui,sans-serif;background:var(--crema);color:var(--tinta);line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  h1,h2,h3{font-family:"Abril Fatface",Georgia,serif;font-weight:400;line-height:1.02;color:var(--tinta)}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  .eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--rojo)}
+  section{padding:96px 0}
+  .titulo{max-width:640px;margin-bottom:46px}
+  .titulo h2{font-size:clamp(2.4rem,5.4vw,4rem);margin-top:12px}
+  .titulo p{color:var(--suave);margin-top:12px;font-size:1.05rem}
+
+  .demo{background:var(--tinta);color:#c9d3ce;font-size:.8rem;text-align:center;padding:7px 16px}
+  .demo b{color:#fff}
+
+  header{position:sticky;top:0;z-index:50;background:var(--esmeralda);border-bottom:3px solid var(--laton)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+  .marca{text-decoration:none;font-family:"Abril Fatface",serif;font-size:1.7rem;color:var(--laton-cl);display:flex;align-items:center;gap:10px}
+  .marca small{font-family:Rubik,sans-serif;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--laton);border:1px solid var(--laton);padding:3px 6px;border-radius:4px}
+  .menu{display:flex;gap:28px;list-style:none;font-weight:600;font-size:.9rem}
+  .menu a{text-decoration:none;color:#b8cbc3}
+  .menu a:hover{color:var(--laton)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:10px;font-family:inherit;font-weight:700;font-size:1rem;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:19px;height:19px}
+  .btn-laton{background:var(--laton);color:var(--esmeralda2)}
+  .btn-laton:hover{background:#d8b56c}
+  .btn-esmeralda{background:var(--esmeralda);color:#fff}
+  .btn-borde{border:2px solid var(--esmeralda);color:var(--esmeralda)}
+
+  /* hero */
+  .hero{background:var(--esmeralda);color:#cfdcd6;padding:76px 0 100px;position:relative;overflow:hidden}
+  .hero::after{content:"C";position:absolute;right:-30px;bottom:-120px;font-family:"Abril Fatface",serif;font-size:clamp(18rem,40vw,34rem);line-height:1;color:rgba(200,163,90,.08)}
+  .hero .grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:50px;align-items:center}
+  .hero .eyebrow{color:var(--laton)}
+  .hero h1{color:#fff;font-size:clamp(3.2rem,8vw,6.4rem);margin-top:14px}
+  .hero h1 em{font-style:normal;color:var(--laton)}
+  .hero .lead{font-size:1.15rem;max-width:520px;margin:22px 0 32px}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .hero .btn-borde{border-color:rgba(255,255,255,.35);color:#fff}
+  .medalla{justify-self:center;width:min(300px,100%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#e7cd93,var(--laton) 55%,#9c7a37);display:grid;place-items:center;text-align:center;color:var(--esmeralda2);box-shadow:0 0 0 10px rgba(200,163,90,.2),0 30px 60px -20px rgba(0,0,0,.6);padding:30px}
+  .medalla b{display:block;font-family:"Abril Fatface",serif;font-size:4rem;line-height:1}
+  .medalla span{font-weight:700;letter-spacing:.06em;font-size:.92rem}
+  .medalla .estrellas{color:var(--esmeralda2)}
+  .estado{display:flex;align-items:center;gap:10px;margin-top:26px;font-weight:600}
+  .punto{width:10px;height:10px;border-radius:50%;background:#4ade80;flex:none}
+  .punto.cerrado{background:#f87171}
+
+  /* servicios */
+  .servs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .serv{background:#fff;border:1px solid var(--linea);border-radius:20px;padding:32px;position:relative;overflow:hidden}
+  .serv::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--laton)}
+  .serv .ico{font-size:2.2rem}
+  .serv h3{font-size:1.7rem;margin:14px 0 8px}
+  .serv p{color:var(--suave)}
+
+  /* peques */
+  .peques{background:var(--laton-cl)}
+  .peques .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+  .peques h2{font-size:clamp(2.4rem,5.4vw,3.8rem);margin-top:12px}
+  .peques h2 em{font-style:normal;color:var(--rojo)}
+  .peques p{font-size:1.1rem;margin-top:16px}
+  .burbuja{background:#fff;border-radius:28px 28px 28px 6px;padding:32px;box-shadow:0 20px 50px -30px rgba(15,59,48,.5)}
+  .burbuja p{font-family:"Abril Fatface",serif;font-size:1.6rem;line-height:1.3;margin:0;color:var(--esmeralda)}
+  .burbuja small{display:block;margin-top:14px;color:var(--suave)}
+  .lista{list-style:none;margin-top:22px;display:grid;gap:10px}
+  .lista li{display:flex;gap:10px;font-weight:600}
+  .lista li::before{content:"✓";color:var(--rojo);font-weight:700}
+
+  /* premios */
+  .premios{background:var(--esmeralda2);color:#c6d5ce;text-align:center}
+  .premios h2{color:#fff;font-size:clamp(2.2rem,5vw,3.4rem);margin-top:12px}
+  .premios .eyebrow{color:var(--laton)}
+  .trofeos{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-top:40px}
+  .trofeo{border:1px solid rgba(200,163,90,.4);border-radius:20px;padding:26px 30px;min-width:220px}
+  .trofeo b{display:block;font-family:"Abril Fatface",serif;font-size:2.4rem;color:var(--laton);line-height:1}
+  .trofeo span{font-size:.95rem}
+  .premios .nota{margin-top:22px;font-size:.88rem;color:#8ea69c}
+
+  /* opiniones */
+  .ops{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .op{background:#fff;border:1px solid var(--linea);border-radius:20px;padding:28px}
+  .op .estrellas{color:var(--laton);letter-spacing:2px}
+  .op p{font-size:1.08rem;margin:12px 0 14px;font-weight:500}
+  .op small{color:var(--suave)}
+
+  /* visita */
+  .visita .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:44px}
+  .visita h2{font-size:clamp(2.2rem,4.6vw,3.2rem);margin-top:12px}
+  .horario{list-style:none;margin-top:22px;background:#fff;border:1px solid var(--linea);border-radius:18px;padding:6px 20px}
+  .horario li{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid var(--linea);font-weight:500}
+  .horario li:last-child{border:0}
+  .horario li span:last-child{color:var(--suave);text-align:right}
+  .horario li.hoy span{color:var(--rojo);font-weight:700}
+  .info{margin-top:20px;display:grid;gap:8px;font-weight:500}
+  .info a{color:var(--esmeralda);font-weight:700;text-decoration:none}
+  .mapa{border-radius:22px;overflow:hidden;border:1px solid var(--linea);min-height:420px}
+  .mapa iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+  footer{background:var(--tinta);color:#a8b6b0;padding:38px 0 110px;font-size:.9rem}
+  footer .grid{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+
+  .barra{display:none}
+
+  @media (max-width:900px){
+    .menu,.nav .btn{display:none}
+    .hero{padding:50px 0 70px}
+    .hero .grid,.peques .grid,.visita .grid{grid-template-columns:minmax(0,1fr);gap:40px}
+    .hero h1{font-size:14vw}
+    .servs,.ops{grid-template-columns:minmax(0,1fr)}
+    section{padding:72px 0}
+    .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--esmeralda);border-top:2px solid var(--laton)}
+    .barra a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 12px;font-size:.76rem;font-weight:700;text-decoration:none;color:#fff}
+    .barra a:first-child{background:var(--laton);color:var(--esmeralda2)}
+    .barra svg{width:20px;height:20px}
+  }
+  @media (max-width:520px){ .ctas{flex-direction:column} .trofeo{min-width:0;width:100%} }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Propuesta de diseño</b> preparada por DaystartIA para Charles Barbershop · no es la web oficial</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="marca" href="#inicio">Charles <small>Barbershop</small></a>
+    <ul class="menu">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#peques">Peques</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#visitanos">Horario</a></li>
+    </ul>
+    <a class="btn btn-laton" href="tel:+34605335876">Reservar</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Barbería · Gonzalo de Berceo · Logroño</span>
+      <h1>Estilo para toda <em>la familia</em>.</h1>
+      <p class="lead">Cortes de caballero, barba y cortes infantiles con mucha paciencia, en una barbería bonita y con buen trato. En la Avenida Gonzalo de Berceo, 28.</p>
+      <div class="ctas">
+        <a class="btn btn-laton" href="tel:+34605335876">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Reservar · 605 33 58 76
+        </a>
+        <a class="btn btn-borde" href="https://wa.me/34605335876?text=Hola%2C%20quer%C3%ADa%20pedir%20cita%20en%20Charles%20Barbershop" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <div class="estado" id="estado"><span class="punto"></span><span>Consultando…</span></div>
+    </div>
+    <div class="medalla"><div><b>4,7</b><span class="estrellas">★★★★★</span><br><span>94 OPINIONES EN GOOGLE</span></div></div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">Servicios</span>
+      <h2>Lo que hacemos</h2>
+      <p>Pregúntanos precios y huecos por teléfono o WhatsApp.</p>
+    </div>
+    <div class="servs">
+      <div class="serv"><div class="ico">✂️</div><h3>Corte de caballero</h3><p>Clásico o moderno, con un acabado cuidado.</p></div>
+      <div class="serv"><div class="ico">🧔</div><h3>Barba</h3><p>Arreglo y perfilado para que luzca impecable.</p></div>
+      <div class="serv"><div class="ico">🧒</div><h3>Corte infantil</h3><p>Cortes con estilo para los peques, sin prisas y con mucha paciencia.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="peques" id="peques">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Cortes infantiles</span>
+      <h2>Que el próximo look <em>sea el suyo</em>.</h2>
+      <p>Sabemos que a muchos niños les cuesta quedarse quietos en la silla. Por eso vamos a su ritmo, con paciencia y cariño, para que salgan contentos y con un corte con estilo y personalidad.</p>
+      <ul class="lista"><li>Paciencia con los más pequeños</li><li>Cortes con estilo y personalidad</li></ul>
+    </div>
+    <div class="burbuja">
+      <p>“Me dejó a mi niño (3 añitos) hermoso. Mucha paciencia con él 🥰 ¡Repetiremos!”</p>
+      <small>Opinión en Google</small>
+    </div>
+  </div>
+</section>
+
+<section class="premios">
+  <div class="wrap">
+    <span class="eyebrow">Reconocimientos</span>
+    <h2>Entre las mejores barberías</h2>
+    <div class="trofeos">
+      <div class="trofeo"><b>TOP 11</b><span>2022</span></div>
+      <div class="trofeo"><b>TOP 50</b><span>2024 · 2025</span></div>
+    </div>
+    <p class="nota">Según destaca la barbería en sus redes. Detalle de los premios a completar.</p>
+  </div>
+</section>
+
+<section id="opiniones">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">Opiniones</span>
+      <h2>4,7 en Google</h2>
+    </div>
+    <div class="ops">
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Muy buen trato, excelente servicio, volveré seguro.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Una peluquería estéticamente muy bonita y buen trato del personal.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Me dejó a mi niño hermoso, mucha paciencia con él. ¡Repetiremos!”</p><small>Opinión en Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visitanos" style="padding-top:0">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Visítanos</span>
+      <h2>Gonzalo de Berceo, 28</h2>
+      <ul class="horario" id="horario">
+        <li data-d="1,0"><span>Domingo y lunes</span><span>Cerrado</span></li>
+        <li data-d="2,3,4,5"><span>Martes a viernes</span><span>10:00 – 13:30 · 17:00 – 20:30</span></li>
+        <li data-d="6"><span>Sábado</span><span>10:00 – 17:00</span></li>
+      </ul>
+      <div class="info">
+        <div>📍 Av. Gonzalo de Berceo, 28, 5 bajo izquierda · 26005 Logroño</div>
+        <div>📞 Reservas: <a href="tel:+34605335876">605 33 58 76</a></div>
+        <div>📷 @charlesbarber_shop</div>
+      </div>
+    </div>
+    <div class="mapa"><iframe title="Mapa: Charles Barbershop, Gonzalo de Berceo 28, Logroño" loading="lazy" src="https://maps.google.com/maps?q=Charles%20barbershop%2C%20Av.%20Gonzalo%20de%20Berceo%2028%2C%20Logro%C3%B1o&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div><b style="color:#fff">Charles Barbershop</b> · Gonzalo de Berceo, 28 · Logroño</div>
+    <div>605 33 58 76</div>
+    <div style="opacity:.6">Propuesta de diseño · DaystartIA</div>
+  </div>
+</footer>
+
+<nav class="barra" aria-label="Acciones rápidas">
+  <a href="tel:+34605335876"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Reservar</a>
+  <a href="https://wa.me/34605335876?text=Hola%2C%20quer%C3%ADa%20pedir%20cita%20en%20Charles%20Barbershop" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>WhatsApp</a>
+  <a href="https://maps.google.com/?q=Charles+barbershop+Gonzalo+de+Berceo+28+Logro%C3%B1o" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>Cómo llegar</a>
+</nav>
+
+<script>
+  const ahora = new Date(), d = ahora.getDay(), m = ahora.getHours() * 60 + ahora.getMinutes();
+  let abierto = false;
+  if (d >= 2 && d <= 5) abierto = (m >= 600 && m < 810) || (m >= 1020 && m < 1230);
+  else if (d === 6) abierto = m >= 600 && m < 1020;
+  const e = document.getElementById('estado');
+  e.querySelector('.punto').classList.toggle('cerrado', !abierto);
+  e.lastElementChild.textContent = abierto ? 'Abierto ahora' : 'Cerrado ahora · llámanos y reserva';
+  document.querySelectorAll('#horario li').forEach(li => { if (li.dataset.d.split(',').includes(String(d))) li.classList.add('hoy'); });
+</script>
+</body>
+</html>
