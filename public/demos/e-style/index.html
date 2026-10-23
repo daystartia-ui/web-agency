@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peluquería E.style · Peluquería en Vara de Rey, Logroño</title>
+<meta name="description" content="Peluquería E.style, en la calle General Vara de Rey 40 de Logroño. Corte, color, mechas, peinados para eventos, tratamientos y productos Tahe. Pide cita en el 679 25 59 33.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ciruela:#4a2545; --ciruela2:#341832; --champan:#e8d3b0; --champan-cl:#f8f1e6; --rosa:#d9a5a0; --tinta:#2a1f29; --suave:#7c6e79; --linea:#eadfd2; --blanco:#fffcf8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"DM Sans",system-ui,sans-serif;background:var(--champan-cl);color:var(--tinta);line-height:1.68;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  h1,h2,h3{font-family:"DM Serif Display",Georgia,serif;font-weight:400;line-height:1.04;color:var(--tinta)}
+  h1 em,h2 em{color:var(--ciruela)}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  .eyebrow{display:inline-block;font-size:.76rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--rosa)}
+  section{padding:96px 0}
+  .titulo{max-width:640px;margin-bottom:46px}
+  .titulo h2{font-size:clamp(2.4rem,5.2vw,3.8rem);margin-top:12px}
+  .titulo p{color:var(--suave);margin-top:12px;font-size:1.05rem}
+
+  .demo{background:var(--tinta);color:#d9ccd6;font-size:.8rem;text-align:center;padding:7px 16px}
+  .demo b{color:#fff}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(248,241,230,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--linea)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+  .marca{text-decoration:none;font-family:"DM Serif Display",serif;font-size:1.8rem;color:var(--ciruela)}
+  .marca i{color:var(--rosa)}
+  .menu{display:flex;gap:28px;list-style:none;font-weight:500;font-size:.93rem}
+  .menu a{text-decoration:none;color:var(--suave)}
+  .menu a:hover{color:var(--ciruela)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:999px;font-family:inherit;font-weight:700;font-size:1rem;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:19px;height:19px}
+  .btn-ciruela{background:var(--ciruela);color:#fff}
+  .btn-ciruela:hover{background:var(--ciruela2)}
+  .btn-borde{border:1.5px solid var(--ciruela);color:var(--ciruela)}
+
+  /* hero */
+  .hero{padding:70px 0 96px}
+  .hero .grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:center}
+  .hero h1{font-size:clamp(3rem,7vw,5.6rem);margin-top:14px}
+  .hero .lead{font-size:1.15rem;color:var(--suave);max-width:510px;margin:22px 0 32px}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .firma{display:flex;gap:28px;margin-top:34px;flex-wrap:wrap}
+  .firma b{display:block;font-family:"DM Serif Display",serif;font-size:2.4rem;line-height:1;color:var(--ciruela)}
+  .firma span{color:var(--suave);font-size:.9rem}
+  .estrellas{color:#c9953a;letter-spacing:2px}
+  .marco{position:relative;aspect-ratio:4/5;border-radius:40px;background:linear-gradient(160deg,var(--ciruela),var(--ciruela2));overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:30px;color:#f1e5ef}
+  .marco::before{content:"";position:absolute;width:140%;height:70%;left:-20%;top:-10%;border-radius:50%;background:radial-gradient(circle,rgba(232,211,176,.35),transparent 65%)}
+  .marco svg{position:absolute;top:34px;right:30px;width:46%;opacity:.5;color:var(--champan)}
+  .marco h3{color:#fff;font-size:2rem;position:relative}
+  .marco p{position:relative;margin-top:6px}
+  .estado{position:relative;display:flex;align-items:center;gap:10px;margin-top:18px;background:rgba(255,255,255,.1);border-radius:999px;padding:10px 16px;font-weight:700;width:max-content;max-width:100%}
+  .punto{width:10px;height:10px;border-radius:50%;background:#4ade80;flex:none}
+  .punto.cerrado{background:#f87171}
+
+  /* servicios */
+  .servs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .serv{background:var(--blanco);border:1px solid var(--linea);border-radius:28px;padding:32px}
+  .serv .n{font-family:"DM Serif Display",serif;font-style:italic;color:var(--rosa);font-size:1.4rem}
+  .serv h3{font-size:1.75rem;margin:8px 0 10px}
+  .serv p{color:var(--suave)}
+
+  /* eventos */
+  .eventos{background:var(--ciruela);color:#e9dbe6}
+  .eventos .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+  .eventos h2{color:#fff;font-size:clamp(2.4rem,5.4vw,3.8rem);margin-top:12px}
+  .eventos h2 em{color:var(--champan)}
+  .eventos p{font-size:1.1rem;margin-top:16px}
+  .lista{display:grid;gap:12px}
+  .lista div{background:rgba(255,255,255,.08);border-radius:20px;padding:20px 22px;display:flex;gap:14px;align-items:center}
+  .lista b{font-size:1.6rem}
+  .lista h3{color:#fff;font-size:1.3rem}
+  .lista p{margin:2px 0 0;font-size:.95rem}
+
+  /* productos */
+  .productos .caja{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:50px;align-items:center;background:var(--blanco);border:1px solid var(--linea);border-radius:36px;padding:52px}
+  .productos h2{font-size:clamp(2.2rem,4.6vw,3.2rem);margin-top:12px}
+  .productos p{color:var(--suave);margin:14px 0 24px;font-size:1.05rem}
+  .botes{display:flex;gap:14px;justify-content:center;align-items:flex-end}
+  .botes i{display:block;width:62px;border-radius:14px 14px 10px 10px;background:linear-gradient(180deg,var(--champan),#d7bb8c);position:relative}
+  .botes i::before{content:"";position:absolute;top:-16px;left:50%;transform:translateX(-50%);width:26px;height:16px;border-radius:6px 6px 0 0;background:var(--ciruela)}
+  .botes i:nth-child(1){height:150px}.botes i:nth-child(2){height:190px;background:linear-gradient(180deg,var(--rosa),#c48b85)}.botes i:nth-child(3){height:130px}
+
+  /* opiniones */
+  .opiniones{background:var(--champan)}
+  .ops{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .op{background:var(--blanco);border-radius:26px;padding:30px}
+  .op p{font-family:"DM Serif Display",serif;font-size:1.25rem;line-height:1.4;margin:12px 0 16px}
+  .op small{color:var(--suave)}
+
+  /* visita */
+  .visita .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:44px}
+  .visita h2{font-size:clamp(2.2rem,4.6vw,3.2rem);margin-top:12px}
+  .horario{list-style:none;margin-top:22px;background:var(--blanco);border:1px solid var(--linea);border-radius:20px;padding:6px 22px}
+  .horario li{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid var(--linea);font-weight:500}
+  .horario li:last-child{border:0}
+  .horario li span:last-child{color:var(--suave);text-align:right}
+  .horario li.hoy span{color:var(--ciruela);font-weight:700}
+  .info{margin-top:20px;display:grid;gap:8px;font-weight:500}
+  .info a{color:var(--ciruela);font-weight:700;text-decoration:none}
+  .mapa{border-radius:28px;overflow:hidden;border:1px solid var(--linea);min-height:420px}
+  .mapa iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+  footer{background:var(--tinta);color:#b9aab6;padding:38px 0 110px;font-size:.9rem}
+  footer .grid{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+
+  .barra{display:none}
+
+  @media (max-width:900px){
+    .menu,.nav .btn{display:none}
+    .hero{padding:46px 0 70px}
+    .hero .grid,.eventos .grid,.visita .grid,.productos .caja{grid-template-columns:minmax(0,1fr);gap:40px}
+    .marco{max-width:380px;width:100%;margin:0 auto}
+    .servs,.ops{grid-template-columns:minmax(0,1fr)}
+    .productos .caja{padding:32px 24px}
+    section{padding:72px 0}
+    .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--blanco);border-top:1px solid var(--linea)}
+    .barra a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 12px;font-size:.76rem;font-weight:700;text-decoration:none;color:var(--ciruela)}
+    .barra a:first-child{background:var(--ciruela);color:#fff}
+    .barra svg{width:20px;height:20px}
+  }
+  @media (max-width:520px){ .ctas{flex-direction:column} }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Propuesta de diseño</b> preparada por DaystartIA para Peluquería E.style · no es la web oficial</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="marca" href="#inicio">E<i>.</i>style</a>
+    <ul class="menu">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#eventos">Eventos</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#visitanos">Horario</a></li>
+    </ul>
+    <a class="btn btn-ciruela" href="https://wa.me/34679255933?text=Hola%20Elena%2C%20quer%C3%ADa%20pedir%20cita" target="_blank" rel="noopener">Pedir cita</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Peluquería · Vara de Rey · Logroño</span>
+      <h1>Tu pelo, <em>cuidado</em> de verdad.</h1>
+      <p class="lead">Corte, color y mechas con mucho mimo, y consejos para que tu pelo luzca también en casa. En E.style te escuchamos y te recomendamos lo que mejor te va.</p>
+      <div class="ctas">
+        <a class="btn btn-ciruela" href="https://wa.me/34679255933?text=Hola%20Elena%2C%20quer%C3%ADa%20pedir%20cita" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+          Cita por WhatsApp
+        </a>
+        <a class="btn btn-borde" href="tel:+34679255933">Llamar · 679 25 59 33</a>
+      </div>
+      <div class="firma">
+        <div><b>4,8</b><span><span class="estrellas">★★★★★</span> 98 opiniones</span></div>
+        <div><b>+1.200</b><span>fotos de trabajos en Google</span></div>
+      </div>
+    </div>
+    <div class="marco">
+      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M20 90C20 50 35 20 60 10M30 90C32 55 45 30 70 18M40 90C44 62 56 40 80 28M50 92C55 70 66 52 88 42"/></svg>
+      <h3>Hola, soy Elena</h3>
+      <p>Te atiendo personalmente, con calma y adaptándome a lo que necesitas.</p>
+      <div class="estado" id="estado"><span class="punto"></span><span>Consultando…</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios" style="padding-top:10px">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">Servicios</span>
+      <h2>Lo que hacemos <em>en E.style</em></h2>
+      <p>Pregúntanos precios por WhatsApp. Nuestros clientes destacan la confianza y la buena relación calidad-precio.</p>
+    </div>
+    <div class="servs">
+      <div class="serv"><div class="n">i.</div><h3>Corte</h3><p>Corte adaptado a tu cara, tu pelo y tu día a día.</p></div>
+      <div class="serv"><div class="n">ii.</div><h3>Color y mechas</h3><p>Tintes y mechas con un resultado cuidado y natural.</p></div>
+      <div class="serv"><div class="n">iii.</div><h3>Peinados</h3><p>Para el día a día o para una ocasión especial.</p></div>
+      <div class="serv"><div class="n">iv.</div><h3>Tratamientos</h3><p>Cuidado y reparación del cabello con productos profesionales.</p></div>
+      <div class="serv"><div class="n">v.</div><h3>Asesoramiento</h3><p>Consejos para cuidar tu pelo también en casa.</p></div>
+      <div class="serv"><div class="n">vi.</div><h3>Manicura</h3><p>Pregúntanos por la manicura permanente.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="eventos" id="eventos">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow" style="color:var(--champan)">Ocasiones especiales</span>
+      <h2>¿Boda, aniversario o <em>celebración</em>?</h2>
+      <p>Nos adaptamos a tu horario y a tu día para que llegues impecable a tu evento, y que el peinado aguante hasta el final de la fiesta.</p>
+    </div>
+    <div class="lista">
+      <div><b>💍</b><div><h3>Bodas y aniversarios</h3><p>Corte, color y peinado para el gran día.</p></div></div>
+      <div><b>🗓️</b><div><h3>Nos adaptamos a ti</h3><p>Buscamos el día y la hora que te vengan bien.</p></div></div>
+      <div><b>✨</b><div><h3>Hasta el final del día</h3><p>Un trabajo cuidadoso que dura toda la celebración.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="productos">
+  <div class="wrap">
+    <div class="caja">
+      <div>
+        <span class="eyebrow">Productos profesionales</span>
+        <h2>Lleva el salón <em>a tu casa</em></h2>
+        <p>Trabajamos con productos profesionales Tahe y te recomendamos los que mejor van con tu tipo de pelo: champús, mascarillas, sérums y tratamientos.</p>
+        <a class="btn btn-ciruela" href="https://wa.me/34679255933?text=Hola%20Elena%2C%20quer%C3%ADa%20consultar%20por%20un%20producto" target="_blank" rel="noopener">Consúltanos</a>
+      </div>
+      <div class="botes" aria-hidden="true"><i></i><i></i><i></i></div>
+    </div>
+  </div>
+</section>
+
+<section class="opiniones" id="opiniones">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow" style="color:var(--ciruela)">Opiniones</span>
+      <h2>Lo que dicen <em>en Google</em></h2>
+    </div>
+    <div class="ops">
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Elena es un encanto. Te aconseja lo mejor para ti y su trabajo es impecable. Salí encantada con mis nuevas mechas, un 10/10.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Elena fue muy amable adaptándose a nuestro horario y día. Al final del día mi cabello estaba impecable.”</p><small>Opinión en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Salí enamorada de mi cabello. La atención excelente; me ha dado muchos consejos para el cuidado de mi cabello.”</p><small>Opinión en Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visitanos">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Visítanos</span>
+      <h2>Vara de Rey, 40</h2>
+      <ul class="horario" id="horario">
+        <li data-d="1,2,3,4,5"><span>Lunes a viernes</span><span>10:00 – 18:00</span></li>
+        <li data-d="6"><span>Sábado</span><span>10:00 – 14:00</span></li>
+        <li data-d="0"><span>Domingo</span><span>Cerrado</span></li>
+      </ul>
+      <div class="info">
+        <div>📍 C. General Vara de Rey, 40, bajo · 26001 Logroño</div>
+        <div>📱 <a href="tel:+34679255933">679 25 59 33</a> · ☎️ <a href="tel:+34941042369">941 04 23 69</a></div>
+      </div>
+    </div>
+    <div class="mapa"><iframe title="Mapa: Peluquería E.style, Vara de Rey 40, Logroño" loading="lazy" src="https://maps.google.com/maps?q=Peluquer%C3%ADa%20E.style%2C%20Vara%20de%20Rey%2040%2C%20Logro%C3%B1o&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div><b style="color:#fff">Peluquería E.style</b> · Vara de Rey, 40 · Logroño</div>
+    <div>679 25 59 33</div>
+    <div style="opacity:.6">Propuesta de diseño · DaystartIA</div>
+  </div>
+</footer>
+
+<nav class="barra" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34679255933?text=Hola%20Elena%2C%20quer%C3%ADa%20pedir%20cita" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Cita</a>
+  <a href="tel:+34679255933"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Llamar</a>
+  <a href="https://maps.google.com/?q=Peluquer%C3%ADa+E.style+Vara+de+Rey+40+Logro%C3%B1o" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>Cómo llegar</a>
+</nav>
+
+<script>
+  const ahora = new Date(), d = ahora.getDay(), m = ahora.getHours() * 60 + ahora.getMinutes();
+  const abierto = (d >= 1 && d <= 5 && m >= 600 && m < 1080) || (d === 6 && m >= 600 && m < 840);
+  const e = document.getElementById('estado');
+  e.querySelector('.punto').classList.toggle('cerrado', !abierto);
+  e.lastElementChild.textContent = abierto ? 'Abierto ahora' : 'Cerrado ahora · escríbeme por WhatsApp';
+  document.querySelectorAll('#horario li').forEach(li => { if (li.dataset.d.split(',').includes(String(d))) li.classList.add('hoy'); });
+</script>
+</body>
+</html>
