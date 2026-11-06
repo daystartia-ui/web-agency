@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pélvico Fisioterapia · Fisioterapia de suelo pélvico en Santander · María Mena</title>
+<meta name="description" content="Pélvico Fisioterapia, consulta de fisioterapia especializada en suelo pélvico en la calle Calvo Sotelo 3 de Santander. Embarazo, posparto, menopausia y oncología. María Mena, fisioterapeuta. Tel. 663 01 66 72.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --marino:#1f2f4a; --marino2:#16233a; --malva:#9c6b7a; --malva-cl:#f4ebee; --arena:#f8f5f1; --arena2:#efe8df;
+    --blanco:#ffffff; --tinta:#1d2533; --suave:#5f6878; --linea:#e3ddd5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--arena);color:var(--tinta);line-height:1.7;-webkit-font-smoothing:antialiased;font-size:16px}
+  a{color:inherit}
+  h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.1;color:var(--marino);letter-spacing:-.005em}
+  h1 em,h2 em{font-style:italic;color:var(--malva)}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .eyebrow{display:inline-block;font-size:.74rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--malva)}
+  section{padding:104px 0}
+  .titulo{max-width:660px;margin-bottom:52px}
+  .titulo h2{font-size:clamp(2.3rem,4.6vw,3.4rem);margin-top:14px}
+  .titulo p{color:var(--suave);margin-top:14px;font-size:1.05rem}
+  .linea{width:56px;height:2px;background:var(--malva);margin-top:22px}
+
+  .demo{background:var(--marino2);color:#c9d1de;font-size:.8rem;text-align:center;padding:7px 16px}
+  .demo b{color:#fff;font-weight:600}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+  .marca{display:flex;align-items:center;gap:14px;text-decoration:none}
+  .marca svg{width:38px;height:38px;flex:none}
+  .marca b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.55rem;font-weight:700;color:var(--marino);line-height:1}
+  .marca small{display:block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--suave);margin-top:4px}
+  .menu{display:flex;gap:30px;list-style:none;font-size:.9rem;font-weight:500}
+  .menu a{text-decoration:none;color:var(--suave);white-space:nowrap}
+  @media (max-width:1080px){ .menu{display:none} }
+  .menu a:hover{color:var(--marino)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:4px;font-family:inherit;font-weight:600;font-size:.95rem;letter-spacing:.02em;text-decoration:none;border:0;cursor:pointer;transition:background .15s,color .15s;white-space:nowrap}
+  .btn svg{width:18px;height:18px}
+  .btn-marino{background:var(--marino);color:#fff}
+  .btn-marino:hover{background:var(--marino2)}
+  .btn-borde{border:1px solid var(--marino);color:var(--marino);background:transparent}
+  .btn-borde:hover{background:var(--marino);color:#fff}
+
+  /* hero */
+  .hero{background:var(--blanco);padding:84px 0 96px;border-bottom:1px solid var(--linea)}
+  .hero .grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:64px;align-items:center}
+  .hero h1{font-size:clamp(2.8rem,5.8vw,4.6rem);margin-top:18px}
+  .hero .lead{font-size:1.12rem;color:var(--suave);max-width:540px;margin:24px 0 34px}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .datos{display:flex;flex-wrap:wrap;gap:32px;margin-top:42px;padding-top:28px;border-top:1px solid var(--linea)}
+  .datos div b{display:block;font-family:"Cormorant Garamond",serif;font-size:2.1rem;font-weight:700;color:var(--marino);line-height:1}
+  .datos div span{font-size:.86rem;color:var(--suave)}
+  .estrellas{color:#c4983f;letter-spacing:2px}
+  .panel{background:var(--arena);border:1px solid var(--linea);padding:38px 34px;position:relative}
+  .panel::before{content:"";position:absolute;top:-1px;left:-1px;width:64px;height:4px;background:var(--malva)}
+  .panel h3{font-size:1.75rem}
+  .panel .sub{color:var(--suave);font-size:.95rem;margin-top:6px}
+  .panel ul{list-style:none;margin-top:22px}
+  .panel li{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--linea);font-size:.97rem}
+  .panel li:last-child{border:0}
+  .panel li svg{width:20px;height:20px;flex:none;color:var(--malva);margin-top:3px}
+  .estado{display:flex;align-items:center;gap:10px;margin-top:20px;font-size:.92rem;font-weight:600;color:var(--marino)}
+  .punto{width:9px;height:9px;border-radius:50%;background:#2f9e62;flex:none}
+  .punto.cerrado{background:#c0453b}
+
+  /* areas */
+  .areas{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--linea);background:var(--blanco)}
+  .area{padding:36px 30px;border-right:1px solid var(--linea)}
+  .area:last-child{border-right:0}
+  .area .n{font-family:"Cormorant Garamond",serif;font-size:1rem;font-weight:600;color:var(--malva);letter-spacing:.1em}
+  .area h3{font-size:1.65rem;margin:12px 0 12px}
+  .area p{color:var(--suave);font-size:.95rem}
+
+  /* abordaje */
+  .abordaje{background:var(--marino);color:#c8d0dd}
+  .abordaje .grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;align-items:start}
+  .abordaje h2{color:#fff;font-size:clamp(2.3rem,4.6vw,3.4rem);margin-top:14px}
+  .abordaje h2 em{color:#d9b7c1}
+  .abordaje .eyebrow{color:#d9b7c1}
+  .abordaje p{margin-top:18px;font-size:1.05rem}
+  .pasos{counter-reset:p}
+  .paso{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .paso:first-child{padding-top:0}
+  .paso:last-child{border:0}
+  .paso::before{counter-increment:p;content:"0" counter(p);font-family:"Cormorant Garamond",serif;font-size:2.2rem;font-weight:600;color:#d9b7c1;line-height:1}
+  .paso h3{color:#fff;font-size:1.45rem}
+  .paso p{margin-top:6px;font-size:.98rem}
+
+  /* sobre */
+  .sobre .grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px;align-items:center}
+  .retrato{aspect-ratio:4/5;max-width:380px;width:100%;margin:0 auto;background:linear-gradient(165deg,var(--malva-cl),var(--arena2));border:1px solid var(--linea);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px}
+  .retrato .ini{font-family:"Cormorant Garamond",serif;font-size:5.6rem;font-weight:600;color:var(--marino);line-height:1}
+  .retrato small{margin-top:14px;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--suave)}
+  .sobre h2{font-size:clamp(2.2rem,4.4vw,3.2rem);margin-top:14px}
+  .sobre p{color:var(--suave);font-size:1.05rem;margin-top:16px}
+  .credenciales{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+  .credenciales div{background:var(--blanco);border:1px solid var(--linea);padding:16px 18px;font-size:.92rem}
+  .credenciales b{display:block;color:var(--marino);font-weight:600;margin-bottom:2px}
+
+  /* opiniones */
+  .opiniones{background:var(--blanco);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+  .resumen{display:flex;align-items:center;gap:22px;margin-bottom:44px;flex-wrap:wrap}
+  .resumen b{font-family:"Cormorant Garamond",serif;font-size:4.2rem;font-weight:600;color:var(--marino);line-height:.9}
+  .resumen span{color:var(--suave)}
+  .ops{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .op{border:1px solid var(--linea);padding:32px 30px;background:var(--arena)}
+  .op p{font-family:"Cormorant Garamond",serif;font-size:1.3rem;font-style:italic;line-height:1.45;color:var(--marino);margin:14px 0 18px}
+  .op small{color:var(--suave);font-size:.85rem}
+
+  /* contacto */
+  .contacto .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:52px}
+  .contacto h2{font-size:clamp(2.2rem,4.4vw,3.2rem);margin-top:14px}
+  .ficha{margin-top:28px;border-top:1px solid var(--linea)}
+  .ficha div{display:grid;grid-template-columns:120px 1fr;gap:12px;padding:15px 0;border-bottom:1px solid var(--linea);font-size:.97rem}
+  .ficha div span:first-child{color:var(--suave);font-weight:500}
+  .ficha a{color:var(--marino);font-weight:600;text-decoration:none}
+  .ficha .hoy{color:var(--malva);font-weight:600}
+  .aviso{margin-top:22px;font-size:.9rem;color:var(--suave);background:var(--malva-cl);padding:16px 18px;border-left:3px solid var(--malva)}
+  .mapa{border:1px solid var(--linea);min-height:440px;background:var(--blanco)}
+  .mapa iframe{width:100%;height:100%;min-height:440px;border:0;display:block}
+
+  footer{background:var(--marino2);color:#9ea8b8;padding:46px 0 110px;font-size:.86rem}
+  footer .grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:30px}
+  footer b{color:#fff;font-weight:600;display:block;margin-bottom:8px;font-size:.92rem}
+  footer .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:.8rem;color:#7d889a}
+
+  .barra{display:none}
+
+  @media (max-width:980px){ .areas{grid-template-columns:1fr 1fr} .area:nth-child(2){border-right:0} .area:nth-child(-n+2){border-bottom:1px solid var(--linea)} }
+  @media (max-width:900px){
+    .menu,.nav .btn{display:none}
+    .hero{padding:52px 0 70px}
+    .hero .grid,.abordaje .grid,.sobre .grid,.contacto .grid{grid-template-columns:minmax(0,1fr);gap:44px}
+    .ops{grid-template-columns:minmax(0,1fr)}
+    footer .grid{grid-template-columns:1fr}
+    section{padding:76px 0}
+    .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--blanco);border-top:1px solid var(--linea)}
+    .barra a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 12px;font-size:.74rem;font-weight:600;text-decoration:none;color:var(--marino)}
+    .barra a:first-child{background:var(--marino);color:#fff}
+    .barra svg{width:20px;height:20px}
+  }
+  @media (max-width:560px){
+    .ctas{flex-direction:column}
+    .areas{grid-template-columns:minmax(0,1fr)}
+    .area{border-right:0;border-bottom:1px solid var(--linea)}
+    .area:last-child{border-bottom:0}
+    .credenciales{grid-template-columns:minmax(0,1fr)}
+    .ficha div{grid-template-columns:96px 1fr}
+    .marca b{font-size:1.3rem}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Propuesta de diseño</b> preparada por DaystartIA para Pélvico Fisioterapia · no es la web oficial</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="marca" href="#inicio" aria-label="Pélvico Fisioterapia, inicio">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="19" stroke="#1f2f4a" stroke-width="1.5"/><path d="M11 16c3 9 15 9 18 0M14 25c3 4 9 4 12 0" stroke="#9c6b7a" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span><b>Pélvico</b><small>Fisioterapia · Santander</small></span>
+    </a>
+    <ul class="menu">
+      <li><a href="#especialidades">Especialidades</a></li>
+      <li><a href="#abordaje">Primera consulta</a></li>
+      <li><a href="#fisioterapeuta">La fisioterapeuta</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a class="btn btn-marino" href="tel:+34663016672">Solicitar cita</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Fisioterapia de suelo pélvico</span>
+      <h1>Atención especializada en <em>suelo pélvico</em>, en cada etapa de la vida.</h1>
+      <p class="lead">Consulta de fisioterapia dedicada al complejo abdominopélvico-perineal: embarazo, posparto, menopausia y acompañamiento oncológico. Atención individual, con rigor y en un entorno de confianza, en el centro de Santander.</p>
+      <div class="ctas">
+        <a class="btn btn-marino" href="tel:+34663016672">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Solicitar cita · 663 01 66 72
+        </a>
+        <a class="btn btn-borde" href="https://wa.me/34663016672?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20una%20consulta." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      </div>
+      <div class="datos">
+        <div><b>5,0</b><span><span class="estrellas">★★★★★</span> en Google</span></div>
+        <div><b>15</b><span>opiniones de pacientes</span></div>
+        <div><b>L–V</b><span>de 8:30 a 20:00</span></div>
+      </div>
+    </div>
+    <aside class="panel">
+      <h3>Consulta individual</h3>
+      <p class="sub">Cada sesión se dedica por completo a usted.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Valoración personalizada del suelo pélvico</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Explicaciones claras en cada paso</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Privacidad y un trato cercano</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Calle Calvo Sotelo, en pleno centro</li>
+      </ul>
+      <div class="estado" id="estado"><span class="punto"></span><span>Consultando horario…</span></div>
+    </aside>
+  </div>
+</section>
+
+<section id="especialidades">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">Especialidades</span>
+      <h2>Acompañamiento en <em>cada etapa</em></h2>
+      <p>La fisioterapia de suelo pélvico se adapta a las necesidades de cada momento vital.</p>
+      <div class="linea"></div>
+    </div>
+    <div class="areas">
+      <div class="area"><div class="n">I</div><h3>Embarazo</h3><p>Preparación y cuidado del suelo pélvico durante la gestación y de cara al parto.</p></div>
+      <div class="area"><div class="n">II</div><h3>Posparto</h3><p>Valoración y recuperación del suelo pélvico y la zona abdominal tras el parto.</p></div>
+      <div class="area"><div class="n">III</div><h3>Menopausia</h3><p>Atención a los cambios del suelo pélvico asociados a esta etapa.</p></div>
+      <div class="area"><div class="n">IV</div><h3>Oncología</h3><p>Fisioterapia de suelo pélvico como apoyo durante y después del tratamiento oncológico.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="abordaje" id="abordaje">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Primera consulta</span>
+      <h2>Un proceso <em>claro</em> desde el primer día.</h2>
+      <p>Sabemos que hablar de suelo pélvico no siempre es fácil. Por eso cada consulta se desarrolla con calma, en privado y respetando su ritmo.</p>
+    </div>
+    <div class="pasos">
+      <div class="paso"><div><h3>Entrevista</h3><p>Conversamos sobre su situación, sus antecedentes y lo que desea mejorar.</p></div></div>
+      <div class="paso"><div><h3>Valoración</h3><p>Exploración del suelo pélvico y del complejo abdominopélvico, siempre explicando cada paso y con su consentimiento.</p></div></div>
+      <div class="paso"><div><h3>Plan individual</h3><p>Le proponemos un tratamiento adaptado a usted y a su momento vital.</p></div></div>
+      <div class="paso"><div><h3>Seguimiento</h3><p>Revisamos su evolución en cada sesión y ajustamos el plan cuando es necesario.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sobre" id="fisioterapeuta">
+  <div class="wrap grid">
+    <div class="retrato"><div class="ini">MM</div><small>María Mena · Fisioterapeuta</small></div>
+    <div>
+      <span class="eyebrow">La fisioterapeuta</span>
+      <h2>María Mena</h2>
+      <p>Fisioterapeuta especializada en suelo pélvico y en el complejo abdominopélvico-perineal. Acompaña a sus pacientes en el embarazo, el posparto, la menopausia y los procesos oncológicos.</p>
+      <p>Sus pacientes destacan el trato cercano, la seguridad que transmite y la claridad de sus explicaciones.</p>
+      <div class="credenciales">
+        <div><b>Especialidad</b>Fisioterapia de suelo pélvico</div>
+        <div><b>N.º de colegiada</b>Pendiente de completar</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="opiniones" id="opiniones">
+  <div class="wrap">
+    <div class="resumen"><b>5,0</b><div><div class="estrellas" style="font-size:1.2rem">★★★★★</div><span>15 opiniones de pacientes en Google</span></div></div>
+    <div class="ops">
+      <div class="op"><span class="estrellas">★★★★★</span><p>“La experiencia ha sido excelente. El trato, la seguridad y la cercanía han sido inmejorables. ¡La recomiendo 100%!”</p><small>Opinión de una paciente en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Muy buena profesional, con un trato cercano y explicaciones claras. Muy recomendable.”</p><small>Opinión de una paciente en Google</small></div>
+      <div class="op"><span class="estrellas">★★★★★</span><p>“Es una gran profesional, muy atenta y cercana. […] Se nota que es una clínica cuidada y con un ambiente muy agradable.”</p><small>Opinión de una paciente en Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="contacto" id="contacto">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Contacto</span>
+      <h2>Solicite su cita</h2>
+      <div class="ficha">
+        <div><span>Dirección</span><span>C. Calvo Sotelo, 3, 2.º izquierda<br>39002 Santander, Cantabria</span></div>
+        <div><span>Teléfono</span><span><a href="tel:+34663016672">663 01 66 72</a> · también WhatsApp</span></div>
+        <div><span>Horario</span><span id="horario">Lunes a viernes, de 8:30 a 20:00<br>Sábados y domingos, cerrado</span></div>
+        <div><span>Instagram</span><span>@pelvicofisioterapia</span></div>
+      </div>
+      <p class="aviso">Atención con cita previa. Si es su primera visita, indíquelo al llamar y le orientaremos sobre la consulta.</p>
+    </div>
+    <div class="mapa"><iframe title="Mapa: Pélvico Fisioterapia, calle Calvo Sotelo 3, Santander" loading="lazy" src="https://maps.google.com/maps?q=P%C3%A9lvico%20fisioterapia%2C%20Calle%20Calvo%20Sotelo%203%2C%20Santander&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div><b>Pélvico Fisioterapia</b>Fisioterapia especializada en suelo pélvico.<br>C. Calvo Sotelo, 3, 2.º izq. · 39002 Santander</div>
+      <div><b>Contacto</b>663 01 66 72<br>Lunes a viernes · 8:30 – 20:00</div>
+      <div><b>Información sanitaria</b>N.º de registro sanitario: pendiente de completar<br>Fisioterapeuta colegiada n.º: pendiente de completar</div>
+    </div>
+    <div class="legal">La información de esta web es orientativa y no sustituye a una valoración profesional individual. · Propuesta de diseño · DaystartIA</div>
+  </div>
+</footer>
+
+<nav class="barra" aria-label="Acciones rápidas">
+  <a href="tel:+34663016672"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Solicitar cita</a>
+  <a href="https://wa.me/34663016672?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20una%20consulta." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>WhatsApp</a>
+  <a href="https://maps.google.com/?q=P%C3%A9lvico+fisioterapia+Calvo+Sotelo+3+Santander" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>Cómo llegar</a>
+</nav>
+
+<script>
+  const ahora = new Date(), d = ahora.getDay(), m = ahora.getHours() * 60 + ahora.getMinutes();
+  const abierto = d >= 1 && d <= 5 && m >= 510 && m < 1200;
+  const e = document.getElementById('estado');
+  e.querySelector('.punto').classList.toggle('cerrado', !abierto);
+  e.lastElementChild.textContent = abierto ? 'Consulta abierta ahora' : 'Consulta cerrada · puede dejar un mensaje por WhatsApp';
+</script>
+</body>
+</html>
